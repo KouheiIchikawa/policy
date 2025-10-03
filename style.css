@@ -1,0 +1,279 @@
+/* ベース */
+:root {
+  --blue-1: #dff6ff;
+  --blue-2: #ffffff;
+  --blue-3: #00aaff;
+  --blue-4: #40cfff;
+  --blue-5: #0077aa;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  color: #333;
+  background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+  overflow-x: hidden;
+}
+
+/* 背景ウォーターマーク（アイコンを薄く大きく） */
+.bg-mark {
+  position: fixed;
+  inset: 0;
+  background-image: url("app-icon.png");
+  background-repeat: no-repeat;
+  background-position: right -120px bottom -80px; /* 右下にオフセット配置 */
+  background-size: min(50vmax, 720px);
+  opacity: 0.06;         /* かなり薄く */
+  pointer-events: none;  /* クリック無効 */
+  filter: saturate(1.1);
+  z-index: 0;
+}
+
+/* ヘッダー（ロゴ＋タイトル） */
+.site-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--blue-3), var(--blue-4));
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.app-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;              /* 角丸でアプリアイコン感 */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  object-fit: cover;
+}
+
+.head-text h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 1.2rem + 2vw, 2.6rem);
+  letter-spacing: 1.5px;
+}
+.head-text p {
+  margin: 4px 0 0;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+/* メイン */
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 42px auto;
+  padding: 0 20px;
+}
+
+/* カード */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 28px;
+  border-left: 6px solid var(--blue-3);
+  box-shadow: 0 6px 18px rgba(0, 160, 230, 0.18);
+  backdrop-filter: blur(2px);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 160, 230, 0.32);
+}
+
+/* 見出し */
+h2 {
+  color: var(--blue-5);
+  margin: 0 0 16px;
+}
+
+/* ボタン（Twitterカラー寄り） */
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, var(--blue-3), var(--blue-4));
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  transition: transform .15s ease, filter .2s ease;
+}
+.button:hover {
+  transform: translateY(-1px) scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* フッター */
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  padding: 24px 12px 36px;
+  margin-top: 54px;
+}
+
+/* スマホ最適化 */
+@media (max-width: 560px) {
+  .site-header { padding: 22px 14px; }
+  .app-logo { width: 56px; height: 56px; }
+  .card { padding: 22px; }
+  .bg-mark { background-position: right -140px bottom -120px; background-size: 85vmin; }
+}
+
+/* カエル会話セクション */
+.frog-talk {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* カエル画像 */
+.frog-talk .frog {
+  width: 160px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* 吹き出し */
+.frog-talk .bubble {
+  position: relative;
+  background: #e6f7ff;
+  border: 2px solid #00aaff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  max-width: 70%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 吹き出しの矢印 */
+.frog-talk .bubble::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 20px;
+  border: 8px solid transparent;
+  border-right-color: #00aaff;
+}
+
+.frog-talk .bubble::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 20px;
+  border: 8px solid transparent;
+  border-right-color: #e6f7ff;
+}
+
+/* 画像のドラッグ・長押し保存をしにくくする */
+.nodrag {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* saiko.png を背景で表示（右側） */
+.support-figure {
+  flex: 0 0 260px;            /* 固定幅（PC） */
+  aspect-ratio: 1 / 1;        /* 正方形枠 */
+  background: url("saiko.png") center/contain no-repeat;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.18));
+  border-radius: 16px;        /* やさしい角丸で“かわいい感じ” */
+  position: relative;
+}
+
+/* うっすら透かし（保存しても薄いロゴが乗る） */
+.support-figure::after {
+  content: "Wings Silver";
+  position: absolute;
+  right: 8%;
+  bottom: 6%;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .5px;
+  color: rgba(0,0,0,.08);
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+/* スマホでは縦並び＆小さめに */
+@media (max-width: 768px) {
+  .support-center { flex-direction: column; text-align: center; }
+  .support-figure { flex-basis: auto; width: 180px; }
+}
+
+/* 既存：カエル会話の画像も保存しにくく */
+.frog-talk .frog { width: 160px; height: auto; flex-shrink: 0; }
+
+/* サポートセンター 横並び */
+.support-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.support-text {
+  flex: 1;
+}
+
+/* 画像ラッパ */
+.support-image {
+  position: relative;
+  max-width: 220px;
+  flex-shrink: 0;
+}
+
+/* 実際の画像 */
+.protected-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none; /* 画像自体にクリック不可 */
+}
+
+/* 透明カバーを上に置いて操作を吸収 */
+.img-cover {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: 1;
+}
+
+/* ホバー時にちょっとアニメーション */
+.support-image:hover {
+  transform: scale(1.05) rotate(-1deg);
+  transition: transform 0.25s ease;
+}
+
+/* スマホ表示 */
+@media (max-width: 768px) {
+  .support-center {
+    flex-direction: column;
+    text-align: center;
+  }
+  .support-image {
+    max-width: 160px;
+    margin-top: 16px;
+  }
+}
+
