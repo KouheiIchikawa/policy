@@ -1,0 +1,9 @@
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.8; }
+.container { max-width: 880px; margin: 24px auto; padding: 0 16px; }
+h1 { font-size: 1.8rem; margin: 0 0 0.5em; }
+h2 { font-size: 1.3rem; margin: 1.6em 0 0.4em; }
+ul { padding-left: 1.2em; }
+a { text-decoration: underline; }
+footer { margin-top: 3rem; opacity: .7; }
