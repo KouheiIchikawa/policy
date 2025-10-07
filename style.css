@@ -1,4 +1,3 @@
-/* ベース */
 :root {
   --blue-1: #dff6ff;
   --blue-2: #ffffff;
@@ -19,24 +18,22 @@ body {
   overflow-x: hidden;
 }
 
-/* 背景ウォーターマーク（アイコンを薄く大きく） */
+/* 背景ウォーターマーク */
 .bg-mark {
   position: fixed;
   inset: 0;
   background-image: url("app-icon.png");
   background-repeat: no-repeat;
-  background-position: right -120px bottom -80px; /* 右下にオフセット配置 */
+  background-position: right -120px bottom -80px;
   background-size: min(50vmax, 720px);
-  opacity: 0.06;         /* かなり薄く */
-  pointer-events: none;  /* クリック無効 */
+  opacity: 0.06;
+  pointer-events: none;
   filter: saturate(1.1);
   z-index: 0;
 }
 
-/* ヘッダー（ロゴ＋タイトル） */
+/* ヘッダー */
 .site-header {
-  position: relative;
-  z-index: 1;
   display: flex;
   gap: 16px;
   align-items: center;
@@ -51,7 +48,7 @@ body {
 .app-logo {
   width: 64px;
   height: 64px;
-  border-radius: 14px;              /* 角丸でアプリアイコン感 */
+  border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   object-fit: cover;
 }
@@ -69,8 +66,6 @@ body {
 
 /* メイン */
 main {
-  position: relative;
-  z-index: 1;
   max-width: 900px;
   margin: 42px auto;
   padding: 0 20px;
@@ -83,22 +78,20 @@ main {
   padding: 28px;
   margin-bottom: 28px;
   border-left: 6px solid var(--blue-3);
-  box-shadow: 0 6px 18px rgba(0, 160, 230, 0.18);
-  backdrop-filter: blur(2px);
+  box-shadow: 0 6px 18px rgba(0,160,230,0.18);
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 26px rgba(0, 160, 230, 0.32);
+  box-shadow: 0 10px 26px rgba(0,160,230,0.32);
 }
 
-/* 見出し */
 h2 {
   color: var(--blue-5);
   margin: 0 0 16px;
 }
 
-/* ボタン（Twitterカラー寄り） */
+/* ボタン */
 .button {
   display: inline-block;
   padding: 12px 22px;
@@ -117,8 +110,6 @@ h2 {
 
 /* フッター */
 footer {
-  position: relative;
-  z-index: 1;
   text-align: center;
   font-size: 0.9em;
   color: #555;
@@ -126,29 +117,16 @@ footer {
   margin-top: 54px;
 }
 
-/* スマホ最適化 */
-@media (max-width: 560px) {
-  .site-header { padding: 22px 14px; }
-  .app-logo { width: 56px; height: 56px; }
-  .card { padding: 22px; }
-  .bg-mark { background-position: right -140px bottom -120px; background-size: 85vmin; }
-}
-
-/* カエル会話セクション */
+/* カエル */
 .frog-talk {
   display: flex;
   align-items: flex-start;
   gap: 20px;
 }
-
-/* カエル画像 */
 .frog-talk .frog {
   width: 160px;
   height: auto;
-  flex-shrink: 0;
 }
-
-/* 吹き出し */
 .frog-talk .bubble {
   position: relative;
   background: #e6f7ff;
@@ -156,13 +134,8 @@ footer {
   border-radius: 16px;
   padding: 16px 20px;
   max-width: 70%;
-  font-size: 1rem;
-  line-height: 1.6;
   color: #333;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-/* 吹き出しの矢印 */
 .frog-talk .bubble::before {
   content: "";
   position: absolute;
@@ -171,7 +144,6 @@ footer {
   border: 8px solid transparent;
   border-right-color: #00aaff;
 }
-
 .frog-talk .bubble::after {
   content: "";
   position: absolute;
@@ -181,91 +153,58 @@ footer {
   border-right-color: #e6f7ff;
 }
 
-/* 画像のドラッグ・長押し保存をしにくくする */
-.nodrag {
-  -webkit-user-drag: none;
-  user-select: none;
-}
-
-/* saiko.png を背景で表示（右側） */
-.support-figure {
-  flex: 0 0 260px;            /* 固定幅（PC） */
-  aspect-ratio: 1 / 1;        /* 正方形枠 */
-  background: url("saiko.png") center/contain no-repeat;
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,.18));
-  border-radius: 16px;        /* やさしい角丸で“かわいい感じ” */
-  position: relative;
-}
-
-/* うっすら透かし（保存しても薄いロゴが乗る） */
-.support-figure::after {
-  content: "Wings Silver";
-  position: absolute;
-  right: 8%;
-  bottom: 6%;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: .5px;
-  color: rgba(0,0,0,.08);
-  transform: rotate(-8deg);
-  pointer-events: none;
-}
-
-/* スマホでは縦並び＆小さめに */
-@media (max-width: 768px) {
-  .support-center { flex-direction: column; text-align: center; }
-  .support-figure { flex-basis: auto; width: 180px; }
-}
-
-/* 既存：カエル会話の画像も保存しにくく */
-.frog-talk .frog { width: 160px; height: auto; flex-shrink: 0; }
-
-/* サポートセンター 横並び */
+/* サポート */
 .support-center {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-
 .support-text {
   flex: 1;
 }
-
-/* 画像ラッパ */
 .support-image {
   position: relative;
   max-width: 220px;
-  flex-shrink: 0;
 }
-
-/* 実際の画像 */
 .protected-img {
   display: block;
   width: 100%;
-  height: auto;
   border-radius: 12px;
   filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
-  -webkit-user-drag: none;
-  user-select: none;
-  pointer-events: none; /* 画像自体にクリック不可 */
+  pointer-events: none;
 }
-
-/* 透明カバーを上に置いて操作を吸収 */
 .img-cover {
   position: absolute;
   inset: 0;
   background: transparent;
-  z-index: 1;
 }
-
-/* ホバー時にちょっとアニメーション */
 .support-image:hover {
   transform: scale(1.05) rotate(-1deg);
   transition: transform 0.25s ease;
 }
 
-/* スマホ表示 */
+/* ストアリンク */
+.store-links {
+  text-align: center;
+  padding: 20px 0;
+}
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.store-badge {
+  width: 180px;
+  max-width: 45%;
+  transition: transform 0.2s ease;
+}
+.store-badge:hover {
+  transform: scale(1.05);
+}
+
+/* レスポンシブ */
 @media (max-width: 768px) {
   .support-center {
     flex-direction: column;
@@ -276,4 +215,55 @@ footer {
     margin-top: 16px;
   }
 }
+/* ===== Store strip (gungho-ish) ===== */
+.store-strip {
+  position: relative;
+  background: #0b0d14;            /* 黒に近い濃紺 */
+  padding: 28px 0 36px;
+  margin-top: 42px;
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08); /* 上に細い線：見切り */
+  border-top: 3px solid #0aa4ff;  /* もっと“線感”が欲しければここを太く */
+}
 
+.store-strip__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.store-strip__title {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: clamp(20px, 2.4vw, 32px);
+  color: #1282bd;                  /* タイトルは青系で */
+  letter-spacing: 1px;
+}
+
+/* バッジ2つを中央に大きめで */
+.store-strip__badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(16px, 4vw, 36px);
+  flex-wrap: wrap;
+}
+
+/* バッジのサイズ感：PCでデカめ・スマホでは絞る */
+.store-strip__badge {
+  display: block;
+  width: clamp(180px, 22vw, 320px);   /* ここで“デカさ”を調整。最大320px */
+  height: auto;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.45));
+  transition: transform .18s ease, filter .18s ease;
+}
+
+.store-strip__badge:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.6));
+}
+
+@media (max-width: 560px) {
+  .store-strip { padding: 22px 0 28px; }
+  .store-strip__title { margin-bottom: 12px; }
+}
