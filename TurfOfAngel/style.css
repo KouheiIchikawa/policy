@@ -1,9 +1,68 @@
 :root { color-scheme: light dark; }
+
 * { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.8; }
-.container { max-width: 880px; margin: 24px auto; padding: 0 16px; }
-h1 { font-size: 1.8rem; margin: 0 0 0.5em; }
-h2 { font-size: 1.3rem; margin: 1.6em 0 0.4em; }
-ul { padding-left: 1.2em; }
-a { text-decoration: underline; }
-footer { margin-top: 3rem; opacity: .7; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.8;
+  background-color: #fafafa;
+  color: #222;
+}
+
+/* ロゴヘッダー */
+.header {
+  background: linear-gradient(to bottom, #d9f0ff, #ffffff);
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+.logo {
+  max-width: 320px;
+  width: 80%;
+  height: auto;
+}
+
+/* タイトル＋アイコン横並び */
+.title-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+.app-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 880px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 1.6em 0 0.4em;
+  border-left: 4px solid #0066cc;
+  padding-left: 8px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 3rem;
+  opacity: .7;
+  font-size: 0.9rem;
+  text-align: center;
+}
