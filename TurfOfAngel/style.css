@@ -10,11 +10,13 @@ body {
   color: #222;
 }
 
-/* ���S�w�b�_�[ */
+/* ���S�w�b�_�[ */
 .header {
   background: linear-gradient(to bottom, #d9f0ff, #ffffff);
   text-align: center;
   padding: 2rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
 }
 .logo {
   max-width: 320px;
@@ -22,11 +24,11 @@ body {
   height: auto;
 }
 
-/* �^�C�g���{�A�C�R�������� */
+/* �^�C�g���{�A�C�R�������� */
 .title-block {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; 
   gap: 12px;
   margin-top: 1.5rem;
 }
@@ -65,4 +67,161 @@ footer {
   opacity: .7;
   font-size: 0.9rem;
   text-align: center;
+}
+/* 画像のデフォルト（保険） */
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- Store strip --- */
+.store-strip {
+  margin: 40px auto 0;
+  padding: 24px 16px;
+  border-top: 1px solid #e5e7eb;
+  background: #111;            /* 黒帯にしたくない場合は削除してOK */
+  color: #fff;                  /* 黒帯に合わせた文字色 */
+}
+.store-strip__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.store-strip__title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.store-strip__badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* バッジのサイズを明示（SVGでも暴れない） */
+.store-strip__badge {
+  height: 44px;   /* モバイル基準 */
+  width: auto;
+}
+
+/* 画面幅が広いときは少し大きく */
+@media (min-width: 768px) {
+  .store-strip__badge { height: 52px; }
+}
+
+/* ダーク帯の上で画像の白フチが見えるように（任意） */
+.store-strip img.store-strip__badge { filter: none; }
+
+/* ===== Xリンク・かわいいカード ===== */
+.x-cta { margin: 28px 0 8px; }
+.x-cta__card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e6eaf2;
+  border-radius: 16px;
+  background:
+    radial-gradient(120% 120% at 0% 0%, #eef6ff 0%, #ffffff 55%) no-repeat;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.x-cta__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.10);
+  border-color: #d6e6ff;
+}
+.x-cta__text { min-width: 0; }
+.x-cta__eyebrow {
+  margin: 0 0 2px;
+  font-size: .8rem;
+  letter-spacing: .08em;
+  color: #6b7280;
+}
+.x-cta__title {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+.x-cta__handle {
+  margin: 6px 0 10px;
+  color: #2563eb;
+  font-weight: 600;
+}
+.x-cta__button {
+  display: inline-block;
+  font-size: .9rem;
+  padding: 8px 14px;
+  background: #111;
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+}
+
+/* 画像を“かわいく”控えめサイズで */
+.x-cta__img {
+  width: clamp(150px, 28vw, 240px);
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(37,99,235,.25);
+  transform: translateY(0);
+  transition: transform .35s ease;
+}
+.x-cta__card:hover .x-cta__img {
+  transform: translateY(-4px) rotate(-1deg);
+}
+
+/* 小さなキラッを追加（お好みで） */
+.x-cta__card::after {
+  content: "";
+  position: absolute;
+  right: 12%;
+  top: 10%;
+  width: 120px; height: 120px;
+  background: radial-gradient(closest-side, rgba(59,130,246,.18), rgba(59,130,246,0));
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+/* レイアウト：モバイルは縦積み */
+@media (max-width: 640px) {
+  .x-cta__card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .x-cta__img { justify-self: end; }
+}
+/* キーボード操作でも分かるフォーカスリング */
+.x-cta__card:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 4px;
+  border-color: #bfdbfe;
+}
+
+/* ホバー効果はポインタがある環境だけで */
+@media (hover: hover) and (pointer: fine) {
+  .x-cta__card:hover { transform: translateY(-2px); }
+  .x-cta__card:hover .x-cta__img { transform: translateY(-4px) rotate(-1deg); }
+}
+
+/* モバイルでの余白と画像サイズをもう少しだけ整える */
+@media (max-width: 480px) {
+  .x-cta { margin-top: 20px; }
+  .x-cta__img { width: clamp(140px, 42vw, 200px); }
+}
+
+/* ダークモード時のカードの見やすさ */
+@media (prefers-color-scheme: dark) {
+  .x-cta__card {
+    background: radial-gradient(120% 120% at 0% 0%, #182335 0%, #0b1220 55%);
+    border-color: #253049;
+    box-shadow: 0 6px 20px rgba(0,0,0,.45);
+  }
+  .x-cta__title { color: #e5edff; }
+  .x-cta__eyebrow { color: #9aa7c1; }
 }
