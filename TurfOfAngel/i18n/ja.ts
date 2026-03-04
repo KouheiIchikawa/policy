@@ -66,6 +66,6 @@ export const ja: PolicyLocaleContent = {
     localeChangedDescription: '選択内容はこの端末に保存されます。',
   },
   footer: {
-    copyright: '© 2025 Kohei Elimi Lab',
+    copyright: '© 2026 Kohei Elimi Lab',
   },
 }

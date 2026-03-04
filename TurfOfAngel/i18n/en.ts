@@ -66,6 +66,6 @@ export const en: PolicyLocaleContent = {
     localeChangedDescription: 'The selected language has been saved on this device.',
   },
   footer: {
-    copyright: '© 2025 Kohei Elimi Lab',
+    copyright: '© 2026 Kohei Elimi Lab',
   },
 }
