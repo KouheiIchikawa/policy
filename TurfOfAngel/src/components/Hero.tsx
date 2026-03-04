@@ -29,6 +29,13 @@ export function Hero({ content, introHtml }: Props) {
           transition={{ duration: 0.7 }}
           className="max-w-3xl"
         >
+          <div className="mb-5">
+            <img
+              src={assetPath('/images/turf_of_angel_logo.png')}
+              alt="Turf of Angel logo"
+              className="h-20 w-auto object-contain drop-shadow-[0_0_32px_rgba(93,246,255,0.22)] sm:h-24"
+            />
+          </div>
           <span className="inline-flex rounded-full border border-cyan-200/[0.3] bg-slate-950/[0.3] px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/[0.85]">
             {content.badge}
           </span>
@@ -72,8 +79,8 @@ export function Hero({ content, introHtml }: Props) {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(93,246,255,0.28),transparent_40%),radial-gradient(circle_at_80%_22%,rgba(255,93,203,0.3),transparent_34%),radial-gradient(circle_at_50%_75%,rgba(185,255,102,0.22),transparent_30%)]" />
             <div className="absolute inset-2 rounded-[1.5rem] border border-white/[0.14]" />
             <img
-              src={assetPath('/images/turf_of_angel_logo.png')}
-              alt="Turf of Angel logo"
+              src={assetPath('/images/ic_launcher_foreground.png')}
+              alt="Turf of Angel app icon"
               className="relative z-10 mx-auto h-full w-full rounded-[1.5rem] object-contain drop-shadow-[0_0_45px_rgba(93,246,255,0.28)]"
             />
           </div>

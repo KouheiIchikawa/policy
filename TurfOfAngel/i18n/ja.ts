@@ -12,9 +12,8 @@ export const ja: PolicyLocaleContent = {
   hero: {
     badge: 'Cyber Neon Glassmorphism',
     title: 'Privacy Policy',
-    subtitle: 'サイバーネオンとオーロラグラデで再構成した、Turf of Angel の公式ポリシーページ。',
-    description:
-      '本文そのものは変更せず、GitHub Pages 配信を前提とした完全静的 React サイトとして再設計しています。',
+    subtitle: '楽しく白熱できる競馬ゲーム、Turf of Angel のプライバシーポリシーです。',
+    description: '個人情報の取り扱いについて、必要な内容をわかりやすくまとめています。',
     ctaPrimary: '本文へ移動',
     ctaSecondary: 'ストアを見る',
   },

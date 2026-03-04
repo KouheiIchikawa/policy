@@ -12,9 +12,9 @@ export const en: PolicyLocaleContent = {
   hero: {
     badge: 'Cyber Neon Glassmorphism',
     title: 'Privacy Policy',
-    subtitle: 'A static GitHub Pages-ready policy page for Turf of Angel with aurora gradients and glass cards.',
+    subtitle: 'A fun and competitive horse racing game with easy-to-read privacy guidance.',
     description:
-      'The Japanese policy text is preserved as-is, while the surrounding interface is localized and rebuilt with React.',
+      'This page summarizes how Turf of Angel handles personal information in a simple and straightforward way.',
     ctaPrimary: 'Jump to policy',
     ctaSecondary: 'View stores',
   },
