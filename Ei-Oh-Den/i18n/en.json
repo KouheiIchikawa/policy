@@ -1,0 +1,67 @@
+﻿{
+  "htmlLang": "en",
+  "pageTitle": "Privacy Policy - Ei-Oh-Den",
+  "badge": "Gentle and Simple Privacy",
+  "title": "Privacy Policy",
+  "appName": "App Name: Ei-Oh-Den",
+  "lead": "Thank you for using this app. Your privacy matters, and this page explains things in a simple way. We want the app to feel safe, calm, and easy to trust.",
+  "highlight": "This app does not collect, store, or share personal information.",
+  "footer": "A sakura-and-fantasy themed privacy page with a soft, mobile-friendly layout.",
+  "detailsLabel": "Privacy policy details",
+  "langLabel": "Language",
+  "languages": {
+    "en": "English",
+    "ja": "Japanese"
+  },
+  "contactUrl": "https://x.com/sio_sio_bull",
+  "contactLabel": "X @sio_sio_bull",
+  "contactNote": "Questions or requests can be sent through this X profile.",
+  "duckBubble": "Phew, I'm not great at this quack...",
+  "fightBubble": "You can do it!!",
+  "sections": {
+    "intro": {
+      "title": "Friendly Introduction",
+      "body": [
+        "This app respects your privacy. We believe privacy information should be easy to read, so we keep this policy short and clear.",
+        "If anything changes in the future, this page will be updated so you can always check the latest version."
+      ]
+    },
+    "dataCollection": {
+      "title": "Data Collection",
+      "pills": [
+        "No personal data",
+        "No account required",
+        "No tracking"
+      ],
+      "body": [
+        "This app does not collect personal data. It does not ask for your name, email address, phone number, contacts, precise location, or other personal information."
+      ]
+    },
+    "permissions": {
+      "title": "Permissions",
+      "body": [
+        "This app does not require special permissions for sensitive features such as camera, microphone, location, or contacts.",
+        "If platform-level permissions are ever needed later, this policy will be updated clearly."
+      ]
+    },
+    "thirdParty": {
+      "title": "Third Party Services",
+      "body": [
+        "This app currently does not use third party analytics, advertising, or external data collection services.",
+        "Placeholder if needed later: third party services will be listed here with a clear explanation."
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "body": [
+        "If you have any questions about this Privacy Policy, please feel free to contact us."
+      ]
+    },
+    "lastUpdated": {
+      "title": "Last Updated",
+      "body": [
+        "Last updated: March 4, 2026"
+      ]
+    }
+  }
+}
