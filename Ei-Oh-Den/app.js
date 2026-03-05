@@ -176,6 +176,58 @@ function LanguageToggle({ language, labels, onChange }) {
   );
 }
 
+function HamburgerMenu({ copy, isOpen, onToggle, onClose }) {
+  const menuLabel = copy.langLabel || "Menu";
+
+  return h(
+    React.Fragment,
+    null,
+    h(
+      "button",
+      {
+        type: "button",
+        className: isOpen ? "menu-toggle is-open" : "menu-toggle",
+        "aria-label": menuLabel,
+        "aria-expanded": isOpen ? "true" : "false",
+        "aria-controls": "site-drawer",
+        onClick: onToggle
+      },
+      h("span", { className: "menu-toggle-line" }),
+      h("span", { className: "menu-toggle-line" }),
+      h("span", { className: "menu-toggle-line" })
+    ),
+    h(
+      "div",
+      {
+        className: isOpen ? "nav-drawer-overlay is-open" : "nav-drawer-overlay",
+        onClick: onClose
+      },
+      h(
+        "nav",
+        {
+          id: "site-drawer",
+          className: isOpen ? "nav-drawer is-open" : "nav-drawer",
+          "aria-label": menuLabel,
+          onClick: (event) => event.stopPropagation()
+        },
+        h("p", { className: "nav-drawer-title" }, menuLabel),
+        h(
+          "a",
+          { href: "#top", className: "nav-drawer-link", onClick: onClose },
+          copy.title
+        ),
+        ...sectionOrder.map((item) =>
+          h(
+            "a",
+            { key: item.id, href: `#${item.id}`, className: "nav-drawer-link", onClick: onClose },
+            copy.sections[item.id].title
+          )
+        )
+      )
+    )
+  );
+}
+
 function Divider() {
   return h(
     "div",
@@ -191,7 +243,7 @@ function Divider() {
 function Hero({ copy, language, onLanguageChange }) {
   return h(
     "section",
-    { className: "hero" },
+    { id: "top", className: "hero" },
     h("div", { className: "hero-paper" }),
     h("img", { className: "hero-watermark", src: imagePath, alt: "", "aria-hidden": "true" }),
     h(LanguageToggle, { language, labels: { en: "English", ja: "日本語" }, onChange: onLanguageChange }),
@@ -302,7 +354,11 @@ function ContentGrid({ copy }) {
         return [
           h(
             "div",
-            { key: item.id, className: item.wide ? "card-slot is-wide" : "card-slot" },
+            {
+              key: item.id,
+              id: item.id,
+              className: item.wide ? "card-slot is-wide" : "card-slot"
+            },
             h(SectionCard, { sectionId: item.id, copy, contact: true })
           ),
           h(
@@ -316,7 +372,11 @@ function ContentGrid({ copy }) {
       return [
         h(
           "div",
-          { key: item.id, className: item.wide ? "card-slot is-wide" : "card-slot" },
+          {
+            key: item.id,
+            id: item.id,
+            className: item.wide ? "card-slot is-wide" : "card-slot"
+          },
           h(SectionCard, { sectionId: item.id, copy, contact: false })
         )
       ];
@@ -341,6 +401,7 @@ function App() {
   const [language, setLanguage] = useState(detectLanguage);
   const [copy, setCopy] = useState(null);
   const [error, setError] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -367,6 +428,23 @@ function App() {
     };
   }, [language]);
 
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return undefined;
+    }
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [isMenuOpen]);
+
   if (!copy && !error) {
     return LoadingState("Loading privacy policy...");
   }
@@ -379,6 +457,12 @@ function App() {
     React.Fragment,
     null,
     h(EffectLayer, null),
+    h(HamburgerMenu, {
+      copy,
+      isOpen: isMenuOpen,
+      onToggle: () => setIsMenuOpen((open) => !open),
+      onClose: () => setIsMenuOpen(false)
+    }),
     h(
       "main",
       { className: "page-shell" },
