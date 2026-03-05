@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Hero } from './components/Hero'
 import { Toc } from './components/Toc'
@@ -23,6 +23,7 @@ export default function App() {
   const { toasts, pushToast, dismissToast } = useToast()
   const content = policyLocales[locale]
   const activeSection = useScrollSpy([...sectionIds, 'download'])
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     document.title = content.meta.title
@@ -52,6 +53,15 @@ export default function App() {
     ogImage.setAttribute('content', assetPath('/images/turf_of_angel_logo.png'))
   }, [content])
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [mobileMenuOpen])
+
   const sectionItems = useMemo(
     () =>
       content.sections.map((section, index) => ({
@@ -61,12 +71,25 @@ export default function App() {
     [content.sections],
   )
 
+  const tocItems = useMemo(
+    () => [
+      ...sectionItems.map((section) => ({ id: section.id, label: section.title })),
+      { id: 'download', label: content.store.title },
+    ],
+    [content.store.title, sectionItems],
+  )
+
   const changeLocale = (nextLocale: Locale) => {
     setLocale(nextLocale)
     pushToast({
       title: policyLocales[nextLocale].toast.localeChangedTitle,
       description: policyLocales[nextLocale].toast.localeChangedDescription,
     })
+  }
+
+  const selectSection = (id: string) => {
+    smoothScrollToId(id)
+    setMobileMenuOpen(false)
   }
 
   return (
@@ -94,9 +117,56 @@ export default function App() {
           </motion.div>
 
           <div className="glass-panel flex items-center gap-2 rounded-full border-white/[0.22] bg-[rgba(8,16,32,0.72)] px-3 py-2">
+            <button
+              type="button"
+              aria-label={content.toc.title}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-toc"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.18] bg-white/[0.08] text-white transition hover:bg-white/[0.16] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/80 lg:hidden"
+            >
+              <span className="sr-only">{content.toc.title}</span>
+              <span className="flex flex-col items-center justify-center gap-[0.22rem]">
+                <span className="h-0.5 w-4 rounded-full bg-current" />
+                <span className="h-0.5 w-4 rounded-full bg-current" />
+                <span className="h-0.5 w-4 rounded-full bg-current" />
+              </span>
+            </button>
             <LanguageToggle locale={locale} onChange={changeLocale} />
           </div>
         </header>
+
+        <AnimatePresence>
+          {mobileMenuOpen ? (
+            <motion.div
+              className="fixed inset-0 z-50 lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <button
+                type="button"
+                aria-label="Close menu"
+                className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"
+                onClick={() => setMobileMenuOpen(false)}
+              />
+              <motion.div
+                id="mobile-toc"
+                className="absolute left-4 right-4 top-20"
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -12, opacity: 0 }}
+              >
+                <Toc
+                  title={content.toc.title}
+                  items={tocItems}
+                  activeId={activeSection}
+                  onSelect={selectSection}
+                />
+              </motion.div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
           <main className="relative z-10">
@@ -124,15 +194,12 @@ export default function App() {
             </footer>
           </main>
 
-          <aside className="relative z-20 lg:sticky lg:top-24">
+          <aside className="relative z-20 hidden lg:sticky lg:top-24 lg:block">
             <Toc
               title={content.toc.title}
-              items={[
-                ...sectionItems.map((section) => ({ id: section.id, label: section.title })),
-                { id: 'download', label: content.store.title },
-              ]}
+              items={tocItems}
               activeId={activeSection}
-              onSelect={(id) => smoothScrollToId(id)}
+              onSelect={selectSection}
             />
           </aside>
         </div>
