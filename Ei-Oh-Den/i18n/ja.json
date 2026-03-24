@@ -6,6 +6,39 @@
   "appName": "影桜伝（Ei-Oh-Den）",
   "lead": "このアプリをご利用いただきありがとうございます。あなたのプライバシーは大切であり、このページでは内容をできるだけシンプルにご案内します。安心して使える、やわらかい体験を目指しています。",
   "highlight": "このアプリは個人情報を収集・保存・共有しません。",
+  "heroPills": [
+    {
+      "label": "iOS / Android 配信中",
+      "url": "#contact"
+    },
+    {
+      "label": "小説版あり",
+      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ"
+    },
+    {
+      "label": "LINEスタンプ販売中",
+      "url": "https://store.line.me/stickershop/product/33347242/ja"
+    }
+  ],
+  "quickLinksTitle": "関連リンク",
+  "quickLinks": [
+    {
+      "label": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden"
+    },
+    {
+      "label": "App Store",
+      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882"
+    },
+    {
+      "label": "小説版",
+      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ"
+    },
+    {
+      "label": "LINEスタンプ",
+      "url": "https://store.line.me/stickershop/product/33347242/ja"
+    }
+  ],
   "footer": "© 2026 Kohei Elimi Lab",
   "detailsLabel": "プライバシーポリシー詳細",
   "langLabel": "言語",
@@ -15,6 +48,92 @@
   },
   "contactUrl": "https://x.com/sio_sio_bull",
   "contactLabel": "X @sio_sio_bull",
+  "storeTag": "#アプリダウンロード",
+  "seoDescription": "影桜伝（Ei-Oh-Den）の公式プライバシーポリシーと最新トピック。個人情報の収集有無、必要な権限、問い合わせ先に加え、小説版とLINEスタンプの購入先も案内します。",
+  "dashboardTitle": "桜戦術ダッシュボード",
+  "dashboardLead": "影桜伝（Ei-Oh-Den）の公開状況を、ひと目で確認できるステータス表示です。",
+  "dashboardStats": [
+    {
+      "label": "Privacy Power",
+      "value": "100",
+      "suffix": "%",
+      "note": "個人情報の収集・保存・共有なし"
+    },
+    {
+      "label": "Store Portals",
+      "value": "2",
+      "suffix": "Links",
+      "note": "Google Play / App Store に対応"
+    },
+    {
+      "label": "Story Expansion",
+      "value": "1",
+      "suffix": "Novel",
+      "note": "Amazon で小説版を公開中"
+    },
+    {
+      "label": "Stamp Aura",
+      "value": "1",
+      "suffix": "Pack",
+      "note": "LINEスタンプ販売中"
+    }
+  ],
+  "topicsTitle": "最新トピック",
+  "topicsLead": "影桜伝（Ei-Oh-Den）に関連する公開情報をまとめています。アプリ配信ページに加えて、小説版とLINEスタンプの購入先もこちらから確認できます。",
+  "topics": [
+    {
+      "tag": "Novel",
+      "badge": "Kindle Edition",
+      "imageUrl": "https://m.media-amazon.com/images/I/814N36JmTGL._SL1500_.jpg",
+      "title": "影桜伝（Ei-Oh-Den）小説版 絶賛発売中!!",
+      "description": "Amazon で購入できる小説版です。作品世界をテキストでじっくり楽しみたい方はこちらから確認できます。",
+      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ",
+      "cta": "小説を購入する"
+    },
+    {
+      "tag": "LINE",
+      "badge": "LINE STORE",
+      "title": "影桜伝（Ei-Oh-Den）LINEスタンプを販売中です",
+      "description": "LINE STORE で購入できる公式スタンプです。キャラクターの雰囲気を日常のトークでも使えます。",
+      "url": "https://store.line.me/stickershop/product/33347242/ja",
+      "cta": "LINEスタンプを見る"
+    }
+  ],
+  "summaryTitle": "検索向け要約",
+  "summaryItems": [
+    "このアプリは個人情報を収集・保存・共有しません。",
+    "アカウント登録は不要です。",
+    "トラッキングや広告用の外部データ収集は行っていません。",
+    "カメラ、マイク、位置情報、連絡先などの機微な権限は必要ありません。",
+    "関連コンテンツとして、小説版とLINEスタンプの購入先も案内しています。"
+  ],
+  "faqTitle": "よくある質問",
+  "faqs": [
+    {
+      "question": "影桜伝（Ei-Oh-Den）は個人情報を集めますか？",
+      "answer": "いいえ。名前、メールアドレス、電話番号、連絡先、正確な位置情報など、個人を特定できる情報は収集しません。"
+    },
+    {
+      "question": "このアプリに特別な権限は必要ですか？",
+      "answer": "いいえ。カメラ、マイク、位置情報、連絡先などの機微な機能に対する特別な権限は必要ありません。"
+    },
+    {
+      "question": "外部の分析ツールや広告 SDK は使っていますか？",
+      "answer": "現在は利用していません。将来利用する場合は、このページにサービス名と目的を明記します。"
+    },
+    {
+      "question": "問い合わせ先はどこですか？",
+      "answer": "ページ内に記載している X アカウントから連絡できます。ストアリンクから Google Play と App Store の配信ページにも移動できます。"
+    },
+    {
+      "question": "影桜伝（Ei-Oh-Den）の小説版はありますか？",
+      "answer": "あります。Amazon の販売ページへのリンクをこのページ上部のトピック欄に掲載しています。"
+    },
+    {
+      "question": "LINEスタンプはありますか？",
+      "answer": "あります。LINE STORE の購入ページへのリンクをこのページ上部のトピック欄に掲載しています。"
+    }
+  ],
   "contactNote": "質問や連絡はこの X プロフィールからお願いします。",
   "duckBubble": "ふう、僕苦手カモ",
   "fightBubble": "ファイト!!",
@@ -60,7 +179,7 @@
     "lastUpdated": {
       "title": "最終更新日",
       "body": [
-        "最終更新日: 2026年3月4日"
+        "最終更新日: 2026年3月24日"
       ]
     }
   }

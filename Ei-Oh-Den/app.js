@@ -12,6 +12,12 @@ const butterflyPath = "./images/choucho_ninja.png";
 const equippedPath = "./images/Equipped.png";
 const appStoreBadgePath = "../common/appstore_badge.svg";
 const googlePlayBadgePath = "../common/Google_Play_Badge_JA.svg";
+const appStoreUrl = "https://apps.apple.com/jp/app/ei-oh-den/id6760655882";
+const googlePlayUrl = "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden";
+const novelUrl = "https://www.amazon.co.jp/dp/B0GT46TYHJ";
+const lineStickerUrl = "https://store.line.me/stickershop/product/33347242/ja";
+const defaultPageUrl = "https://kouheiichikawa.github.io/policy/Ei-Oh-Den/";
+const defaultImageUrl = "https://kouheiichikawa.github.io/policy/app-icon.png";
 const petals = Array.from({ length: 28 }, (_, index) => index + 1);
 const lights = Array.from({ length: 8 }, (_, index) => index + 1);
 
@@ -129,6 +135,144 @@ async function loadMessages(language) {
     throw new Error(`Failed to load ${normalized}`);
   }
   return response.json();
+}
+
+function getCanonicalUrl() {
+  try {
+    const url = new URL(window.location.href);
+    url.hash = "";
+    url.search = "";
+    return url.href;
+  } catch {
+    return defaultPageUrl;
+  }
+}
+
+function getImageUrl() {
+  try {
+    return new URL("../app-icon.png", window.location.href).href;
+  } catch {
+    return defaultImageUrl;
+  }
+}
+
+function ensureMeta(selector, attributes) {
+  let node = document.head.querySelector(selector);
+  if (!node) {
+    node = document.createElement("meta");
+    document.head.appendChild(node);
+  }
+
+  Object.entries(attributes).forEach(([key, value]) => {
+    node.setAttribute(key, value);
+  });
+}
+
+function ensureLink(selector, attributes) {
+  let node = document.head.querySelector(selector);
+  if (!node) {
+    node = document.createElement("link");
+    document.head.appendChild(node);
+  }
+
+  Object.entries(attributes).forEach(([key, value]) => {
+    node.setAttribute(key, value);
+  });
+}
+
+function updateStructuredData(copy, language) {
+  const pageUrl = getCanonicalUrl();
+  const imageUrl = getImageUrl();
+  const faqEntities = copy.faqs.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer
+    }
+  }));
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        name: copy.pageTitle,
+        url: pageUrl,
+        description: copy.seoDescription,
+        inLanguage: language,
+        about: {
+          "@type": "MobileApplication",
+          name: copy.appName
+        }
+      },
+      {
+        "@type": "MobileApplication",
+        name: copy.appName,
+        applicationCategory: "GameApplication",
+        operatingSystem: "Android, iOS",
+        image: imageUrl,
+        downloadUrl: [googlePlayUrl, appStoreUrl],
+        publisher: {
+          "@type": "Organization",
+          name: "Kohei Elimi Lab"
+        }
+      },
+      {
+        "@type": "Book",
+        name: copy.topics[0].title,
+        url: novelUrl,
+        isRelatedTo: {
+          "@type": "MobileApplication",
+          name: copy.appName
+        }
+      },
+      {
+        "@type": "Product",
+        name: copy.topics[1].title,
+        url: lineStickerUrl,
+        category: "Digital Stickers",
+        isRelatedTo: {
+          "@type": "MobileApplication",
+          name: copy.appName
+        }
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faqEntities
+      }
+    ]
+  };
+  const node = document.getElementById("structured-data");
+  if (node) {
+    node.textContent = JSON.stringify(data);
+  }
+}
+
+function updateHead(copy, language) {
+  const pageUrl = getCanonicalUrl();
+  const imageUrl = getImageUrl();
+
+  document.title = copy.pageTitle;
+  document.documentElement.lang = copy.htmlLang;
+
+  ensureMeta('meta[name="description"]', { name: "description", content: copy.seoDescription });
+  ensureMeta('meta[name="robots"]', {
+    name: "robots",
+    content: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+  });
+  ensureMeta('meta[property="og:type"]', { property: "og:type", content: "website" });
+  ensureMeta('meta[property="og:title"]', { property: "og:title", content: copy.pageTitle });
+  ensureMeta('meta[property="og:description"]', { property: "og:description", content: copy.seoDescription });
+  ensureMeta('meta[property="og:url"]', { property: "og:url", content: pageUrl });
+  ensureMeta('meta[property="og:image"]', { property: "og:image", content: imageUrl });
+  ensureMeta('meta[property="og:site_name"]', { property: "og:site_name", content: copy.appName });
+  ensureMeta('meta[name="twitter:card"]', { name: "twitter:card", content: "summary_large_image" });
+  ensureMeta('meta[name="twitter:title"]', { name: "twitter:title", content: copy.pageTitle });
+  ensureMeta('meta[name="twitter:description"]', { name: "twitter:description", content: copy.seoDescription });
+  ensureMeta('meta[name="twitter:image"]', { name: "twitter:image", content: imageUrl });
+  ensureLink('link[rel="canonical"]', { rel: "canonical", href: pageUrl });
+
+  updateStructuredData(copy, language);
 }
 
 function EffectLayer() {
@@ -249,26 +393,136 @@ function Hero({ copy, language, onLanguageChange }) {
     h(LanguageToggle, { language, labels: { en: "English", ja: "日本語" }, onChange: onLanguageChange }),
     h(
       "div",
-      { className: "hero-brand" },
-      h("img", { className: "brand-emblem", src: logoPath, alt: "Kagezakura Den icon" })
-    ),
-    h(
-      "div",
       { className: "hero-grid" },
       h(
         "div",
+        { className: "hero-brand" },
+        h("img", { className: "brand-emblem", src: logoPath, alt: "Kagezakura Den icon" })
+      ),
+      h(
+        "div",
         { className: "hero-copy" },
+        h(
+          "div",
+          { className: "hero-pill-column" },
+          ...copy.heroPills.map((item) =>
+            h(
+              "a",
+              {
+                key: item.label,
+                className: "hero-side-pill",
+                href: item.url,
+                target: item.url.startsWith("#") ? undefined : "_blank",
+                rel: item.url.startsWith("#") ? undefined : "noreferrer"
+              },
+              item.label
+            )
+          )
+        ),
         h("h1", null, copy.title),
         h("p", { className: "app-name" }, copy.appName),
         h("p", { className: "lead" }, copy.lead),
         h("div", { className: "statement-pill" }, h(SparkleIcon, null), copy.highlight)
-      ),
-      h(
-        "div",
-        { className: "hero-visual" },
-        h("div", { className: "hero-visual-glow" }),
-        h("img", { className: "hero-image", src: heroImagePath, alt: "Ei-Oh-Den character group illustration" })
       )
+    )
+  );
+}
+
+function TopicsSection({ copy }) {
+  const [featured, ...secondary] = copy.topics;
+
+  return h(
+    "section",
+    { id: "topics", className: "topics-section", "aria-label": copy.topicsTitle },
+    h(
+      "div",
+      { className: "topics-heading" },
+      h("p", { className: "topics-kicker" }, copy.topicsTitle),
+      h("p", { className: "topics-lead" }, copy.topicsLead)
+    ),
+    h(
+      "div",
+      { className: "topics-grid" },
+      h(
+        "article",
+        { key: featured.url, className: "policy-card topic-card topic-card-featured" },
+        h(
+          "div",
+          { className: "topic-featured-head" },
+          h("span", { className: "topic-tag" }, `#${featured.tag}`),
+          h("div", { className: `topic-badge topic-badge-${featured.tag.toLowerCase()}` }, featured.badge)
+        ),
+        h(
+          "div",
+          { className: "topic-featured-layout" },
+          featured.imageUrl
+            ? h(
+                "div",
+                { className: "topic-image-wrap" },
+                h("img", { className: "topic-image", src: featured.imageUrl, alt: `${featured.title} cover` })
+              )
+            : null,
+          h(
+            "div",
+            { className: "topic-featured-copy" },
+            h("h2", { className: "topic-title topic-title-featured" }, featured.title),
+            h("p", { className: "topic-description" }, featured.description),
+            h(
+              "a",
+              { className: "topic-link", href: featured.url, target: "_blank", rel: "noreferrer" },
+              featured.cta
+            )
+          )
+        )
+      ),
+      ...secondary.map((item) =>
+        h(
+          "article",
+          { key: item.url, className: "policy-card topic-card" },
+          h("span", { className: "topic-tag" }, `#${item.tag}`),
+          h("div", { className: `topic-badge topic-badge-${item.tag.toLowerCase()}` }, item.badge),
+          item.imageUrl
+            ? h("img", { className: "topic-image", src: item.imageUrl, alt: `${item.title} cover` })
+            : null,
+          h("h2", { className: "topic-title" }, item.title),
+          h("p", { className: "topic-description" }, item.description),
+          h(
+            "a",
+            { className: "topic-link", href: item.url, target: "_blank", rel: "noreferrer" },
+            item.cta
+          )
+        )
+      )
+    )
+  );
+}
+
+function DashboardSection({ copy }) {
+  const icons = [ShieldIcon, ShrineIcon, ScrollIcon, SparkleIcon];
+
+  return h(
+    "section",
+    { className: "dashboard-section", "aria-label": copy.dashboardTitle },
+    h(
+      "div",
+      { className: "dashboard-grid" },
+      ...copy.dashboardStats.map((item, index) => {
+        const Icon = icons[index % icons.length];
+
+        return h(
+          "article",
+          { key: item.label, className: "dashboard-card" },
+          h("span", { className: "dashboard-icon" }, h(Icon, null)),
+          h("p", { className: "dashboard-label" }, item.label),
+          h(
+            "p",
+            { className: "dashboard-value" },
+            h("span", { className: "dashboard-value-number" }, item.value),
+            h("span", { className: "dashboard-value-suffix" }, item.suffix)
+          ),
+          h("p", { className: "dashboard-note" }, item.note)
+        );
+      })
     )
   );
 }
@@ -277,14 +531,23 @@ function ContactActions(copy) {
   return h(
     "div",
     { className: "contact-actions" },
+    h("span", { className: "store-tag" }, copy.storeTag),
     h(
       "a",
       { className: "contact-link", href: copy.contactUrl, target: "_blank", rel: "noreferrer" },
       h(LinkIcon, null),
       copy.contactLabel
     ),
-    h("div", { className: "store-link appstore-link" }, h("img", { className: "store-badge appstore-badge", src: appStoreBadgePath, alt: "Download on the App Store" })),
-    h("div", { className: "store-link playstore-link" }, h("img", { className: "store-badge playstore-badge", src: googlePlayBadgePath, alt: "Get it on Google Play" }))
+    h(
+      "a",
+      { className: "store-link appstore-link", href: appStoreUrl, target: "_blank", rel: "noreferrer" },
+      h("img", { className: "store-badge appstore-badge", src: appStoreBadgePath, alt: "Download on the App Store" })
+    ),
+    h(
+      "a",
+      { className: "store-link playstore-link", href: googlePlayUrl, target: "_blank", rel: "noreferrer" },
+      h("img", { className: "store-badge playstore-badge", src: googlePlayBadgePath, alt: "Get it on Google Play" })
+    )
   );
 }
 
@@ -384,6 +647,50 @@ function ContentGrid({ copy }) {
   );
 }
 
+function SummarySection({ copy }) {
+  return h(
+    "section",
+    { className: "answer-section", "aria-label": copy.summaryTitle },
+    h(
+      "article",
+      { className: "policy-card answer-card" },
+      h(
+        "h2",
+        { className: "card-heading" },
+        h("span", { className: "icon-badge" }, h(ShieldIcon, null)),
+        copy.summaryTitle
+      ),
+      h(
+        "ul",
+        { className: "answer-list" },
+        ...copy.summaryItems.map((item) => h("li", { key: item }, item))
+      )
+    ),
+    h(
+      "article",
+      { className: "policy-card answer-card" },
+      h(
+        "h2",
+        { className: "card-heading" },
+        h("span", { className: "icon-badge" }, h(ScrollIcon, null)),
+        copy.faqTitle
+      ),
+      h(
+        "div",
+        { className: "faq-list" },
+        ...copy.faqs.map((item) =>
+          h(
+            "section",
+            { key: item.question, className: "faq-item" },
+            h("h3", { className: "faq-question" }, item.question),
+            h("p", { className: "faq-answer" }, item.answer)
+          )
+        )
+      )
+    )
+  );
+}
+
 function LoadingState(message) {
   return h(
     React.Fragment,
@@ -413,8 +720,7 @@ function App() {
         }
         setCopy(messages);
         setError(false);
-        document.title = messages.pageTitle;
-        document.documentElement.lang = messages.htmlLang;
+        updateHead(messages, language);
         window.localStorage.setItem(storageKey, language);
       })
       .catch(() => {
@@ -467,7 +773,10 @@ function App() {
       "main",
       { className: "page-shell" },
       h(Hero, { copy, language, onLanguageChange: setLanguage }),
+      h(DashboardSection, { copy }),
+      h(TopicsSection, { copy }),
       h(Divider, null),
+      h(SummarySection, { copy }),
       h(ContentGrid, { copy }),
       h("p", { className: "footer" }, copy.footer)
     )

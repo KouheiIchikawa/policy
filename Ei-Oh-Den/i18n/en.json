@@ -6,6 +6,39 @@
   "appName": "Ei-Oh-Den",
   "lead": "Thank you for using this app. Your privacy matters, and this page explains things in a simple way. We want the app to feel safe, calm, and easy to trust.",
   "highlight": "This app does not collect, store, or share personal information.",
+  "heroPills": [
+    {
+      "label": "Now on iOS / Android",
+      "url": "#contact"
+    },
+    {
+      "label": "Novel available",
+      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ"
+    },
+    {
+      "label": "LINE stickers on sale",
+      "url": "https://store.line.me/stickershop/product/33347242/ja"
+    }
+  ],
+  "quickLinksTitle": "Related Links",
+  "quickLinks": [
+    {
+      "label": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden"
+    },
+    {
+      "label": "App Store",
+      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882"
+    },
+    {
+      "label": "Novel",
+      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ"
+    },
+    {
+      "label": "LINE Stickers",
+      "url": "https://store.line.me/stickershop/product/33347242/ja"
+    }
+  ],
   "footer": "© 2026 Kohei Elimi Lab",
   "detailsLabel": "Privacy policy details",
   "langLabel": "Language",
@@ -15,6 +48,92 @@
   },
   "contactUrl": "https://x.com/sio_sio_bull",
   "contactLabel": "X @sio_sio_bull",
+  "storeTag": "#DownloadApp",
+  "seoDescription": "Official Ei-Oh-Den privacy policy and latest topics. Find clear details about personal data collection, permissions, contact information, plus links to the novel and LINE stickers.",
+  "dashboardTitle": "Sakura Status Dashboard",
+  "dashboardLead": "A quick visual snapshot of the current public Ei-Oh-Den release status.",
+  "dashboardStats": [
+    {
+      "label": "Privacy Power",
+      "value": "100",
+      "suffix": "%",
+      "note": "No collection, storage, or sharing of personal data"
+    },
+    {
+      "label": "Store Portals",
+      "value": "2",
+      "suffix": "Links",
+      "note": "Available on Google Play and the App Store"
+    },
+    {
+      "label": "Story Expansion",
+      "value": "1",
+      "suffix": "Novel",
+      "note": "Novel edition available on Amazon"
+    },
+    {
+      "label": "Stamp Aura",
+      "value": "1",
+      "suffix": "Pack",
+      "note": "Official LINE sticker pack on sale"
+    }
+  ],
+  "topicsTitle": "Latest Topics",
+  "topicsLead": "This page also collects the latest public Ei-Oh-Den related links. Alongside app download links, you can find the novel and LINE stickers here.",
+  "topics": [
+    {
+      "tag": "Novel",
+      "badge": "Kindle Edition",
+      "imageUrl": "https://m.media-amazon.com/images/I/814N36JmTGL._SL1500_.jpg",
+      "title": "Ei-Oh-Den Novel Out Now!!",
+      "description": "The novel edition is available on Amazon for readers who want to enjoy the story world in text form.",
+      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ",
+      "cta": "Buy the Novel"
+    },
+    {
+      "tag": "LINE",
+      "badge": "LINE STORE",
+      "title": "Ei-Oh-Den LINE stickers are on sale",
+      "description": "Official stickers are available on LINE STORE so you can use the characters in everyday chats.",
+      "url": "https://store.line.me/stickershop/product/33347242/ja",
+      "cta": "View LINE Stickers"
+    }
+  ],
+  "summaryTitle": "Search Summary",
+  "summaryItems": [
+    "This app does not collect, store, or share personal information.",
+    "No account registration is required.",
+    "No tracking or advertising-related third-party data collection is used.",
+    "No special permissions are required for camera, microphone, location, or contacts.",
+    "This page also links to the Ei-Oh-Den novel and official LINE stickers."
+  ],
+  "faqTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "question": "Does Ei-Oh-Den collect personal information?",
+      "answer": "No. The app does not collect personally identifiable information such as names, email addresses, phone numbers, contacts, or precise location."
+    },
+    {
+      "question": "Does the app require sensitive permissions?",
+      "answer": "No. It does not require special permissions for camera, microphone, location, contacts, or similar sensitive features."
+    },
+    {
+      "question": "Does Ei-Oh-Den use analytics or advertising SDKs?",
+      "answer": "Not at this time. If third-party services are added later, this page will be updated with the service names and their purposes."
+    },
+    {
+      "question": "How can I contact the developer?",
+      "answer": "You can use the X account listed on this page. The page also includes direct links to the Google Play and App Store listings."
+    },
+    {
+      "question": "Is there an Ei-Oh-Den novel?",
+      "answer": "Yes. This page includes a topic card linking directly to the Amazon product page for the novel."
+    },
+    {
+      "question": "Are there Ei-Oh-Den LINE stickers?",
+      "answer": "Yes. This page includes a topic card linking directly to the LINE STORE sticker page."
+    }
+  ],
   "contactNote": "Questions or requests can be sent through this X profile.",
   "duckBubble": "Phew, I'm not great at this quack...",
   "fightBubble": "You can do it!!",
@@ -60,7 +179,7 @@
     "lastUpdated": {
       "title": "Last Updated",
       "body": [
-        "Last updated: March 4, 2026"
+        "Last updated: March 24, 2026"
       ]
     }
   }
