@@ -17,7 +17,7 @@ const googlePlayUrl = "https://play.google.com/store/apps/details?id=com.koheiel
 const novelUrl = "https://www.amazon.co.jp/dp/B0GT46TYHJ";
 const lineStickerUrl = "https://store.line.me/stickershop/product/33347242/ja";
 const defaultPageUrl = "https://kouheiichikawa.github.io/policy/Ei-Oh-Den/";
-const defaultImageUrl = "https://kouheiichikawa.github.io/policy/app-icon.png";
+const defaultImageUrl = "https://kouheiichikawa.github.io/policy/Ei-Oh-Den/images/icon_original.png";
 const petals = Array.from({ length: 28 }, (_, index) => index + 1);
 const lights = Array.from({ length: 8 }, (_, index) => index + 1);
 
@@ -150,7 +150,7 @@ function getCanonicalUrl() {
 
 function getImageUrl() {
   try {
-    return new URL("../app-icon.png", window.location.href).href;
+    return new URL("./images/icon_original.png", window.location.href).href;
   } catch {
     return defaultImageUrl;
   }
