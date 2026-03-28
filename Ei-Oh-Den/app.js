@@ -303,6 +303,13 @@ function getClickEventName(item) {
   return null;
 }
 
+function getClickEventParams(item, fallbackLabel) {
+  return {
+    link_url: item.url,
+    link_label: item.label || fallbackLabel || item.name || item.kind || ""
+  };
+}
+
 function ensureMeta(selector, attributes) {
   let node = document.head.querySelector(selector);
   if (!node) {
@@ -599,7 +606,7 @@ function HeroCTA({ item, compact }) {
     {
       className,
       href: item.url,
-      onClick: eventName ? () => trackEvent(eventName) : undefined,
+      onClick: eventName ? () => trackEvent(eventName, getClickEventParams(item)) : undefined,
       target: item.url.startsWith("#") ? undefined : "_blank",
       rel: item.url.startsWith("#") ? undefined : "noreferrer"
     },
@@ -811,7 +818,13 @@ function StoreSnapshotSection({ storeData, language }) {
             {
               className: "store-link",
               href: item.url,
-              onClick: getClickEventName({ kind: item.id }) ? () => trackEvent(getClickEventName({ kind: item.id })) : undefined,
+              onClick: getClickEventName({ kind: item.id })
+                ? () =>
+                    trackEvent(
+                      getClickEventName({ kind: item.id }),
+                      getClickEventParams({ kind: item.id, url: item.url, label: `${item.name} ${uiCopy.storeAction}`.trim(), name: item.name })
+                    )
+                : undefined,
               target: "_blank",
               rel: "noreferrer"
             },
@@ -1062,7 +1075,7 @@ function FooterSection({ copy }) {
             key: item.label,
             href: item.url,
             className: "footer-link",
-            onClick: getClickEventName(item) ? () => trackEvent(getClickEventName(item)) : undefined,
+            onClick: getClickEventName(item) ? () => trackEvent(getClickEventName(item), getClickEventParams(item)) : undefined,
             target: item.external ? "_blank" : undefined,
             rel: item.external ? "noreferrer" : undefined
           },
