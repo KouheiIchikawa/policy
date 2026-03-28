@@ -40,7 +40,7 @@ export function Hero({ content, introHtml }: Props) {
             {content.badge}
           </span>
           <div className="mt-5 space-y-4">
-            <h1 className="text-balance text-4xl font-black tracking-tight text-white drop-shadow-[0_0_34px_rgba(93,246,255,0.42)] sm:text-5xl lg:text-6xl">
+            <h1 className="headline-tight-wrap text-4xl font-black tracking-tight text-white drop-shadow-[0_0_34px_rgba(93,246,255,0.42)] sm:text-5xl lg:text-6xl">
               {content.title}
             </h1>
             <p className="max-w-2xl text-lg font-medium text-cyan-50/[0.88] sm:text-xl">

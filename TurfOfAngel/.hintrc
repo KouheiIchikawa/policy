@@ -2,6 +2,7 @@
   "hints": {
     "typescript-config/strict": "off",
     "typescript-config/consistent-casing": "off",
-    "compat-api/html": "off"
+    "compat-api/html": "off",
+    "compat-api/css": "off"
   }
 }

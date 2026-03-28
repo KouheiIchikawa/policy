@@ -10,6 +10,8 @@
 
 html {
   scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -27,12 +29,42 @@ body {
   min-height: 100vh;
 }
 
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  appearance: button;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  vertical-align: baseline;
+}
+
 ::selection {
   background: rgba(93, 246, 255, 0.35);
   color: white;
 }
 
 @layer components {
+  .headline-tight-wrap {
+    overflow-wrap: anywhere;
+  }
+
+  .toc-label-clamp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
   .glass-panel {
     @apply relative border border-white/[0.18] bg-[rgba(10,18,36,0.56)] backdrop-blur-2xl;
     box-shadow:

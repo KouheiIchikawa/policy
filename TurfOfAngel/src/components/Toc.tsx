@@ -34,7 +34,7 @@ export function Toc({ title, items, activeId, onSelect }: Props) {
                     : 'bg-white/[0.08] text-slate-100/[0.86] hover:bg-white/[0.14] hover:text-white'
                 }`}
               >
-                <span className="line-clamp-2">{item.label}</span>
+                <span className="toc-label-clamp">{item.label}</span>
                 <span
                   className={`ml-3 h-2.5 w-2.5 rounded-full transition ${
                     active ? 'bg-cyan-200 shadow-glow' : 'bg-slate-400/[0.4] group-hover:bg-cyan-200/[0.7]'
