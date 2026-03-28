@@ -1,186 +1,239 @@
-﻿{
+{
   "htmlLang": "ja",
-  "pageTitle": "プライバシーポリシー - 影桜伝",
-  "badge": "やさしく読めるプライバシー",
-  "title": "Privacy Policy",
-  "appName": "影桜伝（Ei-Oh-Den）",
-  "lead": "このアプリをご利用いただきありがとうございます。あなたのプライバシーは大切であり、このページでは内容をできるだけシンプルにご案内します。安心して使える、やわらかい体験を目指しています。",
-  "highlight": "このアプリは個人情報を収集・保存・共有しません。",
-  "heroPills": [
-    {
-      "label": "iOS / Android 配信中",
-      "url": "#contact"
-    },
-    {
-      "label": "小説版あり",
-      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ"
-    },
-    {
-      "label": "LINEスタンプ販売中",
-      "url": "https://store.line.me/stickershop/product/33347242/ja"
-    }
+  "siteName": "影桜伝 公式サイト",
+  "breadcrumbCurrent": "公式ランディングページ",
+  "pageTitle": "影桜伝 | Ei-Oh-DeN 公式サイト | iOS / Android / Kindle",
+  "appName": "影桜伝",
+  "altNames": ["影桜伝", "Ei-Oh-DeN"],
+  "genres": ["和風ダークファンタジー", "歴史ファンタジー", "戦略育成"],
+  "seoDescription": "影桜伝 / Ei-Oh-DeN 公式サイト。Kohei Elimi Labによる歴史ファンタジー作品で、スマホアプリ・Kindle小説・LINEスタンプの公式情報を掲載しています。",
+  "seoKeywords": [
+    "影桜伝",
+    "Ei-Oh-Den",
+    "Ei-Oh-DeN",
+    "Kohei Elimi Lab",
+    "iOS",
+    "Android",
+    "Kindle",
+    "LINEスタンプ",
+    "歴史ファンタジー",
+    "和風ダークファンタジー",
+    "初心者向け攻略"
   ],
-  "quickLinksTitle": "関連リンク",
-  "quickLinks": [
-    {
-      "label": "Google Play",
-      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden"
-    },
-    {
-      "label": "App Store",
-      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882"
-    },
-    {
-      "label": "小説版",
-      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ"
-    },
-    {
-      "label": "LINEスタンプ",
-      "url": "https://store.line.me/stickershop/product/33347242/ja"
-    }
-  ],
-  "footer": "© 2026 Kohei Elimi Lab",
-  "detailsLabel": "プライバシーポリシー詳細",
-  "langLabel": "言語",
-  "languages": {
-    "en": "English",
-    "ja": "日本語"
+  "ctaGroupLabel": "主要リンク",
+  "stickyMore": "Kindle / LINE",
+  "hero": {
+    "title": "影桜伝",
+    "subtitle": "桜の影に、戦いの記憶が宿る。",
+    "description": "育てて、挑んで、物語に沈む歴史ファンタジー。",
+    "supporting": "iOS / Android 配信中。200円の有料アプリ。Kindle小説とLINEスタンプも展開しています。",
+    "meta": [
+      "Kohei Elimi Lab 制作",
+      "iOS / Android 配信中",
+      "200円の有料アプリ",
+      "初心者向け攻略あり",
+      "Kindle小説あり",
+      "LINEスタンプあり"
+    ]
   },
-  "contactUrl": "https://x.com/sio_sio_bull",
-  "contactLabel": "X @sio_sio_bull",
-  "storeTag": "#アプリダウンロード",
-  "seoDescription": "影桜伝（Ei-Oh-Den）の公式プライバシーポリシーと最新トピック。個人情報の収集有無、必要な権限、問い合わせ先に加え、小説版とLINEスタンプの購入先も案内します。",
-  "dashboardTitle": "桜戦術ダッシュボード",
-  "dashboardLead": "影桜伝（Ei-Oh-Den）の公開状況を、ひと目で確認できるステータス表示です。",
-  "dashboardStats": [
+  "ctas": [
     {
-      "label": "Privacy Power",
-      "value": "100",
-      "suffix": "%",
-      "note": "個人情報の収集・保存・共有なし"
+      "label": "App Storeで遊ぶ",
+      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882",
+      "kind": "appstore"
     },
     {
-      "label": "Store Portals",
-      "value": "2",
-      "suffix": "Links",
-      "note": "Google Play / App Store に対応"
+      "label": "Google Playで遊ぶ",
+      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden",
+      "kind": "playstore"
     },
     {
-      "label": "Story Expansion",
-      "value": "1",
-      "suffix": "Novel",
-      "note": "Amazon で小説版を公開中"
+      "label": "Kindle小説を読む",
+      "eyebrow": "RELATED WORK",
+      "url": "https://amzn.asia/d/0dyYraXp"
     },
     {
-      "label": "Stamp Aura",
-      "value": "1",
-      "suffix": "Pack",
-      "note": "LINEスタンプ販売中"
+      "label": "LINEスタンプを見る",
+      "eyebrow": "OFFICIAL GOODS",
+      "url": "https://store.line.me/stickershop/product/33347242/ja"
     }
   ],
-  "topicsTitle": "最新トピック",
-  "topicsLead": "影桜伝（Ei-Oh-Den）に関連する公開情報をまとめています。アプリ配信ページに加えて、小説版とLINEスタンプの購入先もこちらから確認できます。",
-  "topics": [
+  "screenshots": {
+    "kicker": "Game Overview",
+    "title": "Ei-Oh-DeNの世界を切り取る",
+    "lead": "戦の気配、静かな拠り所、人の面影。それぞれの景色から、影桜伝の歴史ファンタジーが立ち上がれ！！",
+    "items": [
+      {
+        "eyebrow": "BATTLE",
+        "title": "戦闘",
+        "body": "張りつめた空気の中で、育成した力をぶつけていく場面。",
+        "alt": "影桜伝 Ei-Oh-DeN の戦闘シーンのスクリーンショット"
+      },
+      {
+        "eyebrow": "BASE",
+        "title": "拠点 / 宿屋",
+        "body": "次の挑戦へ向けて整える、静かな拠点の時間。",
+        "alt": "影桜伝 Ei-Oh-DeN の宿屋と拠点画面のスクリーンショット"
+      },
+      {
+        "eyebrow": "WORLD",
+        "title": "キャラクター / 世界観",
+        "body": "和の闇と物語の気配が立ち上がる、世界観の断片。",
+        "alt": "影桜伝 Ei-Oh-DeN のキャラクターと世界観が伝わるスクリーンショット"
+      }
+    ]
+  },
+  "overview": {
+    "kicker": "Game Overview",
+    "title": "ひと目でわかる作品の輪郭",
+    "lead": "和風ダークファンタジーの手触りと、育成を積み上げていく攻略の面白さを、スマホでじっくり味わえる作品です。",
+    "stats": [
+      {
+        "label": "GENRE",
+        "value": "和風ダークファンタジー",
+        "note": "歴史ファンタジーの空気と戦略育成の面白さが重なる"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "iOS / Android",
+        "note": "スマホで遊べる有料アプリとして配信中"
+      },
+      {
+        "label": "PRICE",
+        "value": "200円",
+        "note": "手に取りやすい価格で、濃い空気を楽しめる"
+      }
+    ]
+  },
+  "features": {
+    "kicker": "Features",
+    "title": "作品の魅力",
+    "items": [
+      {
+        "eyebrow": "WORLD",
+        "title": "歴史ファンタジーの世界観",
+        "body": "影桜伝 / Ei-Oh-DeN は、和の気配と物語の積み重なりが静かに広がる歴史ファンタジー作品です。やわらかな空気の中に、人物や時代の面影が少しずつ立ち上がっていきます。"
+      },
+      {
+        "eyebrow": "GAMEPLAY",
+        "title": "育成と攻略の積み上がりが面白い",
+        "body": "序盤から育成ルートを考える楽しさがあり、戦略育成アプリとしての手応えがあります。強くなる過程そのものが、次の一手を考える遊びになります。"
+      },
+      {
+        "eyebrow": "EXPANSION",
+        "title": "Kindle小説とLINEスタンプで余韻が続く",
+        "body": "ゲームを気に入ったあとも、Kindle小説やLINEスタンプで作品の気配を持ち帰れます。遊び終えたあとに自然につながる関連作品です。"
+      }
+    ]
+  },
+  "quickGuide": {
+    "kicker": "Quick攻略",
+    "title": "初心者向け攻略",
+    "lead": "最初の数十分を少し楽にする、序盤の基本ルートです。",
+    "badge": "初心者向け攻略あり",
+    "steps": [
+      {
+        "title": "ステージ01 フェーズ01のかかしで撤退育成",
+        "body": "序盤はステージ01のフェーズ01にいるかかしを相手にして撤退し、レベル上げを進めるのが安定です。無理に先へ進むよりも、まずは安全に育成する流れが有効です。"
+      },
+      {
+        "title": "力を30前後まで上げる",
+        "body": "戦力が足りないまま進めるより、力を30前後まで上げてから進行すると安定します。序盤の攻略テンポが大きく変わります。"
+      },
+      {
+        "title": "派遣を活用する",
+        "body": "派遣を並行して回すと育成効率が上がります。攻略だけに集中せず、派遣も組み合わせて強化の土台を作るのがコツです。"
+      }
+    ],
+    "sideTitle": "攻略メモ",
+    "points": [
+      "まずは撤退育成でリスクを抑える",
+      "力30前後を序盤の目標にする",
+      "派遣を回して成長速度を上げる",
+      "初見でも読みやすいTipsとして整理"
+    ]
+  },
+  "relatedKicker": "Related Works",
+  "relatedTitle": "小説とLINEスタンプ",
+  "relatedLead": "",
+  "relatedWorks": [
     {
-      "tag": "Novel",
-      "badge": "Kindle Edition",
-      "imageUrl": "https://m.media-amazon.com/images/I/814N36JmTGL._SL1500_.jpg",
-      "title": "影桜伝（Ei-Oh-Den）小説版 絶賛発売中!!",
-      "description": "Amazon で購入できる小説版です。作品世界をテキストでじっくり楽しみたい方はこちらから確認できます。",
-      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ",
-      "cta": "小説を購入する"
+      "eyebrow": "KINDLE NOVEL",
+      "title": "影桜伝 / Ei-Oh-DeN の世界を、より深く。",
+      "body": "ゲームでは語りきれない物語を描いた、Kindle小説版。\nKohei Elimi Labによる初執筆作品。\nキャラクターの背景や想い、戦いの意味を描き、挿絵付きで誰でも読みやすくしております。",
+      "highlight": "「影桜伝とは何か」――その核心に触れる一冊。",
+      "cta": "Kindle小説を読む",
+      "url": "https://amzn.asia/d/0dyYraXp",
+      "imageUrl": "https://m.media-amazon.com/images/I/814N36JmTGL._SY522_.jpg",
+      "imageAlt": "影桜伝 Ei-Oh-DeN Kindle小説の表紙"
     },
     {
-      "tag": "LINE",
-      "badge": "LINE STORE",
-      "title": "影桜伝（Ei-Oh-Den）LINEスタンプを販売中です",
-      "description": "LINE STORE で購入できる公式スタンプです。キャラクターの雰囲気を日常のトークでも使えます。",
+      "eyebrow": "LINE STICKERS",
+      "title": "LINEスタンプ 好評販売中",
+      "body": "作品の空気を日常の会話にも連れていける、公式 LINE スタンプです。軽く触れられる関連作品として置いています。",
+      "cta": "LINEスタンプを見る",
       "url": "https://store.line.me/stickershop/product/33347242/ja",
-      "cta": "LINEスタンプを見る"
+      "imageUrl": "https://kouheiichikawa.github.io/policy/Ei-Oh-Den/images/icon_original.png",
+      "imageAlt": "影桜伝 Ei-Oh-DeN のアイコン画像"
     }
   ],
-  "summaryTitle": "検索向け要約",
-  "summaryItems": [
-    "このアプリは個人情報を収集・保存・共有しません。",
-    "アカウント登録は不要です。",
-    "トラッキングや広告用の外部データ収集は行っていません。",
-    "カメラ、マイク、位置情報、連絡先などの機微な権限は必要ありません。",
-    "関連コンテンツとして、小説版とLINEスタンプの購入先も案内しています。"
-  ],
+  "creator": {
+    "kicker": "Creator",
+    "title": "Kohei Elimi Lab 制作",
+    "body": "影桜伝 / Ei-Oh-DeN は Kohei Elimi Lab が制作しています。ゲーム本編、関連作品、問い合わせ先まで、必要な導線を静かにまとめた公式ページです。",
+    "contactLabel": "Xで連絡する",
+    "contactUrl": "https://x.com/sio_sio_bull"
+  },
+  "faqKicker": "FAQ",
   "faqTitle": "よくある質問",
   "faqs": [
     {
-      "question": "影桜伝（Ei-Oh-Den）は個人情報を集めますか？",
-      "answer": "いいえ。名前、メールアドレス、電話番号、連絡先、正確な位置情報など、個人を特定できる情報は収集しません。"
+      "question": "影桜伝 / Ei-Oh-DeN とは？",
+      "answer": "Kohei Elimi Lab 制作の和風ダークファンタジー・戦略育成アプリです。静かな空気と、少しずつ積み上げる攻略の面白さが特徴です。"
     },
     {
-      "question": "このアプリに特別な権限は必要ですか？",
-      "answer": "いいえ。カメラ、マイク、位置情報、連絡先などの機微な機能に対する特別な権限は必要ありません。"
+      "question": "Ei-Oh-DeN はどこで遊べる？",
+      "answer": "iOS と Android で配信中です。App Store と Google Play の両方から遊べます。"
     },
     {
-      "question": "外部の分析ツールや広告 SDK は使っていますか？",
-      "answer": "現在は利用していません。将来利用する場合は、このページにサービス名と目的を明記します。"
+      "question": "価格はいくら？",
+      "answer": "200円の有料アプリです。"
     },
     {
-      "question": "問い合わせ先はどこですか？",
-      "answer": "ページ内に記載している X アカウントから連絡できます。ストアリンクから Google Play と App Store の配信ページにも移動できます。"
+      "question": "攻略のコツは？",
+      "answer": "初心者向け攻略として、ステージ01 フェーズ01のかかしで撤退育成し、力を30前後まで上げ、派遣も活用する流れをおすすめしています。"
     },
     {
-      "question": "影桜伝（Ei-Oh-Den）の小説版はありますか？",
-      "answer": "あります。Amazon の販売ページへのリンクをこのページ上部のトピック欄に掲載しています。"
-    },
-    {
-      "question": "LINEスタンプはありますか？",
-      "answer": "あります。LINE STORE の購入ページへのリンクをこのページ上部のトピック欄に掲載しています。"
+      "question": "小説やLINEスタンプはある？",
+      "answer": "あります。Kindle小説と公式 LINE スタンプへのリンクをこのページに掲載しています。"
     }
   ],
-  "contactNote": "質問や連絡はこの X プロフィールからお願いします。",
-  "duckBubble": "ふう、僕苦手カモ",
-  "fightBubble": "ファイト!!",
-  "sections": {
-    "intro": {
-      "title": "はじめに",
-      "body": [
-        "このアプリは、ユーザーのプライバシーを大切にしています。内容を読みやすくするため、このポリシーは短く、わかりやすくまとめています。",
-        "今後内容に変更がある場合は、このページを更新して最新情報をお知らせします。"
-      ]
+  "footerLinks": [
+    {
+      "label": "App Store",
+      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882",
+      "external": true
     },
-    "dataCollection": {
-      "title": "データ収集について",
-      "pills": [
-        "個人情報の収集なし",
-        "アカウント不要",
-        "トラッキングなし"
-      ],
-      "body": [
-        "このアプリは個人情報を収集しません。名前、メールアドレス、電話番号、連絡先、正確な位置情報、その他の個人を特定できる情報は取得しません。"
-      ]
+    {
+      "label": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden",
+      "external": true
     },
-    "permissions": {
-      "title": "権限について",
-      "body": [
-        "このアプリは、カメラ、マイク、位置情報、連絡先などの機微な機能に対して特別な権限を必要としません。",
-        "将来プラットフォーム上の権限が必要になった場合は、このポリシーで明確にお知らせします。"
-      ]
+    {
+      "label": "Kindle小説",
+      "url": "https://amzn.asia/d/0dyYraXp",
+      "external": true
     },
-    "thirdParty": {
-      "title": "サードパーティサービス",
-      "body": [
-        "このアプリは現在、分析、広告、外部データ収集のためのサードパーティサービスを利用していません。",
-        "今後必要になった場合は、利用するサービス名と目的をここにわかりやすく記載します。"
-      ]
+    {
+      "label": "LINEスタンプ",
+      "url": "https://store.line.me/stickershop/product/33347242/ja",
+      "external": true
     },
-    "contact": {
-      "title": "お問い合わせ",
-      "body": [
-        "このプライバシーポリシーについて質問がある場合は、以下の X アカウントまでご連絡ください。"
-      ]
-    },
-    "lastUpdated": {
-      "title": "最終更新日",
-      "body": [
-        "最終更新日: 2026年3月24日"
-      ]
+    {
+      "label": "Privacy Policy",
+      "url": "./privacy.html",
+      "external": false
     }
-  }
+  ],
+  "footer": "© 2026 Kohei Elimi Lab"
 }

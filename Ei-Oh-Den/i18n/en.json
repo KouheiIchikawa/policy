@@ -1,186 +1,237 @@
-﻿{
+{
   "htmlLang": "en",
-  "pageTitle": "Privacy Policy - Ei-Oh-Den",
-  "badge": "Gentle and Simple Privacy",
-  "title": "Privacy Policy",
-  "appName": "Ei-Oh-Den",
-  "lead": "Thank you for using this app. Your privacy matters, and this page explains things in a simple way. We want the app to feel safe, calm, and easy to trust.",
-  "highlight": "This app does not collect, store, or share personal information.",
-  "heroPills": [
-    {
-      "label": "Now on iOS / Android",
-      "url": "#contact"
-    },
-    {
-      "label": "Novel available",
-      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ"
-    },
-    {
-      "label": "LINE stickers on sale",
-      "url": "https://store.line.me/stickershop/product/33347242/ja"
-    }
+  "siteName": "Ei-Oh-DeN Official Site",
+  "breadcrumbCurrent": "Official Landing Page",
+  "pageTitle": "Ei-Oh-DeN Official Site | iOS / Android / Kindle",
+  "appName": "Ei-Oh-DeN",
+  "altNames": ["Ei-Oh-Den", "Ei-Oh-DeN"],
+  "genres": ["historical fantasy", "Japanese-inspired fantasy", "strategy growth"],
+  "seoDescription": "Ei-Oh-DeN official site. A historical fantasy work by Kohei Elimi Lab, available as an iOS and Android app with a Kindle novel and official LINE stickers.",
+  "seoKeywords": [
+    "Ei-Oh-Den",
+    "Ei-Oh-DeN",
+    "Kohei Elimi Lab",
+    "iOS",
+    "Android",
+    "Kindle",
+    "LINE stickers",
+    "historical fantasy",
+    "historical fantasy",
+    "beginner guide"
   ],
-  "quickLinksTitle": "Related Links",
-  "quickLinks": [
-    {
-      "label": "Google Play",
-      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden"
-    },
-    {
-      "label": "App Store",
-      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882"
-    },
-    {
-      "label": "Novel",
-      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ"
-    },
-    {
-      "label": "LINE Stickers",
-      "url": "https://store.line.me/stickershop/product/33347242/ja"
-    }
-  ],
-  "footer": "© 2026 Kohei Elimi Lab",
-  "detailsLabel": "Privacy policy details",
-  "langLabel": "Language",
-  "languages": {
-    "en": "English",
-    "ja": "Japanese"
+  "ctaGroupLabel": "Primary links",
+  "stickyMore": "Kindle / LINE",
+  "hero": {
+    "title": "Ei-Oh-DeN",
+    "subtitle": "A quiet historical fantasy carried by memory, distance, and time.",
+    "description": "Grow stronger, choose your route, and step into a broad historical fantasy world.",
+    "supporting": "Now on iOS and Android. A paid app for 200 JPY, with a Kindle novel and official LINE stickers.",
+    "meta": [
+      "Created by Kohei Elimi Lab",
+      "Now on iOS / Android",
+      "Paid app: 200 JPY",
+      "Beginner strategy guide",
+      "Kindle novel available",
+      "LINE stickers available"
+    ]
   },
-  "contactUrl": "https://x.com/sio_sio_bull",
-  "contactLabel": "X @sio_sio_bull",
-  "storeTag": "#DownloadApp",
-  "seoDescription": "Official Ei-Oh-Den privacy policy and latest topics. Find clear details about personal data collection, permissions, contact information, plus links to the novel and LINE stickers.",
-  "dashboardTitle": "Sakura Status Dashboard",
-  "dashboardLead": "A quick visual snapshot of the current public Ei-Oh-Den release status.",
-  "dashboardStats": [
+  "ctas": [
     {
-      "label": "Privacy Power",
-      "value": "100",
-      "suffix": "%",
-      "note": "No collection, storage, or sharing of personal data"
+      "label": "Play on the App Store",
+      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882",
+      "kind": "appstore"
     },
     {
-      "label": "Store Portals",
-      "value": "2",
-      "suffix": "Links",
-      "note": "Available on Google Play and the App Store"
+      "label": "Play on Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden",
+      "kind": "playstore"
     },
     {
-      "label": "Story Expansion",
-      "value": "1",
-      "suffix": "Novel",
-      "note": "Novel edition available on Amazon"
+      "label": "Read the Kindle Novel",
+      "eyebrow": "RELATED WORK",
+      "url": "https://amzn.asia/d/0dyYraXp"
     },
     {
-      "label": "Stamp Aura",
-      "value": "1",
-      "suffix": "Pack",
-      "note": "Official LINE sticker pack on sale"
+      "label": "View LINE Stickers",
+      "eyebrow": "OFFICIAL GOODS",
+      "url": "https://store.line.me/stickershop/product/33347242/ja"
     }
   ],
-  "topicsTitle": "Latest Topics",
-  "topicsLead": "This page also collects the latest public Ei-Oh-Den related links. Alongside app download links, you can find the novel and LINE stickers here.",
-  "topics": [
+  "screenshots": {
+    "kicker": "Screenshots",
+    "title": "A first look at the mood of the game",
+    "lead": "Battle, base, and worldbuilding each show a different side of Ei-Oh-DeN.",
+    "items": [
+      {
+        "eyebrow": "BATTLE",
+        "title": "Battle",
+        "body": "A tense scene where the strength you raised gets tested.",
+        "alt": "Battle screenshot from Ei-Oh-DeN"
+      },
+      {
+        "eyebrow": "BASE",
+        "title": "Base / Inn",
+        "body": "A quieter place to prepare before the next challenge.",
+        "alt": "Inn and base screenshot from Ei-Oh-DeN"
+      },
+      {
+        "eyebrow": "WORLD",
+        "title": "Characters / World",
+        "body": "A glimpse of the world and the atmosphere behind the story.",
+        "alt": "Character and world screenshot from Ei-Oh-DeN"
+      }
+    ]
+  },
+  "overview": {
+    "kicker": "Game Overview",
+    "title": "The shape of the game at a glance",
+    "lead": "Ei-Oh-DeN blends historical fantasy with the pleasure of growth, pacing, and finding a steady rhythm in the early game.",
+    "stats": [
+      {
+        "label": "GENRE",
+        "value": "Historical Fantasy",
+        "note": "A calm Japanese-inspired fantasy atmosphere with strategy-focused growth"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "iOS / Android",
+        "note": "Released as a paid mobile app"
+      },
+      {
+        "label": "PRICE",
+        "value": "200 JPY",
+        "note": "Accessible pricing for a story-rich mobile release"
+      }
+    ]
+  },
+  "features": {
+    "kicker": "Features",
+    "title": "What makes Ei-Oh-DeN stand out",
+    "items": [
+      {
+        "eyebrow": "WORLD",
+        "title": "A historical fantasy world",
+        "body": "Ei-Oh-DeN carries a Japanese-inspired atmosphere with a quieter, more reflective sense of scale."
+      },
+      {
+        "eyebrow": "GAMEPLAY",
+        "title": "Growth and strategy are part of the appeal",
+        "body": "The fun starts early because players can shape their growth route from the beginning. Getting stronger is not separate from the game flow, it is the game flow."
+      },
+      {
+        "eyebrow": "EXPANSION",
+        "title": "The world continues through a Kindle novel and LINE stickers",
+        "body": "If the game stays with you, the Kindle novel and official LINE stickers give you more ways to remain inside its world."
+      }
+    ]
+  },
+  "quickGuide": {
+    "kicker": "Quick Guide",
+    "title": "Beginner strategy",
+    "lead": "A simple early route that makes the opening stretch easier to settle into.",
+    "badge": "Beginner guide included",
+    "steps": [
+      {
+        "title": "Farm the scarecrow in Stage 01 Phase 01 and retreat",
+        "body": "In the early game, a stable route is to fight the scarecrow in Stage 01 Phase 01 and retreat while leveling up. It reduces risk and builds a stronger base."
+      },
+      {
+        "title": "Raise Strength to around 30",
+        "body": "A practical early goal is to raise Strength to around 30 before pushing further. This makes progression more stable."
+      },
+      {
+        "title": "Use dispatch missions",
+        "body": "Dispatch missions help improve growth efficiency. Running them alongside your normal progression helps the early game feel smoother."
+      }
+    ],
+    "sideTitle": "Guide notes",
+    "points": [
+      "Start with low-risk retreat growth",
+      "Set Strength 30 as the early benchmark",
+      "Use dispatch to improve efficiency",
+      "Kept visible as a real beginner tip box"
+    ]
+  },
+  "relatedKicker": "Related Works",
+  "relatedTitle": "Kindle novel and LINE stickers",
+  "relatedLead": "For players who want to stay a little longer in the world after the game itself.",
+  "relatedWorks": [
     {
-      "tag": "Novel",
-      "badge": "Kindle Edition",
-      "imageUrl": "https://m.media-amazon.com/images/I/814N36JmTGL._SL1500_.jpg",
-      "title": "Ei-Oh-Den Novel Out Now!!",
-      "description": "The novel edition is available on Amazon for readers who want to enjoy the story world in text form.",
-      "url": "https://www.amazon.co.jp/dp/B0GT46TYHJ",
-      "cta": "Buy the Novel"
+      "eyebrow": "KINDLE NOVEL",
+      "title": "Kindle novel available",
+      "body": "There is a Kindle novel edition for Ei-Oh-DeN. It works as a natural next step for players who want to sink further into the story.",
+      "cta": "Read the Kindle Novel",
+      "url": "https://amzn.asia/d/0dyYraXp",
+      "imageUrl": "https://m.media-amazon.com/images/I/814N36JmTGL._SY522_.jpg",
+      "imageAlt": "Cover of the Ei-Oh-DeN Kindle novel"
     },
     {
-      "tag": "LINE",
-      "badge": "LINE STORE",
-      "title": "Ei-Oh-Den LINE stickers are on sale",
-      "description": "Official stickers are available on LINE STORE so you can use the characters in everyday chats.",
+      "eyebrow": "LINE STICKERS",
+      "title": "LINE stickers available",
+      "body": "Official LINE stickers offer a lighter way to keep a piece of the game close in everyday conversation.",
+      "cta": "View LINE Stickers",
       "url": "https://store.line.me/stickershop/product/33347242/ja",
-      "cta": "View LINE Stickers"
+      "imageUrl": "https://kouheiichikawa.github.io/policy/Ei-Oh-Den/images/icon_original.png",
+      "imageAlt": "Ei-Oh-DeN icon artwork"
     }
   ],
-  "summaryTitle": "Search Summary",
-  "summaryItems": [
-    "This app does not collect, store, or share personal information.",
-    "No account registration is required.",
-    "No tracking or advertising-related third-party data collection is used.",
-    "No special permissions are required for camera, microphone, location, or contacts.",
-    "This page also links to the Ei-Oh-Den novel and official LINE stickers."
-  ],
+  "creator": {
+    "kicker": "Creator",
+    "title": "Created by Kohei Elimi Lab",
+    "body": "Ei-Oh-DeN is created by Kohei Elimi Lab. This page keeps the main routes close at hand, from the game itself to related works and contact access.",
+    "contactLabel": "Contact on X",
+    "contactUrl": "https://x.com/sio_sio_bull"
+  },
+  "faqKicker": "FAQ",
   "faqTitle": "Frequently Asked Questions",
   "faqs": [
     {
-      "question": "Does Ei-Oh-Den collect personal information?",
-      "answer": "No. The app does not collect personally identifiable information such as names, email addresses, phone numbers, contacts, or precise location."
+      "question": "What is Ei-Oh-DeN?",
+      "answer": "Ei-Oh-DeN is a historical fantasy strategy growth mobile work created by Kohei Elimi Lab."
     },
     {
-      "question": "Does the app require sensitive permissions?",
-      "answer": "No. It does not require special permissions for camera, microphone, location, contacts, or similar sensitive features."
+      "question": "Where can I play Ei-Oh-DeN?",
+      "answer": "It is available on both iOS and Android through the App Store and Google Play."
     },
     {
-      "question": "Does Ei-Oh-Den use analytics or advertising SDKs?",
-      "answer": "Not at this time. If third-party services are added later, this page will be updated with the service names and their purposes."
+      "question": "How much does it cost?",
+      "answer": "The app is priced at 200 JPY."
     },
     {
-      "question": "How can I contact the developer?",
-      "answer": "You can use the X account listed on this page. The page also includes direct links to the Google Play and App Store listings."
+      "question": "What is the beginner strategy route?",
+      "answer": "A recommended route is to farm the scarecrow in Stage 01 Phase 01 while retreating, raise Strength to around 30, and use dispatch missions."
     },
     {
-      "question": "Is there an Ei-Oh-Den novel?",
-      "answer": "Yes. This page includes a topic card linking directly to the Amazon product page for the novel."
-    },
-    {
-      "question": "Are there Ei-Oh-Den LINE stickers?",
-      "answer": "Yes. This page includes a topic card linking directly to the LINE STORE sticker page."
+      "question": "Is there a novel or LINE stickers?",
+      "answer": "Yes. This page links directly to both the Kindle novel and the official LINE stickers."
     }
   ],
-  "contactNote": "Questions or requests can be sent through this X profile.",
-  "duckBubble": "Phew, I'm not great at this quack...",
-  "fightBubble": "You can do it!!",
-  "sections": {
-    "intro": {
-      "title": "Friendly Introduction",
-      "body": [
-        "This app respects your privacy. We believe privacy information should be easy to read, so we keep this policy short and clear.",
-        "If anything changes in the future, this page will be updated so you can always check the latest version."
-      ]
+  "footerLinks": [
+    {
+      "label": "App Store",
+      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882",
+      "external": true
     },
-    "dataCollection": {
-      "title": "Data Collection",
-      "pills": [
-        "No personal data",
-        "No account required",
-        "No tracking"
-      ],
-      "body": [
-        "This app does not collect personal data. It does not ask for your name, email address, phone number, contacts, precise location, or other personal information."
-      ]
+    {
+      "label": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden",
+      "external": true
     },
-    "permissions": {
-      "title": "Permissions",
-      "body": [
-        "This app does not require special permissions for sensitive features such as camera, microphone, location, or contacts.",
-        "If platform-level permissions are ever needed later, this policy will be updated clearly."
-      ]
+    {
+      "label": "Kindle Novel",
+      "url": "https://amzn.asia/d/0dyYraXp",
+      "external": true
     },
-    "thirdParty": {
-      "title": "Third Party Services",
-      "body": [
-        "This app currently does not use third party analytics, advertising, or external data collection services.",
-        "Placeholder if needed later: third party services will be listed here with a clear explanation."
-      ]
+    {
+      "label": "LINE Stickers",
+      "url": "https://store.line.me/stickershop/product/33347242/ja",
+      "external": true
     },
-    "contact": {
-      "title": "Contact",
-      "body": [
-        "If you have any questions about this Privacy Policy, please feel free to contact us."
-      ]
-    },
-    "lastUpdated": {
-      "title": "Last Updated",
-      "body": [
-        "Last updated: March 24, 2026"
-      ]
+    {
+      "label": "Privacy Policy",
+      "url": "./privacy.html",
+      "external": false
     }
-  }
+  ],
+  "footer": "© 2026 Kohei Elimi Lab"
 }

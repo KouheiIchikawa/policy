@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ei-Oh-DeN Privacy Policy</title>
+  <meta name="description" content="Ei-Oh-DeN privacy policy. Information about cookies, Google Analytics, and contact methods." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://kouheiichikawa.github.io/policy/Ei-Oh-Den/privacy.html" />
+  <link rel="icon" type="image/png" href="./images/favicon.png" />
+  <style>
+    :root {
+      --surface: rgba(255, 255, 255, 0.94);
+      --line: #e5e5e5;
+      --text: #111111;
+      --soft: #5f5f66;
+      --pink: #f5a3b7;
+      --purple: #8f7aa8;
+      --shadow: 0 18px 44px rgba(17, 17, 17, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Nunito", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(245, 163, 183, 0.12), transparent 26%),
+        radial-gradient(circle at 85% 10%, rgba(143, 122, 168, 0.08), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+    }
+    a { color: inherit; }
+    main {
+      width: min(100% - 32px, 980px);
+      margin: 0 auto;
+      padding: 28px 0 120px;
+    }
+    .lang-switcher {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .lang-pill {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--soft);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .lang-pill.is-active {
+      border-color: rgba(245, 163, 183, 0.55);
+      background: #fff1f5;
+      color: var(--text);
+    }
+    .toplink {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .topicon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .kicker {
+      margin: 0;
+      color: var(--purple);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      margin: 0;
+      line-height: 1.2;
+    }
+    h1 {
+      margin-top: 10px;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+    .lead, p, li {
+      color: var(--soft);
+      line-height: 1.8;
+    }
+    .lead {
+      margin: 14px 0 0;
+    }
+    section + section {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+    h2 {
+      font-size: 1.15rem;
+    }
+    .linkrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .pill {
+      display: inline-flex;
+      min-height: 40px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .cookie-banner {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 20;
+      width: min(calc(100% - 24px), 420px);
+      display: none;
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid rgba(229, 229, 229, 0.96);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 20px 44px rgba(17, 17, 17, 0.12);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
+    .cookie-body {
+      margin: 0;
+      color: #5f5f66;
+      line-height: 1.7;
+    }
+    .cookie-banner.is-visible { display: grid; }
+    .cookie-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .cookie-button {
+      appearance: none;
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .cookie-button-primary {
+      background: var(--pink);
+      color: #fff;
+    }
+    .cookie-button-secondary {
+      background: #fff;
+      color: #111;
+      border-color: var(--line);
+    }
+    @media (max-width: 640px) {
+      main { width: min(100% - 20px, 980px); }
+      .panel { padding: 22px; }
+      .cookie-banner {
+        left: 12px;
+        right: 12px;
+        width: auto;
+      }
+      .cookie-actions { flex-direction: column-reverse; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.EIOHDEN_GA_ID = "G-XXXXXXXXXX";
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent", "default", { analytics_storage: "denied" });
+    gtag("js", new Date());
+    gtag("config", window.EIOHDEN_GA_ID);
+  </script>
+</head>
+<body>
+  <main>
+    <div class="lang-switcher" role="group" aria-label="Language toggle">
+      <button class="lang-pill" type="button" data-lang="ja">日本語</button>
+      <button class="lang-pill" type="button" data-lang="en">English</button>
+    </div>
+
+    <a class="toplink" href="./index.html" aria-label="トップページへ戻る" title="トップページへ戻る">
+      <img class="topicon" src="./images/icon_original.png" alt="" />
+      <span data-i18n="topLink">トップページへ戻る</span>
+    </a>
+
+    <article class="panel">
+      <p class="kicker">Privacy Policy</p>
+      <h1 data-i18n="title"></h1>
+      <p class="lead" data-i18n="lead"></p>
+
+      <section>
+        <h2 data-i18n="sections.0.title"></h2>
+        <p data-i18n="sections.0.body"></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="sections.1.title"></h2>
+        <p data-i18n="sections.1.body"></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="sections.2.title"></h2>
+        <p data-i18n="sections.2.body"></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="sections.3.title"></h2>
+        <p data-i18n="sections.3.body"></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="sections.4.title"></h2>
+        <p>
+          <span data-i18n="sections.4.bodyPrefix"></span>
+          <a href="https://x.com/sio_sio_bull" target="_blank" rel="noopener noreferrer">X @sio_sio_bull</a>
+          <span data-i18n="sections.4.bodySuffix"></span>
+        </p>
+        <div class="linkrow">
+          <a class="pill" href="./index.html" data-i18n="links.top" aria-label="トップページへ戻る" title="トップページへ戻る">トップページへ戻る</a>
+          <a class="pill" href="https://apps.apple.com/jp/app/ei-oh-den/id6760655882" target="_blank" rel="noopener noreferrer">App Store</a>
+          <a class="pill" href="https://play.google.com/store/apps/details?id=com.koheielimi.eiohden" target="_blank" rel="noopener noreferrer">Google Play</a>
+        </div>
+      </section>
+
+      <section>
+        <h2 data-i18n="sections.5.title"></h2>
+        <p data-i18n="sections.5.body"></p>
+      </section>
+    </article>
+  </main>
+
+  <aside class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite">
+    <strong data-i18n="cookie.title"></strong>
+    <p class="cookie-body" data-i18n="cookie.body"></p>
+    <div class="cookie-actions">
+      <button class="cookie-button cookie-button-secondary" type="button" data-consent="declined" data-i18n="cookie.decline"></button>
+      <button class="cookie-button cookie-button-primary" type="button" data-consent="accepted" data-i18n="cookie.accept"></button>
+    </div>
+  </aside>
+
+  <script>
+    (function () {
+      var languageStorageKey = "ei-oh-den-language";
+      var consentStorageKey = "ei-oh-den-cookie-consent";
+      var messages = {
+        ja: {
+          htmlLang: "ja",
+          pageTitle: "影桜伝 / Ei-Oh-DeN プライバシーポリシー",
+          description: "影桜伝 / Ei-Oh-DeN のプライバシーポリシーです。Google Analytics、Cookie、問い合わせ方法について案内します。",
+          topLink: "影桜伝 / Ei-Oh-DeN 公式ページへ戻る",
+          title: "影桜伝 / Ei-Oh-DeN プライバシーポリシー",
+          lead: "影桜伝は Ei-Oh-DeN と読みます。このページでは、公式サイトで使う Cookie、Google Analytics、問い合わせ方法について案内します。",
+          links: {
+            top: "公式トップ"
+          },
+          sections: [
+            {
+              title: "1. 取得する情報",
+              body: "このサイトでは、ページの閲覧状況、リンクの利用状況、端末やブラウザの基本情報など、アクセス解析に必要な範囲の情報を取得することがあります。"
+            },
+            {
+              title: "2. Google Analytics について",
+              body: "このサイトでは Google Analytics 4 を利用し、App Store、Google Play、Kindle、小説、LINE スタンプなど各導線の利用状況を把握します。計測は Cookie 同意後に有効化されます。"
+            },
+            {
+              title: "3. Cookie の利用",
+              body: "Cookie は、言語設定や解析同意の保存に使用します。Cookie 同意バナーで拒否を選択した場合は、解析用 Cookie を有効化しません。"
+            },
+            {
+              title: "4. 外部サービスへのリンク",
+              body: "このサイトには App Store、Google Play、Amazon Kindle、LINE STORE、X などの外部サービスへのリンクが含まれます。リンク先の取り扱いについては、各サービスの規約やポリシーを確認してください。"
+            },
+            {
+              title: "5. お問い合わせ",
+              bodyPrefix: "このポリシーに関する問い合わせは、",
+              bodySuffix: " まで連絡してください。"
+            },
+            {
+              title: "6. 最終更新日",
+              body: "2026年3月28日"
+            }
+          ],
+          cookie: {
+            title: "Cookie とアクセス解析について",
+            body: "このサイトでは、導線の利用状況を把握するために Cookie と Google Analytics を使用します。",
+            accept: "同意する",
+            decline: "同意しない"
+          }
+        },
+        en: {
+          htmlLang: "en",
+          pageTitle: "Ei-Oh-DeN Privacy Policy",
+          description: "Ei-Oh-DeN privacy policy. Information about cookies, Google Analytics, and contact methods.",
+          topLink: "Back to the Ei-Oh-DeN official site",
+          title: "Ei-Oh-DeN Privacy Policy",
+          lead: "The Japanese title is read as Ei-Oh-DeN. This page explains how the official site uses cookies, Google Analytics, and contact routes.",
+          links: {
+            top: "Official top"
+          },
+          sections: [
+            {
+              title: "1. Information we collect",
+              body: "This site may collect page views, link usage, and basic browser or device information required for access analytics."
+            },
+            {
+              title: "2. About Google Analytics",
+              body: "This site uses Google Analytics 4 to understand how official links such as the App Store, Google Play, Kindle, and LINE stickers are used. Analytics are enabled only after cookie consent."
+            },
+            {
+              title: "3. Use of cookies",
+              body: "Cookies are used to store language settings and analytics consent. If you decline the cookie banner, analytics cookies are not enabled."
+            },
+            {
+              title: "4. Links to external services",
+              body: "This site links to services such as the App Store, Google Play, Amazon Kindle, LINE STORE, and X. Please review the policies of each linked service."
+            },
+            {
+              title: "5. Contact",
+              bodyPrefix: "For questions about this policy, please contact ",
+              bodySuffix: "."
+            },
+            {
+              title: "6. Last updated",
+              body: "March 28, 2026"
+            }
+          ],
+          cookie: {
+            title: "Cookies and analytics",
+            body: "This site uses cookies and Google Analytics to understand how official links are used.",
+            accept: "Accept",
+            decline: "Decline"
+          }
+        }
+      };
+
+      function getByPath(obj, path) {
+        return path.split(".").reduce(function (acc, key) {
+          if (acc == null) {
+            return acc;
+          }
+          if (/^\d+$/.test(key)) {
+            return acc[Number(key)];
+          }
+          return acc[key];
+        }, obj);
+      }
+
+      function detectLanguage() {
+        try {
+          var saved = window.localStorage.getItem(languageStorageKey);
+          if (saved === "ja" || saved === "en") {
+            return saved;
+          }
+        } catch (e) {}
+        var browserLanguage = (navigator.language || "ja").toLowerCase();
+        return browserLanguage.startsWith("ja") ? "ja" : "en";
+      }
+
+      function renderLanguage(language) {
+        var copy = messages[language] || messages.ja;
+        document.documentElement.lang = copy.htmlLang;
+        document.title = copy.pageTitle;
+        var descriptionNode = document.head.querySelector('meta[name="description"]');
+        if (descriptionNode) {
+          descriptionNode.setAttribute("content", copy.description);
+        }
+
+        document.querySelectorAll("[data-i18n]").forEach(function (node) {
+          var path = node.getAttribute("data-i18n");
+          var value = getByPath(copy, path);
+          if (typeof value === "string") {
+            node.textContent = value;
+          }
+        });
+
+        document.querySelectorAll("[data-lang]").forEach(function (button) {
+          button.classList.toggle("is-active", button.getAttribute("data-lang") === language);
+        });
+      }
+
+      var currentLanguage = detectLanguage();
+      renderLanguage(currentLanguage);
+
+      document.querySelectorAll("[data-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var nextLanguage = button.getAttribute("data-lang");
+          try {
+            window.localStorage.setItem(languageStorageKey, nextLanguage);
+          } catch (e) {}
+          renderLanguage(nextLanguage);
+        });
+      });
+
+      var banner = document.getElementById("cookie-banner");
+      var storedConsent = null;
+      try {
+        storedConsent = window.localStorage.getItem(consentStorageKey);
+      } catch (e) {}
+
+      function updateConsent(status) {
+        if (typeof window.gtag === "function") {
+          window.gtag("consent", "update", {
+            analytics_storage: status === "accepted" ? "granted" : "denied"
+          });
+        }
+      }
+
+      if (storedConsent === "accepted" || storedConsent === "declined") {
+        updateConsent(storedConsent);
+        return;
+      }
+
+      banner.classList.add("is-visible");
+      banner.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-consent]");
+        if (!button) {
+          return;
+        }
+        var status = button.getAttribute("data-consent");
+        try {
+          window.localStorage.setItem(consentStorageKey, status);
+        } catch (e) {}
+        updateConsent(status);
+        banner.classList.remove("is-visible");
+      });
+    })();
+  </script>
+</body>
+</html>

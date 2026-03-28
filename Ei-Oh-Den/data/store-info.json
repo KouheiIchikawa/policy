@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "appstore",
+      "name": "App Store",
+      "price": "200 JPY",
+      "rating": null,
+      "reviewCount": null,
+      "updatedAt": null,
+      "url": "https://apps.apple.com/jp/app/ei-oh-den/id6760655882"
+    },
+    {
+      "id": "googleplay",
+      "name": "Google Play",
+      "price": "200 JPY",
+      "rating": null,
+      "reviewCount": null,
+      "updatedAt": null,
+      "url": "https://play.google.com/store/apps/details?id=com.koheielimi.eiohden"
+    }
+  ]
+}
