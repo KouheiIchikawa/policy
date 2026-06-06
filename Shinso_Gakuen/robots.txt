@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kouheiichikawa.github.io/policy/Shinso_Gakuen/sitemap.xml
