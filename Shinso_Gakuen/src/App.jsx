@@ -63,7 +63,6 @@ export function App() {
       </section>
 
       <article className="content-panel policy-panel" id="privacy">
-        <p className="content-kicker">privacy policy</p>
         <h1>{language === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}</h1>
         <p className="content-lead">{copy.subtitle}</p>
         <p>{copy.lead}</p>

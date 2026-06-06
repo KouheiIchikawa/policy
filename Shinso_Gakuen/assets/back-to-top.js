@@ -8,7 +8,11 @@
     button.className = 'sg-back-to-top'
     button.setAttribute('aria-label', 'ページ上部へ戻る')
     button.title = 'ページ上部へ戻る'
-    button.textContent = '↑'
+    const icon = document.createElement('img')
+    icon.src = new URL('back-to-top-icon.png', document.currentScript.src).href
+    icon.alt = ''
+    icon.setAttribute('aria-hidden', 'true')
+    button.appendChild(icon)
     document.body.appendChild(button)
 
     function updateVisibility() {

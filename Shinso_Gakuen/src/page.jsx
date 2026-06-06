@@ -170,13 +170,13 @@ const pageCopy = {
     ja: {
       title: 'シンソウ学園 | コミック',
       heading: 'コミック',
-      lead: 'シンソウ学園の漫画を公開中。',
-      body: 'シンソウ学園のちびキャラたちによる、\nちょっと不思議で、ちょっとゆるい日常漫画。',
+      lead: '',
+      body: 'シンソウ学園のちびキャラたちによる、ちょっと不思議で、ちょっとゆるい日常漫画。',
     },
     en: {
       title: 'Shinso Gakuen | Comic',
       heading: 'Comic',
-      lead: 'Read the Shinso Gakuen comic.',
+      lead: '',
       body: 'A comic page for the atmosphere and story of Shinso Gakuen.',
     },
   },
@@ -270,7 +270,6 @@ function ContentPage() {
             />
           </>
         ) : null}
-        <p className="content-kicker">{pageId}</p>
         <h1>{copy.heading}</h1>
         {copy.status ? (
           pageId === 'app' ? (
@@ -279,7 +278,7 @@ function ContentPage() {
             <p className="content-status">{copy.status}</p>
           )
         ) : null}
-        <p className="content-lead">{copy.lead}</p>
+        {copy.lead ? <p className="content-lead">{copy.lead}</p> : null}
         {copy.paragraphs ? (
           <div className="story-prose">
             {copy.paragraphs.map((paragraph) => (

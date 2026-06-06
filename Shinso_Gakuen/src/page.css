@@ -195,15 +195,6 @@ a {
   mix-blend-mode: screen;
 }
 
-.content-kicker {
-  margin: 0 0 8px;
-  color: var(--green);
-  font-size: 0.78rem;
-  font-weight: 950;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
-
 h1 {
   margin: 0 0 22px;
   color: var(--green);
