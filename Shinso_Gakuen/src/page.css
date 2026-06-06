@@ -149,8 +149,8 @@ a {
   letter-spacing: 0.02em;
 }
 
-.story-prose p:nth-child(5),
-.story-prose p:nth-child(22),
+.story-prose p:nth-child(4),
+.story-prose p:nth-child(21),
 .story-prose p:last-child {
   color: var(--green);
   font-size: clamp(1.22rem, 2.6vw, 1.55rem);
@@ -236,6 +236,14 @@ h1 {
   letter-spacing: 0.12em;
   line-height: 1.1 !important;
   text-shadow: 0 0 18px rgba(53, 255, 104, 0.3);
+}
+
+.content-status-icon {
+  display: block;
+  width: min(520px, 100%);
+  height: auto;
+  margin: 0 0 22px;
+  filter: drop-shadow(0 0 18px rgba(53, 255, 104, 0.22));
 }
 
 .character-section {

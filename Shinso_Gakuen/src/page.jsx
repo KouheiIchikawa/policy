@@ -6,6 +6,7 @@ import kurumiUrl from '../app/assets/characters/kurumi.png'
 import meguUrl from '../app/assets/characters/megu.png'
 import miuUrl from '../app/assets/characters/miu.png'
 import keyVisualOtherUrl from '../app/assets/ShisoGakuenKeyVisual_other.png'
+import comingSoonIconUrl from '../app/assets/coming-soon-icon.png'
 import cubeFragmentsUrl from '../app/assets/story/cube-fragments.png'
 import mysteryCubeUrl from '../app/assets/story/mystery-cube.png'
 import storyVeilUrl from '../app/assets/story/story-veil.png'
@@ -17,12 +18,12 @@ const storageKey = 'shinso-gakuen-lang'
 
 const comicPages = [
   {
-    ja: './assets/comic/comic001_ja.png',
-    en: './assets/comic/comic001_en.png',
-  },
-  {
     ja: './assets/comic/comic002_ja.png',
     en: './assets/comic/comic002_en.png',
+  },
+  {
+    ja: './assets/comic/comic001_ja.png',
+    en: './assets/comic/comic001_en.png',
   },
 ]
 
@@ -96,7 +97,6 @@ const pageCopy = {
       heading: 'ストーリー',
       lead: 'あなたは、自分をどこまで理解しているだろうか。',
       paragraphs: [
-        'あなたは、自分をどこまで理解しているだろうか。',
         '何が得意で、何が苦手なのか。',
         'どこまで出来て、どこから出来ないのか。',
         'そして、その評価は本当に正しいのだろうか。',
@@ -119,7 +119,7 @@ const pageCopy = {
         '天才と凡人の違いとは何か。',
         'そして。',
         '本当に乗り越えなければならない相手は、誰なのか。',
-        'これは、誰かになるための物語ではない。',
+        '答えは、まだ誰も知らない。',
         '自分の人生を、自分の意思で選び取るための物語。',
         'シンソウ学園ストーリー。',
       ],
@@ -155,8 +155,7 @@ const pageCopy = {
       heading: 'アプリ',
       status: 'COMING SOON',
       lead: '勇気とストーリーで知覚に迫る、学園思考パズルアドベンチャー。',
-      body:
-        'iOS / Android 向けに2026年6月中のリリースを予定しています。公開時には、このページから各ストア情報へアクセスできるようになります。',
+      body: 'あなたがこの学園を訪れる日を私たちは待っている。\n2026年6月公開予定',
     },
     en: {
       title: 'Shinso Gakuen | App',
@@ -172,7 +171,7 @@ const pageCopy = {
       title: 'シンソウ学園 | コミック',
       heading: 'コミック',
       lead: 'シンソウ学園の漫画を公開中。',
-      body: '物語の空気感を、漫画でも見られるページです。',
+      body: 'シンソウ学園のちびキャラたちによる、\nちょっと不思議で、ちょっとゆるい日常漫画。',
     },
     en: {
       title: 'Shinso Gakuen | Comic',
@@ -273,7 +272,13 @@ function ContentPage() {
         ) : null}
         <p className="content-kicker">{pageId}</p>
         <h1>{copy.heading}</h1>
-        {copy.status ? <p className="content-status">{copy.status}</p> : null}
+        {copy.status ? (
+          pageId === 'app' ? (
+            <img className="content-status-icon" src={comingSoonIconUrl} alt="" />
+          ) : (
+            <p className="content-status">{copy.status}</p>
+          )
+        ) : null}
         <p className="content-lead">{copy.lead}</p>
         {copy.paragraphs ? (
           <div className="story-prose">
@@ -289,7 +294,14 @@ function ContentPage() {
             ))}
           </div>
         ) : (
-          <p>{copy.body}</p>
+          <p>
+            {copy.body.split('\n').map((line, index) => (
+              <Fragment key={line}>
+                {index > 0 ? <br /> : null}
+                {line}
+              </Fragment>
+            ))}
+          </p>
         )}
       </article>
 

@@ -1,17 +1,15 @@
 import { StrictMode, useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import keyVisualEnUrl from '../app/assets/ShisoGakuenKeyVisual_en.png'
-import keyVisualJaUrl from '../app/assets/ShisoGakuenKeyVisual_ja.png'
-import keyVisualSpUrl from '../app/assets/ShisoGakuenKeyVisual_sp.png'
 import xLogoUrl from '../app/assets/x-logo.svg'
 import { navItems, officialXUrl, withLanguage } from './navigation'
 import './site.css'
 
 const storageKey = 'shinso-gakuen-lang'
+const keyVisualSpUrl = './assets/ShisoGakuenKeyVisual_sp.png'
 
 const visualByLanguage = {
-  ja: keyVisualJaUrl,
-  en: keyVisualEnUrl,
+  ja: './assets/ShisoGakuenKeyVisual_ja.png',
+  en: './assets/ShisoGakuenKeyVisual_en.png',
 }
 
 const siteCopy = {

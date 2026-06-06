@@ -53,8 +53,34 @@ a {
   width: 100%;
   height: 100%;
   min-height: 640px;
+  animation: key-visual-drift 18s ease-in-out infinite alternate;
   object-fit: cover;
   object-position: center center;
+  transform-origin: center center;
+  will-change: transform, filter;
+}
+
+@keyframes key-visual-drift {
+  0% {
+    filter: saturate(1) contrast(1);
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+
+  50% {
+    filter: saturate(1.08) contrast(1.04);
+    transform: scale(1.025) translate3d(-0.4%, -0.25%, 0);
+  }
+
+  100% {
+    filter: saturate(1.02) contrast(1.02);
+    transform: scale(1.045) translate3d(0.45%, 0.25%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .key-visual img {
+    animation: none;
+  }
 }
 
 .site-lang {
