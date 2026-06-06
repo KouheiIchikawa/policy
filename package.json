@@ -1,0 +1,23 @@
+{
+  "name": "policy-sites",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "Ei-Oh-Den",
+    "Shinso_Gakuen",
+    "TurfOfAngel"
+  ],
+  "scripts": {
+    "dev": "node ./.github/scripts/dev-server.mjs",
+    "dev:ei-oh-den": "npm --workspace Ei-Oh-Den run dev -- --host 127.0.0.1",
+    "build:ei-oh-den": "npm --workspace Ei-Oh-Den run build",
+    "preview:ei-oh-den": "npm --workspace Ei-Oh-Den run preview -- --host 127.0.0.1",
+    "dev:shinso-gakuen": "npm --workspace Shinso_Gakuen run dev -- --host 127.0.0.1",
+    "build:shinso-gakuen": "npm --workspace Shinso_Gakuen run build",
+    "preview:shinso-gakuen": "npm --workspace Shinso_Gakuen run preview -- --host 127.0.0.1",
+    "dev:turf-of-angel": "npm --workspace TurfOfAngel run dev -- --host 127.0.0.1",
+    "build:turf-of-angel": "npm --workspace TurfOfAngel run build",
+    "preview:turf-of-angel": "npm --workspace TurfOfAngel run preview -- --host 127.0.0.1",
+    "build": "npm run build:ei-oh-den && npm run build:shinso-gakuen && npm run build:turf-of-angel"
+  }
+}

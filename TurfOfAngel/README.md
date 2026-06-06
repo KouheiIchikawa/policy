@@ -21,9 +21,6 @@ policy/TurfOfAngel/
 │  │  ├─ turf_of_angel_logo.png
 │  │  ├─ ic_launcher_foreground.png
 │  │  └─ Android_Xgirl.png
-│  └─ common/
-│     ├─ appstore_badge.svg
-│     └─ Google_Play_Badge_JA.svg
 ├─ src/
 │  ├─ components/
 │  ├─ hooks/
@@ -61,6 +58,8 @@ npm run build
 npm run preview
 ```
 
+The build writes the public files directly to `TurfOfAngel/`, matching the static-site layout used by the other app folders.
+
 ## GitHub Pages 設定
 
 `vite.config.ts` は以下のように `base` を設定しています。
@@ -74,7 +73,7 @@ export default defineConfig({
 
 リポジトリや公開先が変わる場合は、この `base` を必ず実URLに合わせて変更してください。
 
-画像とバッジは `public/images` と `public/common` に配置し、コード側では `/images/...` `/common/...` を `assetPath()` 経由で参照しています。
+画像は `public/images` に配置します。全サイト共通のストアバッジはリポジトリルートの `common/` に配置し、コード側では `commonAssetPath()` 経由で `/policy/common/...` を参照します。
 
 ## GitHub Pages デプロイ例
 

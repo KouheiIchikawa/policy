@@ -1,0 +1,269 @@
+:root {
+  --blue-1: #dff6ff;
+  --blue-2: #ffffff;
+  --blue-3: #00aaff;
+  --blue-4: #40cfff;
+  --blue-5: #0077aa;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  color: #333;
+  background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+  overflow-x: hidden;
+}
+
+/* 背景ウォーターマーク */
+.bg-mark {
+  position: fixed;
+  inset: 0;
+  background-image: url("./app-icon.png");
+  background-repeat: no-repeat;
+  background-position: right -120px bottom -80px;
+  background-size: min(50vmax, 720px);
+  opacity: 0.06;
+  pointer-events: none;
+  filter: saturate(1.1);
+  z-index: 0;
+}
+
+/* ヘッダー */
+.site-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--blue-3), var(--blue-4));
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.app-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  object-fit: cover;
+}
+
+.head-text h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 1.2rem + 2vw, 2.6rem);
+  letter-spacing: 1.5px;
+}
+.head-text p {
+  margin: 4px 0 0;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+/* メイン */
+main {
+  max-width: 900px;
+  margin: 42px auto;
+  padding: 0 20px;
+}
+
+/* カード */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 28px;
+  border-left: 6px solid var(--blue-3);
+  box-shadow: 0 6px 18px rgba(0,160,230,0.18);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0,160,230,0.32);
+}
+
+h2 {
+  color: var(--blue-5);
+  margin: 0 0 16px;
+}
+
+/* ボタン */
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, var(--blue-3), var(--blue-4));
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  transition: transform .15s ease, filter .2s ease;
+}
+.button:hover {
+  transform: translateY(-1px) scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  padding: 24px 12px 36px;
+  margin-top: 54px;
+}
+
+/* カエル */
+.frog-talk {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.frog-talk .frog {
+  width: 160px;
+  height: auto;
+}
+.frog-talk .bubble {
+  position: relative;
+  background: #e6f7ff;
+  border: 2px solid #00aaff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  max-width: 70%;
+  color: #333;
+}
+.frog-talk .bubble::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 20px;
+  border: 8px solid transparent;
+  border-right-color: #00aaff;
+}
+.frog-talk .bubble::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 20px;
+  border: 8px solid transparent;
+  border-right-color: #e6f7ff;
+}
+
+/* サポート */
+.support-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.support-text {
+  flex: 1;
+}
+.support-image {
+  position: relative;
+  max-width: 220px;
+}
+.protected-img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+  pointer-events: none;
+}
+.img-cover {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+.support-image:hover {
+  transform: scale(1.05) rotate(-1deg);
+  transition: transform 0.25s ease;
+}
+
+/* ストアリンク */
+.store-links {
+  text-align: center;
+  padding: 20px 0;
+}
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.store-badge {
+  width: 180px;
+  max-width: 45%;
+  transition: transform 0.2s ease;
+}
+.store-badge:hover {
+  transform: scale(1.05);
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .support-center {
+    flex-direction: column;
+    text-align: center;
+  }
+  .support-image {
+    max-width: 160px;
+    margin-top: 16px;
+  }
+}
+/* ===== Store strip (gungho-ish) ===== */
+.store-strip {
+  position: relative;
+  background: #0b0d14;            /* 黒に近い濃紺 */
+  padding: 28px 0 36px;
+  margin-top: 42px;
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08); /* 上に細い線：見切り */
+  border-top: 3px solid #0aa4ff;  /* もっと“線感”が欲しければここを太く */
+}
+
+.store-strip__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.store-strip__title {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: clamp(20px, 2.4vw, 32px);
+  color: #1282bd;                  /* タイトルは青系で */
+  letter-spacing: 1px;
+}
+
+/* バッジ2つを中央に大きめで */
+.store-strip__badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(16px, 4vw, 36px);
+  flex-wrap: wrap;
+}
+
+/* バッジのサイズ感：PCでデカめ・スマホでは絞る */
+.store-strip__badge {
+  display: block;
+  width: clamp(180px, 22vw, 320px);   /* ここで“デカさ”を調整。最大320px */
+  height: auto;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.45));
+  transition: transform .18s ease, filter .18s ease;
+}
+
+.store-strip__badge:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.6));
+}
+
+@media (max-width: 560px) {
+  .store-strip { padding: 22px 0 28px; }
+  .store-strip__title { margin-bottom: 12px; }
+}

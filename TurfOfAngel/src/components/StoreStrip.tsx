@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import type { StoreContent } from '../types'
-import { assetPath } from '../lib/assets'
+import { commonAssetPath } from '../lib/assets'
 
 type Props = {
   content: StoreContent
@@ -32,7 +32,7 @@ export function StoreStrip({ content }: Props) {
             className="rounded-[1.3rem] border border-white/[0.22] bg-white/[0.14] p-2 transition hover:-translate-y-0.5 hover:border-cyan-200/[0.56] hover:bg-white/[0.2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/[0.8]"
           >
             <img
-              src={assetPath('/common/appstore_badge.svg')}
+              src={commonAssetPath('/appstore_badge.svg')}
               alt={content.appStoreAlt}
               className="h-12 w-auto sm:h-[3.35rem]"
             />
@@ -44,7 +44,7 @@ export function StoreStrip({ content }: Props) {
             className="rounded-[1.3rem] border border-white/[0.22] bg-white/[0.14] p-2 transition hover:-translate-y-0.5 hover:border-cyan-200/[0.56] hover:bg-white/[0.2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/[0.8]"
           >
             <img
-              src={assetPath('/common/Google_Play_Badge_JA.svg')}
+              src={commonAssetPath('/Google_Play_Badge_JA.svg')}
               alt={content.playStoreAlt}
               className="h-12 w-auto sm:h-[3.35rem]"
             />
