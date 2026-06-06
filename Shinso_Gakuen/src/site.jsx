@@ -5,11 +5,12 @@ import { navItems, officialXUrl, withLanguage } from './navigation'
 import './site.css'
 
 const storageKey = 'shinso-gakuen-lang'
-const keyVisualSpUrl = './assets/ShisoGakuenKeyVisual_sp.png'
+const keyVisualBaseUrl = './assets/keyvisual/'
+const keyVisualSpUrl = `${keyVisualBaseUrl}ShisoGakuenKeyVisual_sp.png`
 
 const visualByLanguage = {
-  ja: './assets/ShisoGakuenKeyVisual_ja.png',
-  en: './assets/ShisoGakuenKeyVisual_en.png',
+  ja: `${keyVisualBaseUrl}ShisoGakuenKeyVisual_ja.png`,
+  en: `${keyVisualBaseUrl}ShisoGakuenKeyVisual_en.png`,
 }
 
 const siteCopy = {
@@ -76,8 +77,13 @@ function Site() {
       <section className="site-info" aria-label="Site navigation">
         <nav className="site-nav">
           {navItems.map((item) => (
-            <a href={withLanguage(item.href, language)} key={item.id}>
-              {item.label[language]}
+            <a
+              data-tooltip={item.tooltip?.[language]}
+              href={withLanguage(item.href, language)}
+              key={item.id}
+            >
+              <span className="nav-label">{item.label[language]}</span>
+              {item.badge ? <span className="nav-badge">{item.badge[language]}</span> : null}
             </a>
           ))}
         </nav>

@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
-import keyVisualOtherUrl from '../app/assets/ShisoGakuenKeyVisual_other.png'
 import xLogoUrl from '../app/assets/x-logo.svg'
 import { policyCopy } from './content'
 import { navItems, officialXUrl, withLanguage } from './navigation'
 
 const storageKey = 'shinso-gakuen-lang'
+const keyVisualOtherUrl = './assets/keyvisual/ShisoGakuenKeyVisual_other.png'
 
 function getInitialLanguage() {
   const params = new URLSearchParams(window.location.search)
@@ -50,10 +50,12 @@ export function App() {
         {navItems.map((item) => (
           <a
             aria-current={item.id === 'privacy-policy' ? 'page' : undefined}
+            data-tooltip={item.tooltip?.[language]}
             href={withLanguage(item.href, language)}
             key={item.id}
           >
-            {item.label[language]}
+            <span className="nav-label">{item.label[language]}</span>
+            {item.badge ? <span className="nav-badge">{item.badge[language]}</span> : null}
           </a>
         ))}
       </nav>

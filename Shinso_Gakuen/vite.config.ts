@@ -16,6 +16,7 @@ export default defineConfig({
         app: resolve(__dirname, 'app/app.html'),
         character: resolve(__dirname, 'app/character.html'),
         comic: resolve(__dirname, 'app/comic.html'),
+        guide: resolve(__dirname, 'app/guide.html'),
         'privacy-policy': resolve(__dirname, 'app/privacy-policy.html'),
         story: resolve(__dirname, 'app/story.html'),
       },

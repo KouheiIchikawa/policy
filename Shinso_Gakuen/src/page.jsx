@@ -1,11 +1,5 @@
 import { Fragment, StrictMode, useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import akimotoUrl from '../app/assets/characters/akimoto.png'
-import akiraUrl from '../app/assets/characters/akira.png'
-import kurumiUrl from '../app/assets/characters/kurumi.png'
-import meguUrl from '../app/assets/characters/megu.png'
-import miuUrl from '../app/assets/characters/miu.png'
-import keyVisualOtherUrl from '../app/assets/ShisoGakuenKeyVisual_other.png'
 import comingSoonIconUrl from '../app/assets/coming-soon-icon.png'
 import cubeFragmentsUrl from '../app/assets/story/cube-fragments.png'
 import mysteryCubeUrl from '../app/assets/story/mystery-cube.png'
@@ -15,6 +9,32 @@ import { navItems, officialXUrl, withLanguage } from './navigation'
 import './page.css'
 
 const storageKey = 'shinso-gakuen-lang'
+const keyVisualOtherUrl = './assets/keyvisual/ShisoGakuenKeyVisual_other.png'
+const characterAssetBaseUrl = './assets/characterScreen/'
+const akimotoUrl = `${characterAssetBaseUrl}akimoto.png`
+const akiraUrl = `${characterAssetBaseUrl}akira.png`
+const kurumiUrl = `${characterAssetBaseUrl}kurumi.png`
+const meguUrl = `${characterAssetBaseUrl}megu.png`
+const miuUrl = `${characterAssetBaseUrl}miu.png`
+const guideAssetBaseUrl = './assets/guide-cube/'
+const guideChibiMiuUrl = `${guideAssetBaseUrl}guide-chibi-miu.png`
+const guideOrangeGoalUrl = `${guideAssetBaseUrl}orange-goal.png`
+const guideOrangeFlowerCrossUrl = `${guideAssetBaseUrl}orange-flower-cross.png`
+const guideOrangeFaceMiddleUrl = `${guideAssetBaseUrl}orange-face-middle.png`
+const guideOrangeOppositeFinishUrl = `${guideAssetBaseUrl}orange-opposite-finish.png`
+const guideAppTurnVsViewUrl = `${guideAssetBaseUrl}app-turn-vs-view.png`
+const guideMiddleLayerUrl = `${guideAssetBaseUrl}guide-middle-layer.png`
+const guideWhiteCrossUrl = `${guideAssetBaseUrl}guide-white-cross.png`
+const guideYellowFinishUrl = `${guideAssetBaseUrl}guide-yellow-finish.png`
+const guideMiuCubeUrl = `${guideAssetBaseUrl}miu-cube.png`
+const guideMiuSolvedUrl = `${guideAssetBaseUrl}miu-solved.png`
+const guideMiuTeacherUrl = `${guideAssetBaseUrl}miu-teacher.png`
+const guideVisuals = [
+  guideAppTurnVsViewUrl,
+  guideOrangeFlowerCrossUrl,
+  guideOrangeFaceMiddleUrl,
+  guideOrangeOppositeFinishUrl,
+]
 
 const comicPages = [
   {
@@ -89,6 +109,118 @@ const characterProfiles = [
     image: miuUrl,
   },
 ]
+
+const guideContent = {
+  ja: {
+    rulesLabel: 'アプリで見ること',
+    flowLabel: 'オレンジ面クリアの流れ',
+    boardLabel: '覚える手順',
+    boardEyebrow: 'おぼえるのはここだけ',
+    boardTitle: '短い手順表',
+    tipsLabel: 'つまずき対策',
+    exampleLabel: '例題',
+    exampleEyebrow: 'さわって確認',
+    exampleTitle: 'オレンジ面で進めると？',
+    prev: '戻る',
+    next: '次へ',
+    reset: '最初へ',
+    rules: [
+      ['1', '視点と操作を分ける', '見回すだけでは盤面は変わらない'],
+      ['2', 'ゴールはオレンジ', '毎回、オレンジ面をそろえる'],
+      ['3', '灰色は無視', '今の段階に関係ないマスは見ない'],
+    ],
+    steps: [
+      ['操作チェック', '回す / 見る は別', '式の途中では同じ手前を保ちます。', guideAppTurnVsViewUrl, guideMiuTeacherUrl],
+      ['オレンジの花', '上に4本集める', '反対面の中心のまわりへ、オレンジの辺を集めます。', guideOrangeFlowerCrossUrl, guideMiuCubeUrl],
+      ['オレンジ十字', '横色を合わせて落とす', '横色が中心と合ったら、その辺をオレンジ面へ送ります。', guideOrangeFlowerCrossUrl, guideMiuTeacherUrl],
+      ['オレンジ一面', '角を4つ合わせる', '角は3つの中心にはさまる場所へ入れます。', guideOrangeFaceMiddleUrl, guideMiuCubeUrl],
+      ['真ん中の段', '反対色なしを選ぶ', '反対面の色を持たない辺だけを処理します。', guideOrangeFaceMiddleUrl, guideMiuTeacherUrl],
+      ['反対面の形', '点・かぎ・せん', '上面の辺だけ見て、十字へ進めます。', guideOrangeOppositeFinishUrl, guideMiuCubeUrl],
+      ['仕上げ', '角、辺の順', '最後は場所、向きの順で盤面クリアです。', guideOrangeGoalUrl, guideMiuSolvedUrl],
+    ],
+    algorithms: [
+      ['花から十字', 'U / F2', '横色を合わせて送る'],
+      ['角の取り出し', "R' D' R", '詰まった角を下へ'],
+      ['左へ入れる', "D L D' L'", '左の場所へ'],
+      ['右へ入れる', "D' R' D R", '右の場所へ'],
+      ['反対面十字', "F R U R' U' F'", '点、かぎ、せん'],
+      ['最後の角向き', "R' D' R D", '同じ角でやり切る'],
+    ],
+    tips: [
+      ['視点変更', '確認だけ。状態は変わらない。'],
+      ['面回転', 'ログに残る。本当の操作。'],
+      ['止まったら', '今の段階だけ見る。灰色は無視。'],
+      ['こわい所', "R' D' R D は途中で崩れて見えてOK。"],
+    ],
+    example: [
+      ['スタート', 'オレンジ面を決める', 'まずゴール色を固定します。', 'scramble', guideMiuCubeUrl],
+      ['花', '上に4本', 'オレンジの辺だけ集めます。', 'flower', guideMiuTeacherUrl],
+      ['十字', '横色チェック', '横色が合ったら送ります。', 'cross', guideMiuCubeUrl],
+      ['一面と中段', '下側を固める', 'オレンジ面と真ん中を守ります。', 'middle', guideMiuTeacherUrl],
+      ['反対面', '形だけ見る', '点・かぎ・せんから十字へ。', 'opposite', guideMiuCubeUrl],
+      ['クリア', 'オレンジ面ゴール', '最後に場所と向きを整えます。', 'solved', guideMiuSolvedUrl],
+    ],
+  },
+  en: {
+    rulesLabel: 'App reading rules',
+    flowLabel: 'Orange-face clear flow',
+    boardLabel: 'Moves to remember',
+    boardEyebrow: 'Only these moves',
+    boardTitle: 'Short Move List',
+    tipsLabel: 'Stuck points',
+    exampleLabel: 'Example',
+    exampleEyebrow: 'Try the flow',
+    exampleTitle: 'Orange-goal example',
+    prev: 'Back',
+    next: 'Next',
+    reset: 'Reset',
+    rules: [
+      ['1', 'View is separate', 'Looking around does not change the board'],
+      ['2', 'Goal is orange', 'Clear the orange face every time'],
+      ['3', 'Ignore gray', 'Only read tiles for the current step'],
+    ],
+    steps: [
+      ['Operation Check', 'Turn / view are different', 'Keep the same front while a formula runs.', guideAppTurnVsViewUrl, guideMiuTeacherUrl],
+      ['Orange Flower', 'Collect four edges', 'Gather orange edges around the opposite center.', guideOrangeFlowerCrossUrl, guideMiuCubeUrl],
+      ['Orange Cross', 'Match side color', 'When the side color matches, send that edge to orange.', guideOrangeFlowerCrossUrl, guideMiuTeacherUrl],
+      ['Orange Face', 'Four corners', 'Each corner goes between its three center colors.', guideOrangeFaceMiddleUrl, guideMiuCubeUrl],
+      ['Middle Layer', 'No opposite color', 'Only process edges without the opposite-face color.', guideOrangeFaceMiddleUrl, guideMiuTeacherUrl],
+      ['Opposite Shape', 'Dot, hook, line', 'Read only top edges and move toward a cross.', guideOrangeOppositeFinishUrl, guideMiuCubeUrl],
+      ['Finish', 'Corners, then edges', 'Place and orient the last pieces to clear the board.', guideOrangeGoalUrl, guideMiuSolvedUrl],
+    ],
+    algorithms: [
+      ['Flower to cross', 'U / F2', 'match side, send down'],
+      ['Corner out', "R' D' R", 'drop stuck corner'],
+      ['Insert left', "D L D' L'", 'send to left slot'],
+      ['Insert right', "D' R' D R", 'send to right slot'],
+      ['Opposite cross', "F R U R' U' F'", 'dot, hook, line'],
+      ['Final corner turn', "R' D' R D", 'finish same corner'],
+    ],
+    tips: [
+      ['View change', 'For checking only. Board state stays.'],
+      ['Face turn', 'This is the real logged operation.'],
+      ['Stuck', 'Read only the current step. Ignore gray.'],
+      ['Scary part', "R' D' R D may look broken mid-way."],
+    ],
+    example: [
+      ['Start', 'Pick orange goal', 'Fix the goal color first.', 'scramble', guideMiuCubeUrl],
+      ['Flower', 'Four edges on top', 'Collect only orange edges.', 'flower', guideMiuTeacherUrl],
+      ['Cross', 'Check side colors', 'Send an edge when its side matches.', 'cross', guideMiuCubeUrl],
+      ['Face and middle', 'Protect lower area', 'Keep orange face and middle layer stable.', 'middle', guideMiuTeacherUrl],
+      ['Opposite', 'Read shape only', 'Dot, hook, line, then cross.', 'opposite', guideMiuCubeUrl],
+      ['Clear', 'Orange goal reached', 'Place and orient the last pieces.', 'solved', guideMiuSolvedUrl],
+    ],
+  },
+}
+
+const exampleStickers = {
+  scramble: ['red', 'orange', 'blue', 'green', 'white', 'orange', 'blue', 'red', 'yellow'],
+  flower: ['gray', 'orange', 'gray', 'orange', 'yellow', 'orange', 'gray', 'orange', 'gray'],
+  cross: ['gray', 'orange', 'gray', 'orange', 'orange', 'orange', 'gray', 'orange', 'gray'],
+  middle: ['orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'green', 'red', 'blue'],
+  opposite: ['gray', 'yellow', 'gray', 'yellow', 'yellow', 'yellow', 'gray', 'yellow', 'gray'],
+  solved: ['orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange'],
+}
 
 const pageCopy = {
   story: {
@@ -180,6 +312,20 @@ const pageCopy = {
       body: 'A comic page for the atmosphere and story of Shinso Gakuen.',
     },
   },
+  guide: {
+    ja: {
+      title: 'シンソウ学園 | 攻略',
+      heading: '攻略',
+      lead: 'スマホアプリ内の3x3ギミックは、毎回オレンジ面がゴール。',
+      body: '面を回す操作と、見回すだけの視点変更を分けて考えます。',
+    },
+    en: {
+      title: 'Shinso Gakuen | Guide',
+      heading: 'Guide',
+      lead: 'In-app 3x3 logic: the orange face is the goal every time.',
+      body: 'Separate face turns from camera/view changes.',
+    },
+  },
 }
 
 function getInitialLanguage() {
@@ -200,9 +346,13 @@ function getPageId() {
 function ContentPage() {
   const [language, setLanguage] = useState(getInitialLanguage)
   const [comicPageIndex, setComicPageIndex] = useState(0)
+  const [guideExampleIndex, setGuideExampleIndex] = useState(0)
   const pageId = getPageId()
   const copy = useMemo(() => pageCopy[pageId][language], [language, pageId])
+  const guideCopy = guideContent[language]
+  const currentExample = guideCopy.example[guideExampleIndex]
   const isStory = pageId === 'story'
+  const isGuide = pageId === 'guide'
   const currentComicPage = comicPages[comicPageIndex]
 
   useEffect(() => {
@@ -235,19 +385,33 @@ function ContentPage() {
         {navItems.map((item) => (
           <a
             aria-current={item.id === pageId ? 'page' : undefined}
+            data-tooltip={item.tooltip?.[language]}
             href={withLanguage(item.href, language)}
             key={item.id}
           >
-            {item.label[language]}
+            <span className="nav-label">{item.label[language]}</span>
+            {item.badge ? <span className="nav-badge">{item.badge[language]}</span> : null}
           </a>
         ))}
       </nav>
 
-      <section className="content-visual" aria-hidden="true">
-        <img src={keyVisualOtherUrl} alt="" />
-      </section>
+      {isGuide ? (
+        <section className="guide-hero" aria-label={language === 'ja' ? 'アプリ内キューブギミック攻略の案内' : 'In-app cube logic guide intro'}>
+          <img src={guideOrangeGoalUrl} alt="" />
+          <div>
+            <p>{language === 'ja' ? 'APP 3x3 LOGIC' : 'APP 3x3 LOGIC'}</p>
+            <h1>{copy.heading}</h1>
+            <strong>{copy.lead}</strong>
+            <span>{copy.body}</span>
+          </div>
+        </section>
+      ) : (
+        <section className="content-visual" aria-hidden="true">
+          <img src={keyVisualOtherUrl} alt="" />
+        </section>
+      )}
 
-      <article className={`content-panel${isStory ? ' story-panel' : ''}`}>
+      <article className={`content-panel${isStory ? ' story-panel' : ''}${isGuide ? ' guide-intro-panel' : ''}`}>
         {isStory ? (
           <>
             <img
@@ -270,7 +434,7 @@ function ContentPage() {
             />
           </>
         ) : null}
-        <h1>{copy.heading}</h1>
+        {isGuide ? null : <h1>{copy.heading}</h1>}
         {copy.status ? (
           pageId === 'app' ? (
             <img className="content-status-icon" src={comingSoonIconUrl} alt="" />
@@ -278,8 +442,18 @@ function ContentPage() {
             <p className="content-status">{copy.status}</p>
           )
         ) : null}
-        {copy.lead ? <p className="content-lead">{copy.lead}</p> : null}
-        {copy.paragraphs ? (
+        {copy.lead && !isGuide ? <p className="content-lead">{copy.lead}</p> : null}
+        {isGuide ? (
+          <div className="guide-rules" aria-label={guideCopy.rulesLabel}>
+            {guideCopy.rules.map(([number, title, body]) => (
+              <section key={number}>
+                <span>{number}</span>
+                <h2>{title}</h2>
+                <p>{body}</p>
+              </section>
+            ))}
+          </div>
+        ) : copy.paragraphs ? (
           <div className="story-prose">
             {copy.paragraphs.map((paragraph) => (
               <p key={paragraph}>
@@ -303,6 +477,109 @@ function ContentPage() {
           </p>
         )}
       </article>
+
+      {pageId === 'guide' ? (
+        <>
+          <section className="guide-visual-strip" aria-label={language === 'ja' ? '攻略イメージ' : 'Guide visuals'}>
+            {guideVisuals.map((image) => (
+              <img src={image} alt="" key={image} />
+            ))}
+          </section>
+
+          <section className="guide-flow" aria-label={guideCopy.flowLabel}>
+            {guideCopy.steps.map(([title, cue, body, image, miu], index) => (
+              <article className="guide-step" key={title}>
+                <img src={image} alt="" />
+                <div>
+                  <img className="guide-step-miu" src={miu} alt="" />
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <h2>{title}</h2>
+                  <strong>{cue}</strong>
+                  <p>{body}</p>
+                </div>
+              </article>
+            ))}
+          </section>
+
+          <section className="guide-example" aria-label={guideCopy.exampleLabel}>
+            <div className="guide-example-copy">
+              <p>{guideCopy.exampleEyebrow}</p>
+              <h2>{guideCopy.exampleTitle}</h2>
+              <strong>{currentExample[0]}</strong>
+              <span>{currentExample[1]}</span>
+              <small>{currentExample[2]}</small>
+              <div className="guide-example-actions">
+                <button
+                  type="button"
+                  disabled={guideExampleIndex === 0}
+                  onClick={() => setGuideExampleIndex((index) => Math.max(0, index - 1))}
+                >
+                  {guideCopy.prev}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setGuideExampleIndex(0)}
+                >
+                  {guideCopy.reset}
+                </button>
+                <button
+                  type="button"
+                  disabled={guideExampleIndex === guideCopy.example.length - 1}
+                  onClick={() =>
+                    setGuideExampleIndex((index) => Math.min(guideCopy.example.length - 1, index + 1))
+                  }
+                >
+                  {guideCopy.next}
+                </button>
+              </div>
+            </div>
+            <div className="guide-example-stage">
+              <div className={`guide-mini-cube guide-mini-cube-${currentExample[3]}`}>
+                {exampleStickers[currentExample[3]].map((color, index) => (
+                  <span className={`cube-sticker cube-sticker-${color}`} key={`${color}-${index}`} />
+                ))}
+              </div>
+              <img src={currentExample[4]} alt="" />
+              <div className="guide-example-dots" aria-hidden="true">
+                {guideCopy.example.map((step, index) => (
+                  <button
+                    type="button"
+                    aria-label={step[0]}
+                    aria-current={guideExampleIndex === index ? 'step' : undefined}
+                    key={step[0]}
+                    onClick={() => setGuideExampleIndex(index)}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="guide-board" aria-label={guideCopy.boardLabel}>
+            <div className="guide-board-heading">
+              <p>{guideCopy.boardEyebrow}</p>
+              <h2>{guideCopy.boardTitle}</h2>
+            </div>
+            <div className="guide-algorithms">
+              {guideCopy.algorithms.map(([name, notation, phrase]) => (
+                <article key={name}>
+                  <h3>{name}</h3>
+                  <code>{notation}</code>
+                  <p>{phrase}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="guide-tips" aria-label={guideCopy.tipsLabel}>
+            {guideCopy.tips.map(([title, body]) => (
+              <article key={title}>
+                <h2>{title}</h2>
+                <p>{body}</p>
+              </article>
+            ))}
+          </section>
+        </>
+      ) : null}
 
       {pageId === 'character' ? (
         <section className="character-section" aria-label="Character profiles">

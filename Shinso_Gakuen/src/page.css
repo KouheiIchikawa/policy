@@ -83,10 +83,60 @@ a {
 }
 
 .site-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: clamp(0.76rem, 1.7vw, 0.95rem);
   font-weight: 950;
   letter-spacing: 0.08em;
   opacity: 0.72;
+}
+
+.nav-badge {
+  display: inline-grid;
+  place-items: center;
+  min-height: 18px;
+  padding: 2px 6px;
+  color: var(--black);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      var(--green) 0 7px,
+      #caff30 7px 14px
+    );
+  font-size: 0.62rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.site-nav a[data-tooltip]::after {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  z-index: 5;
+  width: max-content;
+  max-width: 180px;
+  padding: 7px 9px;
+  color: var(--green);
+  background: rgba(0, 0, 0, 0.92);
+  box-shadow: inset 0 0 0 1px rgba(77, 255, 95, 0.42);
+  content: attr(data-tooltip);
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1.45;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  transition: opacity 0.16s ease, transform 0.16s ease;
+}
+
+.site-nav a[data-tooltip]:hover::after,
+.site-nav a[data-tooltip]:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .site-nav a[aria-current="page"] {
@@ -392,6 +442,406 @@ h1 {
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
 }
 
+.guide-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: clamp(18px, 4vw, 42px);
+  width: min(1180px, calc(100% - 36px));
+  margin: 34px auto 0;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(247, 255, 249, 0.94), rgba(220, 255, 241, 0.9)),
+    #f7fff9;
+  color: #10231d;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+}
+
+.guide-hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.guide-hero div {
+  padding: clamp(24px, 5vw, 54px) clamp(22px, 4vw, 44px);
+}
+
+.guide-hero p {
+  margin: 0 0 12px;
+  color: #00865b;
+  font-size: 0.8rem;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+}
+
+.guide-hero h1 {
+  margin-bottom: 18px;
+  color: #10231d;
+  font-size: clamp(3.2rem, 9vw, 7rem);
+}
+
+.guide-hero strong,
+.guide-hero span {
+  display: block;
+  max-width: 470px;
+  font-weight: 900;
+  line-height: 1.8;
+}
+
+.guide-hero strong {
+  margin-bottom: 12px;
+  color: #0b4f3a;
+  font-size: clamp(1.18rem, 2.6vw, 1.55rem);
+}
+
+.guide-hero span {
+  color: rgba(16, 35, 29, 0.76);
+  font-size: 1rem;
+}
+
+.guide-intro-panel {
+  width: min(1180px, calc(100% - 36px));
+  padding: clamp(18px, 3vw, 30px);
+}
+
+.guide-rules {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.guide-rules section,
+.guide-step,
+.guide-board,
+.guide-tips article {
+  background:
+    linear-gradient(180deg, rgba(9, 30, 21, 0.88), rgba(0, 0, 0, 0.76)),
+    #020604;
+  box-shadow: inset 0 0 0 1px rgba(247, 255, 249, 0.11);
+}
+
+.guide-rules section {
+  min-height: 150px;
+  padding: 22px;
+}
+
+.guide-rules span,
+.guide-step span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 38px;
+  height: 38px;
+  margin-bottom: 14px;
+  color: var(--black);
+  background: var(--green);
+  font-size: 0.9rem;
+  font-weight: 950;
+}
+
+.guide-rules h2,
+.guide-step h2,
+.guide-board h2,
+.guide-tips h2 {
+  margin: 0 0 10px;
+  color: var(--white);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  letter-spacing: 0;
+}
+
+.guide-rules p,
+.guide-step p,
+.guide-tips p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.75;
+}
+
+.guide-visual-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: min(1180px, calc(100% - 36px));
+  margin: 28px auto 0;
+}
+
+.guide-visual-strip img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+  background: rgba(247, 255, 249, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(247, 255, 249, 0.12);
+}
+
+.guide-flow {
+  display: grid;
+  gap: 18px;
+  width: min(1180px, calc(100% - 36px));
+  margin: 28px auto 0;
+}
+
+.guide-step {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.98fr) minmax(260px, 1.02fr);
+  align-items: center;
+  overflow: hidden;
+}
+
+.guide-step:nth-child(even) {
+  grid-template-columns: minmax(260px, 1.02fr) minmax(260px, 0.98fr);
+}
+
+.guide-step:nth-child(even) img {
+  order: 2;
+}
+
+.guide-step img {
+  display: block;
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.guide-step div {
+  position: relative;
+  padding: clamp(24px, 5vw, 48px);
+}
+
+.guide-step-miu {
+  float: right;
+  width: clamp(76px, 10vw, 128px) !important;
+  height: auto !important;
+  margin: -12px 0 10px 16px;
+  object-fit: contain !important;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.28));
+}
+
+.guide-step strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--green);
+  font-size: clamp(1.05rem, 2.5vw, 1.32rem);
+  font-weight: 950;
+  line-height: 1.5;
+}
+
+.guide-example {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.9fr) minmax(300px, 1.1fr);
+  align-items: stretch;
+  gap: 18px;
+  width: min(1180px, calc(100% - 36px));
+  margin: 28px auto 0;
+}
+
+.guide-example-copy,
+.guide-example-stage {
+  background:
+    linear-gradient(180deg, rgba(9, 30, 21, 0.9), rgba(0, 0, 0, 0.78)),
+    #020604;
+  box-shadow: inset 0 0 0 1px rgba(247, 255, 249, 0.11);
+}
+
+.guide-example-copy {
+  padding: clamp(24px, 5vw, 44px);
+}
+
+.guide-example-copy > p,
+.guide-board-heading p {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+}
+
+.guide-example-copy h2 {
+  margin: 0 0 18px;
+  color: var(--white);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.08;
+}
+
+.guide-example-copy strong,
+.guide-example-copy span,
+.guide-example-copy small {
+  display: block;
+  font-weight: 900;
+  line-height: 1.65;
+}
+
+.guide-example-copy strong {
+  color: var(--green);
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+}
+
+.guide-example-copy span {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.guide-example-copy small {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.guide-example-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.guide-example-actions button,
+.guide-example-dots button {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.guide-example-actions button {
+  min-height: 42px;
+  color: var(--black);
+  background: var(--green);
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.guide-example-actions button:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.guide-example-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) minmax(160px, 1fr);
+  align-items: center;
+  gap: 16px;
+  min-height: 360px;
+  overflow: hidden;
+  padding: clamp(22px, 4vw, 36px);
+}
+
+.guide-example-stage > img {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.34));
+}
+
+.guide-mini-cube {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  width: min(220px, 100%);
+  aspect-ratio: 1;
+  padding: 12px;
+  background: rgba(247, 255, 249, 0.12);
+  box-shadow:
+    inset 0 0 0 2px rgba(247, 255, 249, 0.16),
+    0 22px 48px rgba(0, 0, 0, 0.32);
+  transform: rotate(-3deg);
+}
+
+.cube-sticker {
+  display: block;
+  min-width: 0;
+  border: 2px solid rgba(0, 0, 0, 0.48);
+}
+
+.cube-sticker-red { background: #e23b33; }
+.cube-sticker-yellow { background: #ffd938; }
+.cube-sticker-blue { background: #2359d8; }
+.cube-sticker-green { background: #21a95d; }
+.cube-sticker-white { background: #f7fff9; }
+.cube-sticker-orange { background: #f28c22; }
+.cube-sticker-gray { background: #9aa8a0; }
+
+.guide-example-dots {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.guide-example-dots button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(247, 255, 249, 0.35);
+}
+
+.guide-example-dots button[aria-current="step"] {
+  background: var(--green);
+}
+
+.guide-board {
+  width: min(1180px, calc(100% - 36px));
+  margin: 28px auto 0;
+  padding: clamp(24px, 5vw, 48px);
+}
+
+.guide-algorithms {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.guide-algorithms article {
+  min-width: 0;
+  padding: 18px;
+  background: rgba(247, 255, 249, 0.08);
+}
+
+.guide-algorithms h3 {
+  margin: 0 0 10px;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.guide-algorithms code {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #10231d;
+  background: var(--green);
+  padding: 10px;
+  font-size: clamp(0.92rem, 2vw, 1.08rem);
+  font-weight: 950;
+  line-height: 1.5;
+}
+
+.guide-algorithms p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.guide-tips {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: min(1180px, calc(100% - 36px));
+  margin: 28px auto 0;
+}
+
+.guide-tips article {
+  min-height: 160px;
+  padding: 22px;
+}
+
 .content-footer {
   display: flex;
   align-items: center;
@@ -483,6 +933,54 @@ h1 {
   }
 
   .release-platforms {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-hero,
+  .guide-example,
+  .guide-example-stage,
+  .guide-step,
+  .guide-step:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-hero img,
+  .guide-step img {
+    min-height: 0;
+    height: auto;
+  }
+
+  .guide-step:nth-child(even) img {
+    order: 0;
+  }
+
+  .guide-step-miu {
+    width: 86px !important;
+    margin-top: -6px;
+  }
+
+  .guide-example-stage {
+    min-height: 0;
+    padding-bottom: 54px;
+  }
+
+  .guide-mini-cube {
+    justify-self: center;
+    width: min(210px, 82vw);
+  }
+
+  .guide-example-stage > img {
+    max-height: 230px;
+  }
+
+  .guide-example-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-rules,
+  .guide-visual-strip,
+  .guide-algorithms,
+  .guide-tips {
     grid-template-columns: 1fr;
   }
 }
