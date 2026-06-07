@@ -7,19 +7,19 @@ export const policyCopy = {
     subtitle: 'シンソウ学園の情報の取り扱いについて',
     updated: '制定日: 2026年5月31日',
     lead:
-      'シンソウ学園（以下「本アプリ」といいます）は、利用者のプライバシーを尊重し、個人情報の保護に努めます。本ページでは、本アプリにおける情報の取り扱いを説明します。',
+      'シンソウ学園（以下「本アプリおよび本サイト」といいます）は、利用者のプライバシーを尊重し、個人情報の保護に努めます。本ページでは、本アプリおよび公式サイトにおける情報の取り扱いを説明します。',
     sections: [
       {
         title: '取得する情報',
         body:
-          '本アプリは、利用者を直接特定できる氏名、住所、電話番号、メールアドレス等の個人情報を取得しません。ただし、品質向上や不具合調査のため、端末情報、利用状況、クラッシュログ等の匿名の技術情報がOSまたは配信プラットフォームを通じて取得される場合があります。',
+          '本アプリは、利用者を直接特定できる氏名、住所、電話番号、メールアドレス等の個人情報を取得しません。ただし、品質向上や不具合調査のため、端末情報、利用状況、クラッシュログ等の匿名の技術情報がOSまたは配信プラットフォームを通じて取得される場合があります。また、本サイトではGoogle Analytics 4を利用し、Cookieを通じて閲覧ページ、利用ブラウザ、端末情報、参照元などのアクセス解析情報を取得する場合があります。',
       },
       {
         title: '利用目的',
         items: [
           '本アプリの提供、維持、改善のため',
           '不具合の調査および修正のため',
-          '利用状況を分析し、品質向上に役立てるため',
+          '本アプリおよび本サイトの利用状況を分析し、品質向上に役立てるため',
         ],
       },
       {
@@ -30,7 +30,7 @@ export const policyCopy = {
       {
         title: '外部サービス',
         body:
-          '本アプリは、アプリストア、OS、解析サービス等の外部サービスを利用する場合があります。これらの外部サービスにより取得される情報は、各サービス提供者のプライバシーポリシーに従って管理されます。',
+          '本アプリおよび本サイトは、アプリストア、OS、Google Analytics 4等の外部サービスを利用する場合があります。これらの外部サービスにより取得される情報は、各サービス提供者のプライバシーポリシーに従って管理されます。本サイトのアクセス解析Cookieは、Cookieポップアップで許可した場合に利用されます。',
       },
       {
         title: 'お問い合わせ',
@@ -45,7 +45,7 @@ export const policyCopy = {
       },
     ],
     asideTitle: 'SHINSO GAKUEN',
-    asideBody: '本ページは、シンソウ学園アプリのプライバシーポリシーです。',
+    asideBody: '本ページは、シンソウ学園アプリおよび公式サイトのプライバシーポリシーです。',
     miniTop: 'TOP',
     miniPolicy: 'PRIVACY',
     miniContact: 'CONTACT',
@@ -59,19 +59,19 @@ export const policyCopy = {
     subtitle: 'How Shinso Gakuen handles user information',
     updated: 'Effective date: May 31, 2026',
     lead:
-      'Shinso Gakuen (the "App") respects user privacy and works to protect personal information. This page explains how information is handled in the App.',
+      'Shinso Gakuen (the "App and Site") respects user privacy and works to protect personal information. This page explains how information is handled in the App and on the official website.',
     sections: [
       {
         title: 'Information We Collect',
         body:
-          'The App does not collect personal information that directly identifies users, such as names, addresses, phone numbers, or email addresses. However, anonymous technical information such as device information, usage data, and crash logs may be collected through the OS or distribution platform for quality improvement and troubleshooting.',
+          'The App does not collect personal information that directly identifies users, such as names, addresses, phone numbers, or email addresses. However, anonymous technical information such as device information, usage data, and crash logs may be collected through the OS or distribution platform for quality improvement and troubleshooting. The Site may also use Google Analytics 4 and cookies to collect analytics information such as viewed pages, browser and device information, and referrers.',
       },
       {
         title: 'Purpose of Use',
         items: [
           'To provide, maintain, and improve the App',
           'To investigate and fix defects',
-          'To analyze usage and improve quality',
+          'To analyze usage of the App and Site and improve quality',
         ],
       },
       {
@@ -82,7 +82,7 @@ export const policyCopy = {
       {
         title: 'External Services',
         body:
-          "The App may use external services such as app stores, operating systems, or analytics services. Information collected by those services is managed according to each service provider's privacy policy.",
+          "The App and Site may use external services such as app stores, operating systems, or Google Analytics 4. Information collected by those services is managed according to each service provider's privacy policy. Analytics cookies on the Site are used when allowed through the cookie popup.",
       },
       {
         title: 'Contact',
@@ -97,7 +97,7 @@ export const policyCopy = {
       },
     ],
     asideTitle: 'SHINSO GAKUEN',
-    asideBody: 'This page is the privacy policy for the Shinso Gakuen app.',
+    asideBody: 'This page is the privacy policy for the Shinso Gakuen app and official website.',
     miniTop: 'TOP',
     miniPolicy: 'PRIVACY',
     miniContact: 'CONTACT',

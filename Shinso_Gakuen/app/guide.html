@@ -10,6 +10,20 @@
     <link rel="manifest" href="/policy/Shinso_Gakuen/assets/favicon/site.webmanifest" />
     <link rel="stylesheet" href="/policy/Shinso_Gakuen/assets/back-to-top.css" />
     <meta name="theme-color" content="#020604" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y92DSMT7WN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      const shinsoCookieConsent = document.cookie
+        .split('; ')
+        .find((cookie) => cookie.startsWith('shinso_cookie_consent='))
+        ?.split('=')[1];
+      gtag('consent', 'default', {
+        analytics_storage: shinsoCookieConsent === 'accepted' ? 'granted' : 'denied',
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-Y92DSMT7WN');
+    </script>
     <title>シンソウ学園 | 攻略</title>
     <meta name="description" content="スマホアプリ内の3x3キューブギミックを、オレンジ面ゴールとして図と短い言葉で説明する攻略ページ。" />
     <meta name="robots" content="index, follow, max-image-preview:large" />

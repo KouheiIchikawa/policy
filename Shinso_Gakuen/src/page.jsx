@@ -5,6 +5,7 @@ import cubeFragmentsUrl from '../app/assets/story/cube-fragments.png'
 import mysteryCubeUrl from '../app/assets/story/mystery-cube.png'
 import storyVeilUrl from '../app/assets/story/story-veil.png'
 import xLogoUrl from '../app/assets/x-logo.svg'
+import { CookieConsent } from './CookieConsent'
 import { navItems, officialXUrl, withLanguage } from './navigation'
 import './page.css'
 
@@ -345,6 +346,7 @@ function getPageId() {
 
 function ContentPage() {
   const [language, setLanguage] = useState(getInitialLanguage)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [comicPageIndex, setComicPageIndex] = useState(0)
   const [guideExampleIndex, setGuideExampleIndex] = useState(0)
   const pageId = getPageId()
@@ -361,9 +363,27 @@ function ContentPage() {
     window.localStorage.setItem(storageKey, language)
   }, [copy.title, language])
 
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [language, pageId])
+
   return (
     <main className="content-shell">
       <header className="content-header">
+        <div className="content-actions">
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-controls="site-navigation"
+            aria-expanded={isMenuOpen}
+            aria-label={language === 'ja' ? 'メニュー' : 'Menu'}
+            onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
         <a className="content-logo" href={withLanguage('./', language)}>
           SHINSO GAKUEN
         </a>
@@ -381,13 +401,18 @@ function ContentPage() {
         </div>
       </header>
 
-      <nav className="site-nav" aria-label="Site navigation">
+      <nav
+        className={`site-nav${isMenuOpen ? ' is-open' : ''}`}
+        id="site-navigation"
+        aria-label="Site navigation"
+      >
         {navItems.map((item) => (
           <a
             aria-current={item.id === pageId ? 'page' : undefined}
             data-tooltip={item.tooltip?.[language]}
             href={withLanguage(item.href, language)}
             key={item.id}
+            onClick={() => setIsMenuOpen(false)}
           >
             <span className="nav-label">{item.label[language]}</span>
             {item.badge ? <span className="nav-badge">{item.badge[language]}</span> : null}
@@ -657,6 +682,7 @@ function ContentPage() {
           <span>@sio_sio_bull</span>
         </a>
       </footer>
+      <CookieConsent language={language} />
     </main>
   )
 }

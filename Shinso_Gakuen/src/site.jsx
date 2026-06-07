@@ -1,6 +1,7 @@
 import { StrictMode, useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import xLogoUrl from '../app/assets/x-logo.svg'
+import { CookieConsent } from './CookieConsent'
 import { navItems, officialXUrl, withLanguage } from './navigation'
 import './site.css'
 
@@ -99,6 +100,7 @@ function Site() {
           <span>@sio_sio_bull</span>
         </a>
       </footer>
+      <CookieConsent language={language} />
     </main>
   )
 }

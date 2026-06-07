@@ -10,6 +10,20 @@
     <link rel="manifest" href="/policy/Shinso_Gakuen/assets/favicon/site.webmanifest" />
     <link rel="stylesheet" href="/policy/Shinso_Gakuen/assets/back-to-top.css" />
     <meta name="theme-color" content="#020604" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y92DSMT7WN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      const shinsoCookieConsent = document.cookie
+        .split('; ')
+        .find((cookie) => cookie.startsWith('shinso_cookie_consent='))
+        ?.split('=')[1];
+      gtag('consent', 'default', {
+        analytics_storage: shinsoCookieConsent === 'accepted' ? 'granted' : 'denied',
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-Y92DSMT7WN');
+    </script>
     <title>シンソウ学園 | ストーリー</title>
     <meta name="description" content="道喜玖永学園を舞台に、才能、努力、知覚、そして自分自身と向き合う物語。" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -33,6 +47,7 @@
     <script type="application/ld+json">{"@type":"WebPage","url":"https://kouheiichikawa.github.io/policy/Shinso_Gakuen/story.html","name":"シンソウ学園 | ストーリー","description":"道喜玖永学園を舞台に、才能、努力、知覚、そして自分自身と向き合う物語。","inLanguage":"ja-JP","@context":"https://schema.org","publisher":{"url":"https://x.com/sio_sio_bull","name":"Kohei Elimi Lab","@type":"Organization"},"image":"https://kouheiichikawa.github.io/policy/Shinso_Gakuen/assets/keyvisual/ShisoGakuenKeyVisual_ja.png"}</script>
     <script type="module" crossorigin src="/policy/Shinso_Gakuen/assets/navigation.js"></script>
     <script type="module" crossorigin src="/policy/Shinso_Gakuen/assets/page.js"></script>
+    <link rel="stylesheet" crossorigin href="/policy/Shinso_Gakuen/assets/navigation.css">
     <link rel="stylesheet" crossorigin href="/policy/Shinso_Gakuen/assets/page.css">
   </head>
   <body>

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import xLogoUrl from '../app/assets/x-logo.svg'
 import { policyCopy } from './content'
+import { CookieConsent } from './CookieConsent'
 import { navItems, officialXUrl, withLanguage } from './navigation'
 
 const storageKey = 'shinso-gakuen-lang'
@@ -18,6 +19,7 @@ function getInitialLanguage() {
 
 export function App() {
   const [language, setLanguage] = useState(getInitialLanguage)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const copy = useMemo(() => policyCopy[language], [language])
 
   useEffect(() => {
@@ -26,9 +28,27 @@ export function App() {
     window.localStorage.setItem(storageKey, language)
   }, [copy.metaTitle, language])
 
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [language])
+
   return (
     <main className="content-shell">
       <header className="content-header">
+        <div className="content-actions">
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-controls="site-navigation"
+            aria-expanded={isMenuOpen}
+            aria-label={language === 'ja' ? 'メニュー' : 'Menu'}
+            onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
         <a className="content-logo" href={withLanguage('./', language)}>
           SHINSO GAKUEN
         </a>
@@ -46,13 +66,18 @@ export function App() {
         </div>
       </header>
 
-      <nav className="site-nav" aria-label="Site navigation">
+      <nav
+        className={`site-nav${isMenuOpen ? ' is-open' : ''}`}
+        id="site-navigation"
+        aria-label="Site navigation"
+      >
         {navItems.map((item) => (
           <a
             aria-current={item.id === 'privacy-policy' ? 'page' : undefined}
             data-tooltip={item.tooltip?.[language]}
             href={withLanguage(item.href, language)}
             key={item.id}
+            onClick={() => setIsMenuOpen(false)}
           >
             <span className="nav-label">{item.label[language]}</span>
             {item.badge ? <span className="nav-badge">{item.badge[language]}</span> : null}
@@ -116,6 +141,7 @@ export function App() {
           <span>@sio_sio_bull</span>
         </a>
       </footer>
+      <CookieConsent language={language} />
     </main>
   )
 }
