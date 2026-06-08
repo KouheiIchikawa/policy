@@ -39,6 +39,10 @@ const guideVisuals = [
 
 const comicPages = [
   {
+    ja: './assets/comic/comic003_ja.png',
+    en: './assets/comic/comic003_en.png',
+  },
+  {
     ja: './assets/comic/comic002_ja.png',
     en: './assets/comic/comic002_en.png',
   },
