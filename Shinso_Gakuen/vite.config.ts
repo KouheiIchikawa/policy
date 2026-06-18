@@ -14,6 +14,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, 'app/index.html'),
         app: resolve(__dirname, 'app/app.html'),
+        book: resolve(__dirname, 'app/book.html'),
         character: resolve(__dirname, 'app/character.html'),
         comic: resolve(__dirname, 'app/comic.html'),
         guide: resolve(__dirname, 'app/guide.html'),

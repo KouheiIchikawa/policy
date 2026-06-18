@@ -1,6 +1,7 @@
 export const navItems = [
   { id: 'story', href: './story.html', label: { ja: 'ストーリー', en: 'Story' } },
   { id: 'character', href: './character.html', label: { ja: 'キャラクター', en: 'Character' } },
+  { id: 'book', href: './book.html', label: { ja: '書籍', en: 'Books' } },
   { id: 'comic', href: './comic.html', label: { ja: 'コミック', en: 'Comic' } },
   {
     id: 'guide',

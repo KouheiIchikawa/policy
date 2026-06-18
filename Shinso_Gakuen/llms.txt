@@ -7,6 +7,7 @@
 - 公式サイト: https://kouheiichikawa.github.io/policy/Shinso_Gakuen/
 - ストーリー: https://kouheiichikawa.github.io/policy/Shinso_Gakuen/story.html
 - キャラクター: https://kouheiichikawa.github.io/policy/Shinso_Gakuen/character.html
+- 書籍: https://kouheiichikawa.github.io/policy/Shinso_Gakuen/book.html
 - コミック: https://kouheiichikawa.github.io/policy/Shinso_Gakuen/comic.html
 - アプリ: https://kouheiichikawa.github.io/policy/Shinso_Gakuen/app.html
 - プライバシーポリシー: https://kouheiichikawa.github.io/policy/Shinso_Gakuen/privacy-policy.html
@@ -19,6 +20,10 @@
 
 シンソウ学園のちびキャラたちによる、ちょっと不思議で、ちょっとゆるい日常漫画を公開しています。
 
-## 公開予定
+## 書籍
 
-シンソウ学園アプリは2026年6月公開予定です。
+小説「シンソウ学園(Ⅰ) 入学編」をリリースしています。今後、「シンソウ学園(Ⅱ) 熱中編」「シンソウ学園(Ⅲ) 青春篇」もリリース予定です。
+
+## アプリ
+
+シンソウ学園アプリはiOS / Android向けにリリース済みです。

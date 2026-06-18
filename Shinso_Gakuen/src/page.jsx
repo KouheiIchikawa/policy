@@ -1,6 +1,5 @@
 import { Fragment, StrictMode, useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import comingSoonIconUrl from '../app/assets/coming-soon-icon.png'
 import cubeFragmentsUrl from '../app/assets/story/cube-fragments.png'
 import mysteryCubeUrl from '../app/assets/story/mystery-cube.png'
 import storyVeilUrl from '../app/assets/story/story-veil.png'
@@ -36,25 +35,117 @@ const guideVisuals = [
   guideOrangeFaceMiddleUrl,
   guideOrangeOppositeFinishUrl,
 ]
+const appStoreUrl = 'https://apps.apple.com/jp/app/シンソウ学園/id6778015795'
+const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.koheiilimilab.shinsogakuen&pcampaignid=web_share'
+const firstNovelUrl = 'https://amzn.asia/d/0gjywItQ'
+const firstNovelCoverUrl = './assets/book/shinso-gakuen-1.jpg'
+const comingSoonBookIconUrl = './assets/book/coming-soon-volume.png'
+const bookHeroUrl = './assets/book/book-hero.png'
+const appHeroUrl = './assets/app/app-hero.png'
+const appStoreBadgeUrl = '../common/appstore_badge.svg'
+const googlePlayBadgeUrl = '../common/Google_Play_Badge_JA.svg'
+const releasePlatforms = [
+  {
+    id: 'ios',
+    label: 'iOS',
+    device: 'App Store',
+    url: appStoreUrl,
+    badge: appStoreBadgeUrl,
+    badgeAlt: {
+      ja: 'App Storeからダウンロード',
+      en: 'Download on the App Store',
+    },
+    note: {
+      ja: 'iPhone / iPad でプレイできます。',
+      en: 'Available for iPhone and iPad.',
+    },
+  },
+  {
+    id: 'android',
+    label: 'Android',
+    device: 'Google Play',
+    url: googlePlayUrl,
+    badge: googlePlayBadgeUrl,
+    badgeAlt: {
+      ja: 'Google Playで手に入れよう',
+      en: 'Get it on Google Play',
+    },
+    note: {
+      ja: 'Android 端末でプレイできます。',
+      en: 'Available for Android devices.',
+    },
+  },
+]
+const bookVolumes = [
+  {
+    id: 'volume-1',
+    number: 'I',
+    title: { ja: 'シンソウ学園(Ⅰ)', en: 'Shinso Gakuen (I)' },
+    subtitle: { ja: '入学編', en: 'Entrance Arc' },
+    status: { ja: '発売中', en: 'Available now' },
+    body: {
+      ja: '道喜玖永学園への入学から始まる第I巻。',
+      en: 'Volume I begins with entrance into Dokikuei Academy.',
+    },
+    url: firstNovelUrl,
+    image: firstNovelCoverUrl,
+  },
+  {
+    id: 'volume-2',
+    number: 'II',
+    title: { ja: 'シンソウ学園(Ⅱ)', en: 'Shinso Gakuen (II)' },
+    subtitle: { ja: '熱中編', en: 'Immersion Arc' },
+    status: { ja: 'リリース予定', en: 'Coming soon' },
+    body: {
+      ja: '第II巻は今後リリース予定です。',
+      en: 'Volume II is planned for a future release.',
+    },
+    image: comingSoonBookIconUrl,
+    isComingSoon: true,
+  },
+  {
+    id: 'volume-3',
+    number: 'III',
+    title: { ja: 'シンソウ学園(Ⅲ)', en: 'Shinso Gakuen (III)' },
+    subtitle: { ja: '青春篇', en: 'Youth Arc' },
+    status: { ja: 'リリース予定', en: 'Coming soon' },
+    body: {
+      ja: '第III巻は今後リリース予定です。',
+      en: 'Volume III is planned for a future release.',
+    },
+    image: comingSoonBookIconUrl,
+    isComingSoon: true,
+  },
+]
 
 const comicPages = [
   {
+    id: '006',
+    ja: './assets/comic/comic006_ja.png',
+    en: './assets/comic/comic006_en.png',
+  },
+  {
+    id: '005',
     ja: './assets/comic/comic005_ja.png',
     en: './assets/comic/comic005_en.png',
   },
   {
+    id: '004',
     ja: './assets/comic/comic004_ja.png',
     en: './assets/comic/comic004_en.png',
   },
   {
+    id: '003',
     ja: './assets/comic/comic003_ja.png',
     en: './assets/comic/comic003_en.png',
   },
   {
+    id: '002',
     ja: './assets/comic/comic002_ja.png',
     en: './assets/comic/comic002_en.png',
   },
   {
+    id: '001',
     ja: './assets/comic/comic001_ja.png',
     en: './assets/comic/comic001_en.png',
   },
@@ -298,17 +389,38 @@ const pageCopy = {
     ja: {
       title: 'シンソウ学園 | アプリ',
       heading: 'アプリ',
-      status: 'COMING SOON',
-      lead: '勇気とストーリーで知覚に迫る、学園思考パズルアドベンチャー。',
-      body: 'あなたがこの学園を訪れる日を私たちは待っている。\n2026年6月公開予定',
+      status: 'NOW LIVE',
+      lead: 'シンソウ学園、開幕。',
+      body: '会話を読み、パズルギミックを解き、勇気への真相へ近づく。\n学園思考パズルアドベンチャー。\n\niOS / Android 向けにリリース。\nシンソウ学園の物語を、あなたの手の中へ。',
     },
     en: {
       title: 'Shinso Gakuen | App',
       heading: 'App',
-      status: 'COMING SOON',
-      lead: 'A school puzzle adventure where courage and story sharpen perception.',
+      status: 'NOW LIVE',
+      lead: 'Shinso Gakuen begins.',
       body:
-        'Planned for release on iOS and Android in June 2026. Store information will be available from this page when ready.',
+        'Read the conversations, solve the puzzle gimmicks, and move closer to the truth behind courage.\nA school-thinking puzzle adventure.\n\nNow available for iOS and Android.\nCarry the story of Shinso Gakuen in your hands.',
+    },
+  },
+  book: {
+    ja: {
+      title: 'シンソウ学園 | 書籍',
+      heading: '書籍',
+      status: 'SHINSO GAKUEN EXTRA STORIES',
+      lead: 'もっとシンソウを\n知りたいあなたへ',
+      body: 'アプリでは描かれなかった、\nもうひとつの\nシンソウ学園。',
+      note: '選ばれなかった言葉、隠された感情、\nキャラクターたちの本音まで。\n物語の奥へ、もう一歩。',
+      footer: 'SHINSO GAKUEN NOVELIZATION',
+    },
+    en: {
+      title: 'Shinso Gakuen | Books',
+      heading: 'Books',
+      status: 'SHINSO GAKUEN EXTRA STORIES',
+      lead: 'For those who want to know\nShinso more deeply',
+      body: 'Another Shinso Gakuen,\nbeyond what the app reveals.',
+      note:
+        'The words left unchosen, the emotions kept hidden,\nand the honest thoughts behind each character.\nTake one more step into the depths of the story.',
+      footer: 'SHINSO GAKUEN NOVELIZATION',
     },
   },
   comic: {
@@ -367,6 +479,8 @@ function ContentPage() {
   const currentExample = guideCopy.example[guideExampleIndex]
   const isStory = pageId === 'story'
   const isGuide = pageId === 'guide'
+  const isBook = pageId === 'book'
+  const isApp = pageId === 'app'
   const currentComicPage = comicPages[comicPageIndex]
 
   useEffect(() => {
@@ -380,7 +494,7 @@ function ContentPage() {
   }, [language, pageId])
 
   return (
-    <main className="content-shell">
+    <main className={`content-shell content-shell-${pageId}`}>
       <header className="content-header">
         <div className="content-actions">
           <button
@@ -442,13 +556,74 @@ function ContentPage() {
             <span>{copy.body}</span>
           </div>
         </section>
+      ) : isBook ? (
+        <section className="book-hero" aria-label={language === 'ja' ? 'シンソウ学園 書籍' : 'Shinso Gakuen books'}>
+          <img className="book-hero-bg" src={bookHeroUrl} alt="" aria-hidden="true" />
+          <div className="book-hero-copy">
+            <div className="book-hero-kicker">
+              <strong>{copy.heading}</strong>
+              <span>{copy.status}</span>
+            </div>
+            <h1>
+              {copy.lead.split('\n').map((line, index) => (
+                <Fragment key={line}>
+                  {index > 0 ? <br /> : null}
+                  {line}
+                </Fragment>
+              ))}
+            </h1>
+            <div className="book-hero-summary">
+              {copy.body.split('\n').map((line, index) => (
+                <Fragment key={line}>
+                  {index > 0 ? <br /> : null}
+                  {line}
+                </Fragment>
+              ))}
+            </div>
+            <p className="book-hero-note">
+              {copy.note.split('\n').map((line, index) => (
+                <Fragment key={`${line}-${index}`}>
+                  {index > 0 ? <br /> : null}
+                  {line}
+                </Fragment>
+              ))}
+            </p>
+            <small>{copy.footer}</small>
+          </div>
+        </section>
+      ) : isApp ? (
+        <section className="app-hero" aria-label={language === 'ja' ? 'シンソウ学園 アプリ' : 'Shinso Gakuen app'}>
+          <img className="app-hero-bg" src={appHeroUrl} alt="" aria-hidden="true" />
+          <div className="app-hero-copy">
+            <p>{copy.status}</p>
+            <h1>{copy.lead}</h1>
+            <span>
+              {copy.body.split('\n').map((line, index) => (
+                <Fragment key={`${line}-${index}`}>
+                  {index > 0 ? <br /> : null}
+                  {line}
+                </Fragment>
+              ))}
+            </span>
+            <div className="app-hero-actions" aria-label={language === 'ja' ? 'アプリストア' : 'App stores'}>
+              {releasePlatforms.map((platform) => (
+                <a href={platform.url} key={platform.id} rel="noreferrer" target="_blank">
+                  <small>{platform.device}</small>
+                  <strong>{platform.label}</strong>
+                  <img src={platform.badge} alt={platform.badgeAlt[language]} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
       ) : (
         <section className="content-visual" aria-hidden="true">
           <img src={keyVisualOtherUrl} alt="" />
         </section>
       )}
 
-      <article className={`content-panel${isStory ? ' story-panel' : ''}${isGuide ? ' guide-intro-panel' : ''}`}>
+      {!isBook && !isApp ? (
+        <article className={`content-panel${isStory ? ' story-panel' : ''}${isGuide ? ' guide-intro-panel' : ''}`}>
         {isStory ? (
           <>
             <img
@@ -473,11 +648,7 @@ function ContentPage() {
         ) : null}
         {isGuide ? null : <h1>{copy.heading}</h1>}
         {copy.status ? (
-          pageId === 'app' ? (
-            <img className="content-status-icon" src={comingSoonIconUrl} alt="" />
-          ) : (
-            <p className="content-status">{copy.status}</p>
-          )
+          <p className="content-status">{copy.status}</p>
         ) : null}
         {copy.lead && !isGuide ? <p className="content-lead">{copy.lead}</p> : null}
         {isGuide ? (
@@ -513,7 +684,8 @@ function ContentPage() {
             ))}
           </p>
         )}
-      </article>
+        </article>
+      ) : null}
 
       {pageId === 'guide' ? (
         <>
@@ -636,22 +808,50 @@ function ContentPage() {
         </section>
       ) : null}
 
-      {pageId === 'app' ? (
-        <section className="release-platforms" aria-label="Release platforms">
-          {[
-            { id: 'ios', label: 'iOS', device: 'App Store' },
-            { id: 'android', label: 'Android', device: 'Google Play' },
-          ].map((platform) => (
-            <article className="release-card" key={platform.id}>
-              <p>{platform.device}</p>
-              <h2>{platform.label}</h2>
-              <span>
-                  {language === 'ja'
-                    ? '2026年6月中リリース予定'
-                    : 'Planned for June 2026'}
-              </span>
-            </article>
-          ))}
+      {pageId === 'book' ? (
+        <section className="book-section" aria-label={language === 'ja' ? 'シンソウ学園 書籍一覧' : 'Shinso Gakuen books'}>
+          {bookVolumes.map((book) => {
+            const content = (
+              <>
+                <div className={`book-cover${book.isComingSoon ? ' book-cover-coming-soon' : ''}`} aria-hidden="true">
+                  <img src={book.image} alt="" />
+                  {book.isComingSoon ? (
+                    <div className="book-cover-label">
+                      <span>COMING</span>
+                      <strong>SOON</strong>
+                    </div>
+                  ) : null}
+                </div>
+                <div className="book-copy">
+                  <p>{book.status[language]}</p>
+                  <h2>{book.title[language]}</h2>
+                  <small>{book.subtitle[language]}</small>
+                  <span>{book.body[language]}</span>
+                  {book.url ? (
+                    <strong>{language === 'ja' ? 'Amazonで見る' : 'View on Amazon'}</strong>
+                  ) : (
+                    <em>{language === 'ja' ? '続報をお待ちください' : 'More details to come'}</em>
+                  )}
+                </div>
+              </>
+            )
+
+            return book.url ? (
+              <a
+                className="book-card book-card-live"
+                href={book.url}
+                key={book.id}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {content}
+              </a>
+            ) : (
+              <article className="book-card" key={book.id}>
+                {content}
+              </article>
+            )
+          })}
         </section>
       ) : null}
 
@@ -666,7 +866,7 @@ function ContentPage() {
               {language === 'ja' ? '前へ' : 'Prev'}
             </button>
             <span>
-              {comicPageIndex + 1}/{comicPages.length}
+              {currentComicPage.id}/{comicPages.length}
             </span>
             <button
               type="button"
@@ -680,8 +880,8 @@ function ContentPage() {
             src={currentComicPage[language]}
             alt={
               language === 'ja'
-                ? `シンソウ学園 コミック ${String(comicPageIndex + 1).padStart(3, '0')}`
-                : `Shinso Gakuen Comic ${String(comicPageIndex + 1).padStart(3, '0')}`
+                ? `シンソウ学園 コミック ${currentComicPage.id}`
+                : `Shinso Gakuen Comic ${currentComicPage.id}`
             }
           />
         </section>
