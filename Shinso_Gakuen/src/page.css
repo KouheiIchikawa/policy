@@ -1577,16 +1577,65 @@ h1 {
 
   .guide-hero,
   .guide-example,
-  .guide-example-stage,
   .guide-step,
   .guide-step:nth-child(even) {
     grid-template-columns: 1fr;
+  }
+
+  .guide-hero {
+    width: min(420px, calc(100% - 28px));
+    gap: 0;
+  }
+
+  .guide-hero div {
+    order: 1;
+    padding: 24px 20px 22px;
+  }
+
+  .guide-hero img {
+    order: 2;
+    aspect-ratio: 1.35;
+    object-fit: contain;
+    background: #f1fff4;
+  }
+
+  .guide-hero h1 {
+    font-size: clamp(2.55rem, 15vw, 4rem);
+  }
+
+  .guide-intro-panel,
+  .guide-flow,
+  .guide-example,
+  .guide-board,
+  .guide-tips {
+    width: min(420px, calc(100% - 28px));
+  }
+
+  .guide-intro-panel {
+    padding: 14px;
+  }
+
+  .guide-rules section,
+  .guide-tips article {
+    min-height: 0;
+    padding: 18px;
   }
 
   .guide-hero img,
   .guide-step img {
     min-height: 0;
     height: auto;
+  }
+
+  .guide-step img {
+    aspect-ratio: 1.45;
+    object-fit: cover;
+  }
+
+  .guide-step div,
+  .guide-example-copy,
+  .guide-board {
+    padding: 20px;
   }
 
   .guide-step:nth-child(even) img {
@@ -1599,27 +1648,46 @@ h1 {
   }
 
   .guide-example-stage {
+    grid-template-columns: minmax(116px, 0.85fr) minmax(132px, 1fr);
     min-height: 0;
-    padding-bottom: 54px;
+    gap: 10px;
+    padding: 18px 18px 48px;
   }
 
   .guide-mini-cube {
     justify-self: center;
-    width: min(210px, 82vw);
+    width: min(150px, 38vw);
+    gap: 4px;
+    padding: 8px;
   }
 
   .guide-example-stage > img {
-    max-height: 230px;
+    max-height: 210px;
   }
 
   .guide-example-actions {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .guide-example-actions button {
+    min-height: 38px;
+    font-size: 0.78rem;
   }
 
   .guide-rules,
-  .guide-visual-strip,
   .guide-algorithms,
   .guide-tips {
     grid-template-columns: 1fr;
+  }
+
+  .guide-visual-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(420px, calc(100% - 28px));
+    gap: 10px;
+  }
+
+  .guide-visual-strip img {
+    aspect-ratio: 1.25;
   }
 }

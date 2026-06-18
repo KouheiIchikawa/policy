@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - button "メニュー" [ref=e6] [cursor=pointer]
+      - link "SHINSO GAKUEN" [ref=e10] [cursor=pointer]:
+        - /url: ./?lang=ja
+      - generic "Language" [ref=e11]:
+        - button "JA" [pressed] [ref=e12] [cursor=pointer]
+        - button "EN" [ref=e13] [cursor=pointer]
+    - region "アプリ内キューブギミック攻略の案内" [ref=e14]:
+      - generic [ref=e15]:
+        - paragraph [ref=e16]: APP 3x3 LOGIC
+        - heading "攻略" [level=1] [ref=e17]
+        - strong [ref=e18]: スマホアプリ内の3x3ギミックは、毎回オレンジ面がゴール。
+        - generic [ref=e19]: 面を回す操作と、見回すだけの視点変更を分けて考えます。
+    - article [ref=e20]:
+      - generic "アプリで見ること" [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: "1"
+          - heading "視点と操作を分ける" [level=2] [ref=e24]
+          - paragraph [ref=e25]: 見回すだけでは盤面は変わらない
+        - generic [ref=e26]:
+          - generic [ref=e27]: "2"
+          - heading "ゴールはオレンジ" [level=2] [ref=e28]
+          - paragraph [ref=e29]: 毎回、オレンジ面をそろえる
+        - generic [ref=e30]:
+          - generic [ref=e31]: "3"
+          - heading "灰色は無視" [level=2] [ref=e32]
+          - paragraph [ref=e33]: 今の段階に関係ないマスは見ない
+    - region "攻略イメージ" [ref=e34]
+    - region "オレンジ面クリアの流れ" [ref=e35]:
+      - article [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: "01"
+          - heading "操作チェック" [level=2] [ref=e39]
+          - strong [ref=e40]: 回す / 見る は別
+          - paragraph [ref=e41]: 式の途中では同じ手前を保ちます。
+      - article [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: "02"
+          - heading "オレンジの花" [level=2] [ref=e45]
+          - strong [ref=e46]: 上に4本集める
+          - paragraph [ref=e47]: 反対面の中心のまわりへ、オレンジの辺を集めます。
+      - article [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: "03"
+          - heading "オレンジ十字" [level=2] [ref=e51]
+          - strong [ref=e52]: 横色を合わせて落とす
+          - paragraph [ref=e53]: 横色が中心と合ったら、その辺をオレンジ面へ送ります。
+      - article [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: "04"
+          - heading "オレンジ一面" [level=2] [ref=e57]
+          - strong [ref=e58]: 角を4つ合わせる
+          - paragraph [ref=e59]: 角は3つの中心にはさまる場所へ入れます。
+      - article [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]: "05"
+          - heading "真ん中の段" [level=2] [ref=e63]
+          - strong [ref=e64]: 反対色なしを選ぶ
+          - paragraph [ref=e65]: 反対面の色を持たない辺だけを処理します。
+      - article [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: "06"
+          - heading "反対面の形" [level=2] [ref=e69]
+          - strong [ref=e70]: 点・かぎ・せん
+          - paragraph [ref=e71]: 上面の辺だけ見て、十字へ進めます。
+      - article [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: "07"
+          - heading "仕上げ" [level=2] [ref=e75]
+          - strong [ref=e76]: 角、辺の順
+          - paragraph [ref=e77]: 最後は場所、向きの順で盤面クリアです。
+    - region "例題" [ref=e78]:
+      - generic [ref=e79]:
+        - paragraph [ref=e80]: さわって確認
+        - heading "オレンジ面で進めると？" [level=2] [ref=e81]
+        - strong [ref=e82]: スタート
+        - generic [ref=e83]: オレンジ面を決める
+        - generic [ref=e84]: まずゴール色を固定します。
+        - generic [ref=e85]:
+          - button "戻る" [disabled] [ref=e86]
+          - button "最初へ" [ref=e87] [cursor=pointer]
+          - button "次へ" [ref=e88] [cursor=pointer]
+      - generic [ref=e100]:
+        - button [ref=e101] [cursor=pointer]
+        - button [ref=e102] [cursor=pointer]
+        - button [ref=e103] [cursor=pointer]
+        - button [ref=e104] [cursor=pointer]
+        - button [ref=e105] [cursor=pointer]
+        - button [ref=e106] [cursor=pointer]
+    - region "覚える手順" [ref=e107]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: おぼえるのはここだけ
+        - heading "短い手順表" [level=2] [ref=e110]
+      - generic [ref=e111]:
+        - article [ref=e112]:
+          - heading "花から十字" [level=3] [ref=e113]
+          - code [ref=e114]: U / F2
+          - paragraph [ref=e115]: 横色を合わせて送る
+        - article [ref=e116]:
+          - heading "角の取り出し" [level=3] [ref=e117]
+          - code [ref=e118]: R' D' R
+          - paragraph [ref=e119]: 詰まった角を下へ
+        - article [ref=e120]:
+          - heading "左へ入れる" [level=3] [ref=e121]
+          - code [ref=e122]: D L D' L'
+          - paragraph [ref=e123]: 左の場所へ
+        - article [ref=e124]:
+          - heading "右へ入れる" [level=3] [ref=e125]
+          - code [ref=e126]: D' R' D R
+          - paragraph [ref=e127]: 右の場所へ
+        - article [ref=e128]:
+          - heading "反対面十字" [level=3] [ref=e129]
+          - code [ref=e130]: F R U R' U' F'
+          - paragraph [ref=e131]: 点、かぎ、せん
+        - article [ref=e132]:
+          - heading "最後の角向き" [level=3] [ref=e133]
+          - code [ref=e134]: R' D' R D
+          - paragraph [ref=e135]: 同じ角でやり切る
+    - region "つまずき対策" [ref=e136]:
+      - article [ref=e137]:
+        - heading "視点変更" [level=2] [ref=e138]
+        - paragraph [ref=e139]: 確認だけ。状態は変わらない。
+      - article [ref=e140]:
+        - heading "面回転" [level=2] [ref=e141]
+        - paragraph [ref=e142]: ログに残る。本当の操作。
+      - article [ref=e143]:
+        - heading "止まったら" [level=2] [ref=e144]
+        - paragraph [ref=e145]: 今の段階だけ見る。灰色は無視。
+      - article [ref=e146]:
+        - heading "こわい所" [level=2] [ref=e147]
+        - paragraph [ref=e148]: R' D' R D は途中で崩れて見えてOK。
+    - generic [ref=e149]:
+      - generic [ref=e150]: © 2026 Kohei Elimi Lab
+      - link "@sio_sio_bull" [ref=e151] [cursor=pointer]:
+        - /url: https://x.com/sio_sio_bull
+        - generic [ref=e152]: "@sio_sio_bull"
+    - complementary "Cookieの使用について" [ref=e153]:
+      - generic [ref=e154]:
+        - strong [ref=e155]: Cookieの使用について
+        - paragraph [ref=e156]: このサイトでは、言語設定の保存とGoogle Analytics 4によるアクセス解析のためにCookieを使用します。許可すると、閲覧状況の把握とサイト改善に利用します。
+        - link "プライバシーポリシー" [ref=e157] [cursor=pointer]:
+          - /url: ./privacy-policy.html?lang=ja
+      - generic [ref=e158]:
+        - button "拒否" [ref=e159] [cursor=pointer]
+        - button "許可" [ref=e160] [cursor=pointer]
+  - button "ページ上部へ戻る":
+    - img

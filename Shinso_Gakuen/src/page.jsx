@@ -556,7 +556,13 @@ function ContentPage() {
             <span>{copy.body}</span>
           </div>
         </section>
-      ) : isBook ? (
+      ) : (
+        <section className="content-visual" aria-hidden="true">
+          <img src={keyVisualOtherUrl} alt="" />
+        </section>
+      )}
+
+      {isBook ? (
         <section className="book-hero" aria-label={language === 'ja' ? 'シンソウ学園 書籍' : 'Shinso Gakuen books'}>
           <img className="book-hero-bg" src={bookHeroUrl} alt="" aria-hidden="true" />
           <div className="book-hero-copy">
@@ -591,7 +597,9 @@ function ContentPage() {
             <small>{copy.footer}</small>
           </div>
         </section>
-      ) : isApp ? (
+      ) : null}
+
+      {isApp ? (
         <section className="app-hero" aria-label={language === 'ja' ? 'シンソウ学園 アプリ' : 'Shinso Gakuen app'}>
           <img className="app-hero-bg" src={appHeroUrl} alt="" aria-hidden="true" />
           <div className="app-hero-copy">
@@ -616,11 +624,7 @@ function ContentPage() {
             </div>
           </div>
         </section>
-      ) : (
-        <section className="content-visual" aria-hidden="true">
-          <img src={keyVisualOtherUrl} alt="" />
-        </section>
-      )}
+      ) : null}
 
       {!isBook && !isApp ? (
         <article className={`content-panel${isStory ? ' story-panel' : ''}${isGuide ? ' guide-intro-panel' : ''}`}>
@@ -866,7 +870,7 @@ function ContentPage() {
               {language === 'ja' ? '前へ' : 'Prev'}
             </button>
             <span>
-              {currentComicPage.id}/{comicPages.length}
+              {comicPages.length - comicPageIndex}/{comicPages.length}
             </span>
             <button
               type="button"
