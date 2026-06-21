@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prebuild": "node scripts/ensure-single-assets-root.mjs",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

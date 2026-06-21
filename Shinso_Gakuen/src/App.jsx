@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import xLogoUrl from '../app/assets/x-logo.svg'
+import xLogoUrl from '../assets/x-logo.svg'
 import { policyCopy } from './content'
 import { CookieConsent } from './CookieConsent'
 import { navItems, officialXUrl, withLanguage } from './navigation'

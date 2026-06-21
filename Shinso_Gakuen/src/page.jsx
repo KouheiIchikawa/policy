@@ -1,9 +1,9 @@
 import { Fragment, StrictMode, useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import cubeFragmentsUrl from '../app/assets/story/cube-fragments.png'
-import mysteryCubeUrl from '../app/assets/story/mystery-cube.png'
-import storyVeilUrl from '../app/assets/story/story-veil.png'
-import xLogoUrl from '../app/assets/x-logo.svg'
+import cubeFragmentsUrl from '../assets/cube-fragments.png'
+import mysteryCubeUrl from '../assets/mystery-cube.png'
+import storyVeilUrl from '../assets/story-veil.png'
+import xLogoUrl from '../assets/x-logo.svg'
 import { CookieConsent } from './CookieConsent'
 import { navItems, officialXUrl, withLanguage } from './navigation'
 import './page.css'
@@ -38,7 +38,9 @@ const guideVisuals = [
 const appStoreUrl = 'https://apps.apple.com/jp/app/シンソウ学園/id6778015795'
 const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.koheiilimilab.shinsogakuen&pcampaignid=web_share'
 const firstNovelUrl = 'https://amzn.asia/d/0gjywItQ'
+const secondNovelUrl = 'https://amzn.asia/d/0iCDvGo0'
 const firstNovelCoverUrl = './assets/book/shinso-gakuen-1.jpg'
+const secondNovelCoverUrl = './assets/book/shinso-gakuen-2.jpg'
 const comingSoonBookIconUrl = './assets/book/coming-soon-volume.png'
 const bookHeroUrl = './assets/book/book-hero.png'
 const appHeroUrl = './assets/app/app-hero.png'
@@ -95,13 +97,13 @@ const bookVolumes = [
     number: 'II',
     title: { ja: 'シンソウ学園(Ⅱ)', en: 'Shinso Gakuen (II)' },
     subtitle: { ja: '熱中編', en: 'Immersion Arc' },
-    status: { ja: 'リリース予定', en: 'Coming soon' },
+    status: { ja: '発売中', en: 'Available now' },
     body: {
-      ja: '第II巻は今後リリース予定です。',
-      en: 'Volume II is planned for a future release.',
+      ja: '熱中編へ進む第II巻。Amazonで販売中です。',
+      en: 'Volume II continues into the Immersion Arc. Available now on Amazon.',
     },
-    image: comingSoonBookIconUrl,
-    isComingSoon: true,
+    url: secondNovelUrl,
+    image: secondNovelCoverUrl,
   },
   {
     id: 'volume-3',
@@ -119,6 +121,11 @@ const bookVolumes = [
 ]
 
 const comicPages = [
+  {
+    id: '007',
+    ja: './assets/comic/comic007_ja.png',
+    en: './assets/comic/comic007_en.png',
+  },
   {
     id: '006',
     ja: './assets/comic/comic006_ja.png',
