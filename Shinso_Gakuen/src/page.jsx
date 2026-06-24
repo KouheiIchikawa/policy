@@ -123,43 +123,43 @@ const bookVolumes = [
 const comicPages = [
   {
     id: '008',
-    ja: './assets/comic/comic008_ja.png',
-    en: './assets/comic/comic008_en.png',
+    ja: './assets/comic/comic008_ja.webp',
+    en: './assets/comic/comic008_en.webp',
   },
   {
     id: '007',
-    ja: './assets/comic/comic007_ja.png',
-    en: './assets/comic/comic007_en.png',
+    ja: './assets/comic/comic007_ja.webp',
+    en: './assets/comic/comic007_en.webp',
   },
   {
     id: '006',
-    ja: './assets/comic/comic006_ja.png',
-    en: './assets/comic/comic006_en.png',
+    ja: './assets/comic/comic006_ja.webp',
+    en: './assets/comic/comic006_en.webp',
   },
   {
     id: '005',
-    ja: './assets/comic/comic005_ja.png',
-    en: './assets/comic/comic005_en.png',
+    ja: './assets/comic/comic005_ja.webp',
+    en: './assets/comic/comic005_en.webp',
   },
   {
     id: '004',
-    ja: './assets/comic/comic004_ja.png',
-    en: './assets/comic/comic004_en.png',
+    ja: './assets/comic/comic004_ja.webp',
+    en: './assets/comic/comic004_en.webp',
   },
   {
     id: '003',
-    ja: './assets/comic/comic003_ja.png',
-    en: './assets/comic/comic003_en.png',
+    ja: './assets/comic/comic003_ja.webp',
+    en: './assets/comic/comic003_en.webp',
   },
   {
     id: '002',
-    ja: './assets/comic/comic002_ja.png',
-    en: './assets/comic/comic002_en.png',
+    ja: './assets/comic/comic002_ja.webp',
+    en: './assets/comic/comic002_en.webp',
   },
   {
     id: '001',
-    ja: './assets/comic/comic001_ja.png',
-    en: './assets/comic/comic001_en.png',
+    ja: './assets/comic/comic001_ja.webp',
+    en: './assets/comic/comic001_en.webp',
   },
 ]
 
