@@ -122,6 +122,11 @@ const bookVolumes = [
 
 const comicPages = [
   {
+    id: '008',
+    ja: './assets/comic/comic008_ja.png',
+    en: './assets/comic/comic008_en.png',
+  },
+  {
     id: '007',
     ja: './assets/comic/comic007_ja.png',
     en: './assets/comic/comic007_en.png',
