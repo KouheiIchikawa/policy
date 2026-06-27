@@ -486,10 +486,30 @@ function getPageId() {
   return pageCopy[name] ? name : 'story'
 }
 
+function getInitialComicPageIndex() {
+  const params = new URLSearchParams(window.location.search)
+  const requestedComic = params.get('comic')
+  const requestedPage = params.get('page')
+
+  if (requestedComic) {
+    const comicId = requestedComic.padStart(3, '0')
+    const comicIndex = comicPages.findIndex((page) => page.id === comicId)
+    if (comicIndex >= 0) return comicIndex
+  }
+
+  if (requestedPage) {
+    const pageNumber = Number.parseInt(requestedPage, 10)
+    const pageIndex = comicPages.findIndex((_, index) => comicPages.length - index === pageNumber)
+    if (pageIndex >= 0) return pageIndex
+  }
+
+  return 0
+}
+
 function ContentPage() {
   const [language, setLanguage] = useState(getInitialLanguage)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [comicPageIndex, setComicPageIndex] = useState(0)
+  const [comicPageIndex, setComicPageIndex] = useState(getInitialComicPageIndex)
   const [guideExampleIndex, setGuideExampleIndex] = useState(0)
   const pageId = getPageId()
   const copy = useMemo(() => pageCopy[pageId][language], [language, pageId])
@@ -510,6 +530,17 @@ function ContentPage() {
   useEffect(() => {
     setIsMenuOpen(false)
   }, [language, pageId])
+
+  function updateComicPage(nextIndex) {
+    const clampedIndex = Math.min(Math.max(nextIndex, 0), comicPages.length - 1)
+    setComicPageIndex(clampedIndex)
+
+    if (pageId !== 'comic') return
+
+    const url = new URL(window.location.href)
+    url.searchParams.set('comic', comicPages[clampedIndex].id)
+    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`)
+  }
 
   return (
     <main className={`content-shell content-shell-${pageId}`}>
@@ -883,7 +914,7 @@ function ContentPage() {
             <button
               type="button"
               disabled={comicPageIndex === 0}
-              onClick={() => setComicPageIndex((index) => Math.max(index - 1, 0))}
+              onClick={() => updateComicPage(comicPageIndex - 1)}
             >
               {language === 'ja' ? '前へ' : 'Prev'}
             </button>
@@ -893,7 +924,7 @@ function ContentPage() {
             <button
               type="button"
               disabled={comicPageIndex === comicPages.length - 1}
-              onClick={() => setComicPageIndex((index) => Math.min(index + 1, comicPages.length - 1))}
+              onClick={() => updateComicPage(comicPageIndex + 1)}
             >
               {language === 'ja' ? '次へ' : 'Next'}
             </button>
