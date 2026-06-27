@@ -39,9 +39,10 @@ const appStoreUrl = 'https://apps.apple.com/jp/app/シンソウ学園/id67780157
 const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.koheiilimilab.shinsogakuen&pcampaignid=web_share'
 const firstNovelUrl = 'https://amzn.asia/d/0gjywItQ'
 const secondNovelUrl = 'https://amzn.asia/d/0iCDvGo0'
+const thirdNovelUrl = 'https://www.amazon.co.jp/dp/B0H6S6B5CG'
 const firstNovelCoverUrl = './assets/book/shinso-gakuen-1.jpg'
 const secondNovelCoverUrl = './assets/book/shinso-gakuen-2.jpg'
-const comingSoonBookIconUrl = './assets/book/coming-soon-volume.png'
+const thirdNovelCoverUrl = 'https://m.media-amazon.com/images/I/81KM1oG54GL._SL1500_.jpg'
 const bookHeroUrl = './assets/book/book-hero.png'
 const appHeroUrl = './assets/app/app-hero.png'
 const appStoreBadgeUrl = '../common/appstore_badge.svg'
@@ -109,14 +110,14 @@ const bookVolumes = [
     id: 'volume-3',
     number: 'III',
     title: { ja: 'シンソウ学園(Ⅲ)', en: 'Shinso Gakuen (III)' },
-    subtitle: { ja: '青春篇', en: 'Youth Arc' },
-    status: { ja: 'リリース予定', en: 'Coming soon' },
+    subtitle: { ja: '回答編', en: 'Answer Arc' },
+    status: { ja: '発売中', en: 'Available now' },
     body: {
-      ja: '第III巻は今後リリース予定です。',
-      en: 'Volume III is planned for a future release.',
+      ja: '回答編となる第III巻。Amazonで販売中です。',
+      en: 'Volume III is the Answer Arc. Available now on Amazon.',
     },
-    image: comingSoonBookIconUrl,
-    isComingSoon: true,
+    url: thirdNovelUrl,
+    image: thirdNovelCoverUrl,
   },
 ]
 
