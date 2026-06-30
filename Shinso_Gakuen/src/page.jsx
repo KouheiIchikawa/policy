@@ -123,6 +123,11 @@ const bookVolumes = [
 
 const comicPages = [
   {
+    id: '011',
+    ja: './assets/comic/comic011_ja.webp',
+    en: './assets/comic/comic011_en.webp',
+  },
+  {
     id: '010',
     ja: './assets/comic/comic010_ja.webp',
     en: './assets/comic/comic010_en.webp',
