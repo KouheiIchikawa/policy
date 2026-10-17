@@ -25,7 +25,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir _site
-          cp -R common Ei-Oh-Den GiniroNoTsubasa Shinso_Gakuen TurfOfAngel _site/
+          cp -R common Ei-Oh-Den GiniroNoTsubasa Shinso_Gakuen TurfOfAngel pocketPatrol _site/
           cp privacy-policy.html _site/
           cp .nojekyll _site/
 
