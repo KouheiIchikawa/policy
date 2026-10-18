@@ -10,8 +10,8 @@ export const en: PolicyLocaleContent = {
     policySections: 'Privacy policy sections',
   },
   hero: {
-    badge: 'Cyber Neon Glassmorphism',
-    title: 'Privacy Policy',
+    badge: 'Official Game & Privacy',
+    title: 'Turf of Angel',
     subtitle: 'A fun and competitive horse racing game with easy-to-read privacy guidance.',
     description:
       'This page summarizes how Turf of Angel handles personal information in a simple and straightforward way.',
@@ -22,15 +22,15 @@ export const en: PolicyLocaleContent = {
     title: 'Contents',
   },
   introHtml:
-    '“Turf of Angel” (hereinafter referred to as “the App”) is an application provided by <strong>Kohei Elimi Lab</strong> (hereinafter referred to as “the Lab”).<br />The Lab respects user privacy and prioritizes the protection of personal information in development.<br />The App does not collect, store, or transmit any personal information of users.',
+    '“Turf of Angel” (hereinafter referred to as “the App”) is an application provided by <strong>Kouhei Elimi Lab</strong> (hereinafter referred to as “the Lab”).<br />The Lab respects user privacy and prioritizes the protection of personal information in development.<br />The App does not send your personal information to developer-operated servers.',
   sections: [
     {
       title: '1. Information We Collect',
-      html: 'The App does not collect any personally identifiable information such as users’ names, addresses, email addresses, location information, or device identifiers.',
+      html: 'Names and birth dates entered for gameplay are stored on your device and are not sent to the Lab. You do not need to use your real name or birth date. The App does not access location or advertising identifiers.',
     },
     {
       title: '2. Data Storage and Usage',
-      html: 'Data generated and saved within the App, such as game progress, is stored only on the user’s device.<br />This data is not transmitted to any external server.',
+      html: 'Data generated and saved within the App, such as game progress, is stored only on the user’s device.<br />Player and horse names, progress, language, and separate music / sound-effect preferences stay on your device. Audio and translations are bundled with the app; no text is sent to translation services.',
     },
     {
       title: '3. Advertising and Analytics Tools',
@@ -66,6 +66,6 @@ export const en: PolicyLocaleContent = {
     localeChangedDescription: 'The selected language has been saved on this device.',
   },
   footer: {
-    copyright: '© 2026 Kohei Elimi Lab',
+    copyright: '© 2025–2026 Kouhei Elimi Lab',
   },
 }
