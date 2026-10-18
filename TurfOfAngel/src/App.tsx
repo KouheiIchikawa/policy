@@ -187,7 +187,7 @@ export default function App() {
               ))}
             </section>
 
-            <StoreStrip content={content.store} />
+            <StoreStrip content={content.store} locale={locale} />
 
             <footer className="mx-auto mt-10 max-w-6xl px-1 pb-4 text-center text-sm text-slate-300/[0.64]">
               <p>{content.footer.copyright}</p>

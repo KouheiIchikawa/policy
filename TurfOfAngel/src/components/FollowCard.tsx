@@ -30,6 +30,7 @@ export function FollowCard({ content }: Props) {
 
   return (
     <motion.a
+      id="support"
       href={content.href}
       target="_blank"
       rel="noopener noreferrer"

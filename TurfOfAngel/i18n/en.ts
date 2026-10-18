@@ -30,7 +30,7 @@ export const en: PolicyLocaleContent = {
     },
     {
       title: '2. Data Storage and Usage',
-      html: 'Data generated and saved within the App, such as game progress, is stored only on the user’s device.<br />Player and horse names, progress, language, and separate music / sound-effect preferences stay on your device. Audio and translations are bundled with the app; no text is sent to translation services.',
+      html: 'Data generated and saved within the App, such as game progress, is stored only on the user’s device.<br />Player and horse names, progress, language, and separate music / sound-effect preferences stay on your device. Version 1.22 and later bundle audio and translations and do not send text to translation services. Earlier versions could send Japanese text shown in the game to Google for translation into English. Update to the current version to use bundled translations.',
     },
     {
       title: '3. Advertising and Analytics Tools',
@@ -38,7 +38,7 @@ export const en: PolicyLocaleContent = {
     },
     {
       title: '4. Provision of Information to Third Parties',
-      html: 'The Lab does not provide user information to third parties except where required by law.',
+      html: 'The Lab does not provide user information to third parties except where required by law. For the external translation service that earlier versions could use, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.',
     },
     {
       title: '5. Contact',
@@ -58,8 +58,8 @@ export const en: PolicyLocaleContent = {
     ariaLabel: 'App download links',
     appStoreAlt: 'Download on the App Store',
     playStoreAlt: 'Get it on Google Play',
-    appStoreHref: 'https://apps.apple.com/jp/app/turfofangel/id6754843679',
-    playStoreHref: 'https://play.google.com/store/apps/details?id=com.turfofangel&hl=ja',
+    appStoreHref: 'https://apps.apple.com/app/id6754843679?l=en-US',
+    playStoreHref: 'https://play.google.com/store/apps/details?id=com.turfofangel&hl=en',
   },
   toast: {
     localeChangedTitle: 'Language updated',
