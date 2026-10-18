@@ -185,8 +185,8 @@
     "en": "Leaderboards and authentication use Google Play Games or Apple Game Center. These providers process information to deliver and secure their services. Legacy-version compatibility uses Firebase Authentication and Realtime Database. Connections are encrypted. Please also review Google’s and Apple’s privacy policies."
   },
   "policy.services.sdk": {
-    "ja": "本バージョンに広告SDK、広告IDの取得、アプリ内購入、行動分析SDKは含まれません。情報の販売は行いません。",
-    "en": "This release includes no advertising SDK, advertising ID access, in-app purchases or behavioral analytics SDK. We do not sell your data."
+    "ja": "広告対応版1.0.52以降は、ステージ間・コンティニュー時にGoogle AdMobの全画面広告を表示します。Googleの広告SDKはIPアドレス（概算位置の推定を含む）、端末・アカウント識別子、広告への操作、広告データ、利用状況・診断情報などを広告配信・分析・不正防止のため収集・共有します。必要な地域ではGoogle UMPによる同意画面を表示し、必要な場合はゲーム内のプライバシー画面から選択を変更できます。確認用Android APKにはテスト広告を表示します。1.0.51以前には広告SDKは含まれません。アプリ内購入はありません。",
+    "en": "Ad-supported versions 1.0.52 and later show Google AdMob interstitial ads between stages and on Continue. Google’s advertising SDK collects and shares IP addresses (including approximate location inference), device/account identifiers, ad interactions, advertising data, usage and diagnostics for advertising, analytics and fraud prevention. Google UMP requests consent where required; when applicable, choices can be changed from the in-game Privacy screen. Android verification APKs display test ads. Versions through 1.0.51 do not include the advertising SDK. There are no in-app purchases."
   },
   "policy.retention.body": {
     "ja": "新ランキングの保持・公開範囲・削除は各プラットフォームの方針と設定に従います。旧Firebaseランキングの上位1000件という保存制限は新サービスには適用されません。旧記録は互換運用と削除対応のため保持し、終了時に整理します。端末内データはOSのデータ消去やアンインストールで削除できますが、クラウドの記録は自動では消えません。",
