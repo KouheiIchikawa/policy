@@ -26,9 +26,9 @@
     "p5body": "不具合やご質問は開発者のXへご連絡ください。パスワードや個人情報は投稿しないでください。",
     "contact": "Xで問い合わせる",
     "deleteTitle": "ゲームデータの削除",
-    "deleteLead": "データは端末内に保存されています。削除すると進行・装備・設定は元に戻せません。",
-    "deleteAndroid": "Android：設定 → アプリ → 銀色の翼 → ストレージとキャッシュ → ストレージを消去。またはアプリをアンインストールします。",
-    "deleteIos": "iPhone／iPad：設定 → 一般 → iPhone／iPadストレージ → 銀色の翼 → アプリを削除。「Appを取り除く」はデータを保持する場合があります。",
+    "deleteLead": "端末内の進行・装備・設定と、Google／Appleに登録したランキング成績は別々に管理されます。アプリを削除しても、登録済みのランキング成績は自動では消えません。",
+    "deleteAndroid": "Androidの端末内データ：設定 → アプリ → 銀色の翼 → ストレージとキャッシュ → ストレージを消去。ランキング：Google Play Gamesの設定 → Play Gamesアカウントとデータの削除 → 銀色の翼のゲームデータを削除。Googleのヘルプも確認してください。",
+    "deleteIos": "iPhone／iPadの端末内データ：設定 → 一般 → iPhone／iPadストレージ → 銀色の翼 → アプリを削除。「Appを取り除く」はデータを保持する場合があります。登録済み成績はAppleのGame Center側で管理されます。Appleの案内をご確認いただき、不明点は下記のXからお問い合わせください。",
     "delete": "データ削除",
     "copyright": "© 2025–2026 Kouhei Elimi Lab"
   },
@@ -59,9 +59,9 @@
     "p5body": "For issues or questions, contact the developer on X. Do not post passwords or personal information.",
     "contact": "Contact Us on X",
     "deleteTitle": "Delete Game Data",
-    "deleteLead": "Game data is stored on your device. Deleting it permanently removes progress, equipment, and preferences.",
-    "deleteAndroid": "Android: Settings → Apps → Silver Wings → Storage & cache → Clear storage. Alternatively, uninstall the app.",
-    "deleteIos": "iPhone / iPad: Settings → General → iPhone / iPad Storage → Silver Wings → Delete App. Offloading the app may retain its data.",
+    "deleteLead": "Local progress, equipment and preferences are separate from rankings held by Google or Apple. Uninstalling this app does not automatically delete submitted leaderboard scores.",
+    "deleteAndroid": "Local Android data: Settings → Apps → Silver Wings → Storage & cache → Clear storage. For rankings: Google Play Games settings → Delete Play Games account & data → Delete individual game data for Silver Wings. Refer to Google Play Games Help.",
+    "deleteIos": "Local iPhone/iPad data: Settings → General → iPhone/iPad Storage → Silver Wings → Delete App. Offloading may retain local data. Submitted scores are managed separately by Apple Game Center. Consult Apple’s guidance or contact us through X below for help.",
     "delete": "Delete Data",
     "copyright": "© 2025–2026 Kouhei Elimi Lab"
   }

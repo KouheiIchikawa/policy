@@ -30,7 +30,7 @@ export const en: PolicyLocaleContent = {
     },
     {
       title: '2. Data Storage and Usage',
-      html: "Game progress, names, language and separate music/sound preferences stay on your device. Rankings submit career prize money, best race prize, victories and elapsed ranch years. Uninstalling the app or clearing its storage removes local progress, settings and pending records. This does not automatically delete scores already stored by Google or Apple. Use the platform’s game-data and profile management options. The developer has no server-side account records.",
+      html: "Game progress, names, language and separate music/sound preferences stay on your device. Rankings submit career prize money, best race prize, victories and elapsed ranch years. Uninstalling the app or clearing its storage removes local progress, settings and pending records. This does not automatically delete scores already stored by Google or Apple. For Google scores, use Google Play Games settings → Delete Play Games account & data → Delete individual game data for Turf of Angel. Apple scores are managed separately by Game Center; consult Apple’s guidance or contact us through the X link on this page for help. The developer has no server-side account records.",
     },
     {
       title: '3. Advertising and Analytics Tools',
