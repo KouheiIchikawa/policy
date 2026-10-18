@@ -4,8 +4,15 @@
   "breadcrumbCurrent": "Official Landing Page",
   "pageTitle": "Ei-Oh-DeN Official Site | iOS / Android / Kindle",
   "appName": "Ei-Oh-DeN",
-  "altNames": ["Ei-Oh-Den", "Ei-Oh-DeN"],
-  "genres": ["historical fantasy", "Japanese-inspired fantasy", "strategy growth"],
+  "altNames": [
+    "Ei-Oh-Den",
+    "Ei-Oh-DeN"
+  ],
+  "genres": [
+    "historical fantasy",
+    "Japanese-inspired fantasy",
+    "strategy growth"
+  ],
   "seoDescription": "Ei-Oh-DeN official site. A historical fantasy work by Kohei Elimi Lab, available as an iOS and Android app with a Kindle novel and official LINE stickers.",
   "seoKeywords": [
     "Ei-Oh-Den",
@@ -128,29 +135,29 @@
   "quickGuide": {
     "kicker": "Quick Guide",
     "title": "Beginner strategy",
-    "lead": "A simple early route that makes the opening stretch easier to settle into.",
+    "lead": "A guide for version 1.2. Build your strength one short mission at a time.",
     "badge": "Beginner guide included",
     "steps": [
       {
-        "title": "Farm the scarecrow in Stage 01 Phase 01 and retreat",
-        "body": "In the early game, a stable route is to fight the scarecrow in Stage 01 Phase 01 and retreat while leveling up. It reduces risk and builds a stronger base."
+        "title": "Defeat scarecrows and tap their drops",
+        "body": "In Stage 01, Area 1, aim your knives at the scarecrows. Tap any EXP or gold they drop. Defeating an enemy alone does not collect the item."
       },
       {
-        "title": "Raise Strength to around 30",
-        "body": "A practical early goal is to raise Strength to around 30 before pushing further. This makes progression more stable."
+        "title": "Choose Retreat after clearing one area",
+        "body": "Try one area at a time at first. Collected EXP and gold are added when you return to the menu, whether you quit, retreat, or get a game over. Clearing an area is not required."
       },
       {
-        "title": "Use dispatch missions",
-        "body": "Dispatch missions help improve growth efficiency. Running them alongside your normal progression helps the early game feel smoother."
+        "title": "Tap Michitaka at the top right",
+        "body": "Tap Michitaka’s portrait at the top right of the menu to check EXP and abilities. Repeat deploying, collecting and retreating to build experience and gold."
       }
     ],
     "sideTitle": "Guide notes",
     "points": [
-      "A game over means you lose money and EXP",
-      "Retreating by phase gives you money and EXP",
-      "Allocate your stats on level up",
-      "Use that money to buy peach buns",
-      "Items do nothing unless you equip them"
+      "Each stage has three areas and a boss",
+      "Tap dropped EXP and gold to collect them",
+      "Collected EXP and gold are added on reaching the menu",
+      "Keep collected rewards after quitting, retreating, or game over",
+      "Allocate ability points after leveling up"
     ]
   },
   "relatedKicker": "Related Works",
@@ -234,5 +241,16 @@
       "external": false
     }
   ],
-  "footer": "© 2026 Kohei Elimi Lab"
+  "footer": "© 2026 Kohei Elimi Lab",
+  "training": {
+    "kicker": "VERSION 1.2",
+    "title": "Your first mission, with Retsuma.",
+    "lead": "Defeat scarecrows with your knife. Tap their EXP and gold drops. Clear an area, retreat, then tap Michitaka at the top right to check your growth. Learn the loop through real gameplay and Retsuma’s guidance.",
+    "speaker": "Yokoyama Retsuma · First Mission Training",
+    "quote": "“The beginning is hard. But every drop you bring home matters. Collect, return safely, and train.”",
+    "replay": "Shown automatically on your first start. Replay it in Options → Prologue → Retsuma’s First Mission Training.",
+    "music": "The music player becomes a Japanese disco: a dancing girl, swaying hair and sleeves, drifting petals and soft lights. Refined opening typography and a smooth Michitaka-to-title transition complete the update.",
+    "caption": "Retsuma’s guidance · Actual gameplay",
+    "lang": "en"
+  }
 }

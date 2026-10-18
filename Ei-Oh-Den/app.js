@@ -901,6 +901,27 @@ function FeaturesSection({ copy }) {
   );
 }
 
+function TrainingSection({ copy }) {
+  const t = copy.training;
+  if (!t) return null;
+  return h("section", { className: "section-block", id: "training", "aria-labelledby": "training-title" },
+    h("div", { className: "section-head" },
+      h("p", { className: "section-kicker" }, t.kicker),
+      h("h2", { className: "section-title", id: "training-title" }, t.title),
+      h("p", { className: "section-lead" }, t.lead)),
+    h("div", { className: "training-layout glass-card" },
+      h("video", { key: t.lang, className: "training-video", controls: true, playsInline: true, preload: "metadata", poster: "./images/training-poster.jpg" },
+          h("source", { src: `./images/retsuma-training-${t.lang}.mp4`, type: "video/mp4" }),
+          h("track", { src: `./data/training-${t.lang}.vtt`, kind: "captions", srcLang: t.lang, label: t.caption })),
+      h("div", { className: "training-copy" },
+        h("img", { className: "training-mentor", src: "./images/YokoyamaRetsuma.png", alt: t.speaker, loading: "lazy" }),
+        h("h3", null, t.speaker),
+        h("blockquote", null, t.quote),
+        h("p", null, t.replay),
+        h("p", null, t.music)))
+  );
+}
+
 function StrategySection({ copy }) {
   return h(
     "section",
@@ -1276,6 +1297,7 @@ function App() {
       h(RelatedWorksSection, { copy: hydratedCopy }),
       h(ScreenshotsSection, { copy: hydratedCopy }),
       h(FeaturesSection, { copy: hydratedCopy }),
+      h(TrainingSection, { copy: hydratedCopy }),
       h(StrategySection, { copy: hydratedCopy }),
       h(CreatorSection, { copy: hydratedCopy }),
       h(FAQSection, { copy: hydratedCopy }),
