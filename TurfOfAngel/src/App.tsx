@@ -12,6 +12,7 @@ import { useLocale } from './hooks/useLocale'
 import { useScrollSpy } from './hooks/useScrollSpy'
 import { useToast } from './hooks/useToast'
 import { policyLocales } from '../i18n'
+import { gameLocales } from '../i18n/game'
 import { assetPath } from './lib/assets'
 import { smoothScrollToId } from './lib/dom'
 import type { Locale } from './types'
@@ -21,7 +22,8 @@ const sectionIds = ['section-1', 'section-2', 'section-3', 'section-4', 'section
 export default function App() {
   const { locale, setLocale } = useLocale()
   const { toasts, pushToast, dismissToast } = useToast()
-  const content = policyLocales[locale]
+  const isPolicy = window.location.pathname.endsWith('privacy-policy.html')
+  const content = (isPolicy ? policyLocales : gameLocales)[locale]
   const activeSection = useScrollSpy([...sectionIds, 'download'])
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -170,6 +172,10 @@ export default function App() {
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
           <main className="relative z-10">
+            <nav className="mb-4 flex flex-wrap gap-4 text-sm text-cyan-100" aria-label={locale === 'ja' ? 'ページ' : 'Pages'}>
+              <a href={`./#${locale}`}>{locale === 'ja' ? 'ゲーム紹介' : 'The Game'}</a>
+              <a href={`privacy-policy.html#${locale}`}>{locale === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}</a>
+            </nav>
             <Hero content={content.hero} introHtml={content.introHtml} />
 
             <section aria-label={content.ui.policySections} className="mt-8 grid gap-5">

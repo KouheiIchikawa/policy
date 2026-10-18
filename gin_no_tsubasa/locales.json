@@ -30,7 +30,11 @@
     "deleteAndroid": "Androidの端末内データ：設定 → アプリ → 銀色の翼 → ストレージとキャッシュ → ストレージを消去。ランキング：Google Play Gamesの設定 → Play Gamesアカウントとデータの削除 → 銀色の翼のゲームデータを削除。Googleのヘルプも確認してください。",
     "deleteIos": "iPhone／iPadの端末内データ：設定 → 一般 → iPhone／iPadストレージ → 銀色の翼 → アプリを削除。「Appを取り除く」はデータを保持する場合があります。登録済み成績はAppleのGame Center側で管理されます。Appleの案内をご確認いただき、不明点は下記のXからお問い合わせください。",
     "delete": "データ削除",
-    "copyright": "© 2025–2026 Kouhei Elimi Lab"
+    "copyright": "© 2025–2026 Kouhei Elimi Lab",
+    "motionTitle": "風景が息づき、武器が閃く。",
+    "motion": "街道、港、富士山の背景には、元のイラストを活かした短い環境アニメーション。敵味方の待機、攻撃、被弾と、武器ごとの斬撃・刺突・術式などの演出が戦いを彩ります。",
+    "rankingTitle": "槍おに挑んだ、その力を記録。",
+    "ranking": "槍お撃破時の総能力、槍お撃破回数、転生回数のランキング。AndroidはGoogle Play Games、iPhoneはGame Centerを使用し、順位はOS別に管理します。通常のゲーム進行は端末内に保存されます。"
   },
   "en": {
     "app": "Silver Wings",
@@ -63,6 +67,10 @@
     "deleteAndroid": "Local Android data: Settings → Apps → Silver Wings → Storage & cache → Clear storage. For rankings: Google Play Games settings → Delete Play Games account & data → Delete individual game data for Silver Wings. Refer to Google Play Games Help.",
     "deleteIos": "Local iPhone/iPad data: Settings → General → iPhone/iPad Storage → Silver Wings → Delete App. Offloading may retain local data. Submitted scores are managed separately by Apple Game Center. Consult Apple’s guidance or contact us through X below for help.",
     "delete": "Delete Data",
-    "copyright": "© 2025–2026 Kouhei Elimi Lab"
+    "copyright": "© 2025–2026 Kouhei Elimi Lab",
+    "motionTitle": "Living scenery. Distinctive strikes.",
+    "motion": "Subtle animated scenery brings the railway, harbor and Mount Fuji illustrations to life. Both sides have idle, attack and hit motion, with slashes, thrusts, runes and other weapon-specific effects.",
+    "rankingTitle": "Record the strength behind your victory.",
+    "ranking": "Compare total stats when defeating Yario, Yario victories and rebirth count. Android uses Google Play Games and iPhone uses Game Center, with separate platform rankings. Normal progress remains on your device."
   }
 }
