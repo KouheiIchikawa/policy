@@ -10,7 +10,7 @@
 <meta property="og:title" content="POCKET PATROL">
 <meta property="og:image" content="https://kouheiichikawa.github.io/policy/pocketPatrol/assets/hero.webp">
 <link rel="icon" href="assets/icon.png">
-<script src="site.js?v=2">
+<script src="site.js?v=3">
 </script>
 <link rel="stylesheet" href="style.css?v=2">
 </head>
@@ -48,7 +48,7 @@
 <a data-i18n="policy.contact.title" href="#contact">Operator and contact</a>
 </aside>
 <div class="legal-body">
-<p data-i18n="updated" class="muted update">Last updated: October 17, 2026</p>
+<p data-i18n="updated" class="muted update">Last updated: October 18, 2026</p>
 <section id="local" class="policy-section">
 <span class="section-number">01</span>
 <h2 data-i18n="policy.local.title" >On your device</h2>
@@ -57,22 +57,22 @@
 <section id="ranking" class="policy-section">
 <span class="section-number">02</span>
 <h2 data-i18n="policy.ranking.title" >Leaderboard data</h2>
-<p data-i18n="policy.ranking.body" >If you choose to submit a national leaderboard score, we send an anonymous Firebase user ID, score, optional display name (up to eight characters), optional manually selected Japanese region, stage, difficulty, craft, clear/game-over result, submission time and run ID. Guest credentials are created and stored on your device for secure writes. There is no email/password account registration.</p>
-<p data-i18n="policy.ranking.public" >Display names, selected regions, scores, stages, difficulties, crafts, results and submission times are public. Anonymous IDs and run IDs are also included in downloadable records. Do not use your real name or precise address as a display name. We do not obtain regions from GPS. Leaderboard submission is optional; you can play without submitting.</p>
+<p data-i18n="policy.ranking.body" >Android 1.0.51 and later use Google Play Games; the upcoming iPhone version uses Game Center. Participating authenticates with that provider and sends your settled Clear/Game Over score. The SDK processes player identifiers, profiles and connection information under the provider’s policies. Rankings are separate by platform; campaign progress is not synced across devices. Versions up to 1.0.50 used Firebase guest IDs, scores, optional names of up to eight characters, selected regions, stages, difficulty, craft, results, times and run IDs. That legacy service is being retired; its records are not automatically moved to the new boards.</p>
+<p data-i18n="policy.ranking.public" >New boards show the platform player name/profile and score according to profile visibility settings. There is no separate eight-character name or region form. Legacy Firebase records publicly included name, region, score, stage, difficulty, craft, result and time, with anonymous identifiers in the distributed data. GPS is not used. You can play without using leaderboards.</p>
 </section>
 <section id="services" class="policy-section">
 <span class="section-number">03</span>
 <h2 data-i18n="policy.services.title" >Purpose and external services</h2>
-<p data-i18n="policy.services.body" >We use this data to provide the leaderboard, prevent duplicate abuse, authenticate submissions and protect the service. Data is sent over HTTPS to Google Firebase Authentication and Realtime Database. Google may process IP addresses and related information for security.</p>
+<p data-i18n="policy.services.body" >Leaderboards and authentication use Google Play Games or Apple Game Center. These providers process information to deliver and secure their services. Legacy-version compatibility uses Firebase Authentication and Realtime Database. Connections are encrypted. Please also review Google’s and Apple’s privacy policies.</p>
 <p>
-<a href="https://firebase.google.com/support/privacy/">Firebase Privacy and Security</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+<a href="https://firebase.google.com/support/privacy/">Firebase Privacy and Security</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://www.apple.com/legal/privacy/data/en/game-center/">Game Center &amp; Privacy</a>
 </p>
 <p data-i18n="policy.services.sdk" >This release includes no advertising SDK, advertising ID access, in-app purchases or behavioral analytics SDK. We do not sell your data.</p>
 </section>
 <section id="retention" class="policy-section">
 <span class="section-number">04</span>
 <h2 data-i18n="policy.retention.title" >Retention and deletion</h2>
-<p data-i18n="policy.retention.body" >The public leaderboard retains the top 1,000 scores. Records may be replaced or removed during periodic maintenance; we cannot guarantee when an individual record will leave the board. Guest identities may be retained until deletion is requested or they are no longer needed. Clearing app data or uninstalling removes local records but does not automatically delete server data.</p>
+<p data-i18n="policy.retention.body" >New leaderboard retention, visibility and deletion follow each platform’s policies and settings. The old Firebase top-1,000 storage cap does not apply to the new services. Legacy records are retained for compatibility and deletion requests and will be retired with that service. Clearing app data or uninstalling removes local data, not automatically cloud records.</p>
 <a data-i18n="policy.deleteLink" href="delete-data.html#delete-data" class="text-link" data-local-link>About deleting your data →</a>
 </section>
 <section id="contact" class="policy-section">

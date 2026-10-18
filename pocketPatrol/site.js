@@ -89,8 +89,8 @@
     "en": "Every encounter leaves a memory."
   },
   "feature.2.body": {
-    "ja": "撃破して埋まる図鑑、物語の分岐、全国上位1000件の得点ランキング。合間のミニゲームで、ちょっと息抜き。",
-    "en": "Build your collection through battle, discover branching endings and chase a place in the top-1,000 national leaderboard. Take a breather with short arcade intermissions."
+    "ja": "撃破して埋まる図鑑、物語の分岐、プラットフォーム別の得点ランキング。合間のミニゲームで、ちょっと息抜き。",
+    "en": "Build your collection, discover story branches and chase platform leaderboard scores. Take a break with short bonus games."
   },
   "screens.title": {
     "ja": "その手で、境界を越えろ。",
@@ -165,32 +165,32 @@
     "en": "Operator and contact"
   },
   "updated": {
-    "ja": "更新日：2026年10月17日",
-    "en": "Last updated: October 17, 2026"
+    "ja": "更新日：2026年10月18日",
+    "en": "Last updated: October 18, 2026"
   },
   "policy.local.body": {
     "ja": "進行状況、設定、図鑑、端末内の成績は端末内に保存します。これらの情報は、ランキングへの送信を除き、通常のゲーム進行のためにサーバーへ送信しません。",
     "en": "Progress, settings, collection records and local scores are stored on your device. Apart from leaderboard submissions, these records are not sent to a server for ordinary gameplay."
   },
   "policy.ranking.body": {
-    "ja": "全国ランキングへの登録を希望する場合、Firebaseの匿名認証識別子、得点、任意の表示名（8文字まで）、任意に選択した都道府県、到達面、難易度、機体、クリア／ゲームオーバー、登録日時、プレイ識別子を送信します。安全な書き込みのため、ゲスト認証情報を作成して端末に保存します。メールアドレスやパスワードによる会員登録はありません。",
-    "en": "If you choose to submit a national leaderboard score, we send an anonymous Firebase user ID, score, optional display name (up to eight characters), optional manually selected Japanese region, stage, difficulty, craft, clear/game-over result, submission time and run ID. Guest credentials are created and stored on your device for secure writes. There is no email/password account registration."
+    "ja": "Android版1.0.51以降はGoogle Play Games、今後のiPhone版はGame Centerのランキングを利用します。参加時は各サービスで認証し、クリア／ゲームオーバー時の得点を送信します。SDKはプレイヤー識別子やプロフィール、接続に必要な情報を各社の方針に従って処理します。ランキングはOS別で、進行状況の端末間同期はありません。旧版1.0.50以前はFirebaseの匿名ID、得点、任意名（8文字まで）、選択地域、面、難易度、機体、結果、日時、プレイ識別子を扱っていました。旧サービスは移行に伴い終了予定で、旧記録を新ランキングへ自動移行しません。",
+    "en": "Android 1.0.51 and later use Google Play Games; the upcoming iPhone version uses Game Center. Participating authenticates with that provider and sends your settled Clear/Game Over score. The SDK processes player identifiers, profiles and connection information under the provider’s policies. Rankings are separate by platform; campaign progress is not synced across devices. Versions up to 1.0.50 used Firebase guest IDs, scores, optional names of up to eight characters, selected regions, stages, difficulty, craft, results, times and run IDs. That legacy service is being retired; its records are not automatically moved to the new boards."
   },
   "policy.ranking.public": {
-    "ja": "表示名、選択地域、得点、面、難易度、機体、結果、登録日時は公開されます。匿名識別子とプレイ識別子も配信データに含まれます。表示名に本名や正確な住所を入力しないでください。GPSで地域は取得しません。ランキングへの登録は任意で、登録せずに遊べます。",
-    "en": "Display names, selected regions, scores, stages, difficulties, crafts, results and submission times are public. Anonymous IDs and run IDs are also included in downloadable records. Do not use your real name or precise address as a display name. We do not obtain regions from GPS. Leaderboard submission is optional; you can play without submitting."
+    "ja": "新ランキングでは各サービスのプレイヤー名・プロフィールと得点が、プロフィールの公開設定に従って表示されます。独自の8文字名や都道府県の入力はありません。旧Firebaseランキングでは名前・地域・得点・面・難易度・機体・結果・日時が公開され、匿名ID等も配信データに含まれます。GPSで地域は取得しません。ランキングを使わずにゲームを遊べます。",
+    "en": "New boards show the platform player name/profile and score according to profile visibility settings. There is no separate eight-character name or region form. Legacy Firebase records publicly included name, region, score, stage, difficulty, craft, result and time, with anonymous identifiers in the distributed data. GPS is not used. You can play without using leaderboards."
   },
   "policy.services.body": {
-    "ja": "ランキングの提供、不正な重複登録の抑止、認証およびサービス保護に使用します。GoogleのFirebase AuthenticationとRealtime DatabaseへHTTPSで送信します。GoogleはIPアドレス等をセキュリティ目的で処理する場合があります。",
-    "en": "We use this data to provide the leaderboard, prevent duplicate abuse, authenticate submissions and protect the service. Data is sent over HTTPS to Google Firebase Authentication and Realtime Database. Google may process IP addresses and related information for security."
+    "ja": "ランキングと認証にはGoogle Play Games／Apple Game Centerを使用します。各社はセキュリティやサービス提供のために情報を処理します。旧版の互換運用ではFirebase AuthenticationとRealtime Databaseを利用します。通信は暗号化されます。詳しくはGoogleおよびAppleのプライバシー方針をご確認ください。",
+    "en": "Leaderboards and authentication use Google Play Games or Apple Game Center. These providers process information to deliver and secure their services. Legacy-version compatibility uses Firebase Authentication and Realtime Database. Connections are encrypted. Please also review Google’s and Apple’s privacy policies."
   },
   "policy.services.sdk": {
     "ja": "本バージョンに広告SDK、広告IDの取得、アプリ内購入、行動分析SDKは含まれません。情報の販売は行いません。",
     "en": "This release includes no advertising SDK, advertising ID access, in-app purchases or behavioral analytics SDK. We do not sell your data."
   },
   "policy.retention.body": {
-    "ja": "公開ランキングは上位1000件を保持し、入れ替えや定期整理で記録が削除される場合があります。ランキングから外れる時期は保証されません。認証情報は削除のお問い合わせまたは運用上不要になるまで保持する場合があります。端末内データはOSのアプリデータ消去やアンインストールで削除できますが、サーバー側の記録は自動では削除されません。",
-    "en": "The public leaderboard retains the top 1,000 scores. Records may be replaced or removed during periodic maintenance; we cannot guarantee when an individual record will leave the board. Guest identities may be retained until deletion is requested or they are no longer needed. Clearing app data or uninstalling removes local records but does not automatically delete server data."
+    "ja": "新ランキングの保持・公開範囲・削除は各プラットフォームの方針と設定に従います。旧Firebaseランキングの上位1000件という保存制限は新サービスには適用されません。旧記録は互換運用と削除対応のため保持し、終了時に整理します。端末内データはOSのデータ消去やアンインストールで削除できますが、クラウドの記録は自動では消えません。",
+    "en": "New leaderboard retention, visibility and deletion follow each platform’s policies and settings. The old Firebase top-1,000 storage cap does not apply to the new services. Legacy records are retained for compatibility and deletion requests and will be retired with that service. Clearing app data or uninstalling removes local data, not automatically cloud records."
   },
   "policy.deleteLink": {
     "ja": "データの削除について →",
@@ -205,20 +205,20 @@
     "en": "Your data. Your control."
   },
   "delete.lead": {
-    "ja": "ランキングの記録も、<br>ゲスト情報も。",
-    "en": "Manage your leaderboard records<br>and guest identity."
+    "ja": "プレイの記録を、<br>自分で管理。",
+    "en": "Take control of<br>your play records."
   },
   "delete.summary": {
-    "ja": "ランキング記録のみの削除、またはゲスト認証情報を含む削除について、Xからお問い合わせいただけます。ゲームを削除しただけでは、サーバー側の記録は消えません。",
-    "en": "Contact us on X to remove leaderboard records only, or both your records and guest authentication identity. Uninstalling the game does not delete server records."
+    "ja": "新ランキングはGoogle Play Games／Game Centerで管理します。Googleのゲームデータ削除機能をご利用いただけるほか、Game Centerや旧Firebase記録の削除についてはXからご相談ください。アプリの削除だけではクラウドの記録は消えません。",
+    "en": "New records are managed by Google Play Games or Game Center. Google provides game-data deletion controls. Contact us on X for help with Game Center records or legacy Firebase records. Uninstalling alone does not erase cloud records."
   },
   "delete.step0.title": {
     "ja": "削除したい範囲を確認",
     "en": "Choose what to remove"
   },
   "delete.step0.body": {
-    "ja": "ランキング記録のみ、またはゲスト認証情報を含む削除のどちらを希望するか確認してください。端末内の進行データを消す必要はありません。",
-    "en": "Choose whether to remove leaderboard records only or also your guest identity. You do not need to erase your local campaign progress."
+    "ja": "Google Play Gamesのプロフィール設定から対象ゲームのデータ削除を選べます。Game Centerの記録や旧Firebaseの得点・ゲスト情報については、対象と希望する範囲をお知らせください。端末内の進行を消す必要はありません。",
+    "en": "Google Play Games profile settings let you delete data for a specific game. For Game Center or legacy Firebase scores/guest identities, tell us which records you want removed. You do not need to erase local campaign progress."
   },
   "delete.step1.title": {
     "ja": "Xで問い合わせる",
@@ -233,8 +233,8 @@
     "en": "Verify and remove"
   },
   "delete.step2.body": {
-    "ja": "本人の記録であることを確認後、希望する範囲のランキング記録・ゲスト認証データを原則30日以内に削除します。追加の確認や時間が必要な場合はご連絡します。",
-    "en": "After verifying that the records belong to you, we normally delete the requested leaderboard records and/or guest identity within 30 days. We will contact you if further verification or more time is needed."
+    "ja": "旧Firebase記録は本人確認後、希望する範囲を原則30日以内に削除します。Google／Appleが管理する記録は各社の削除手順・権限に従って対応し、当社がプラットフォームのアカウント全体を削除することはありません。追加確認や時間が必要な場合はご連絡します。",
+    "en": "After ownership verification, we normally remove requested legacy Firebase records within 30 days. Google/Apple-managed records follow each provider’s deletion controls and permissions; we cannot delete your entire platform account on your behalf. We will contact you if further verification or time is needed."
   },
   "delete.contactTitle": {
     "ja": "まずは、お問い合わせください。",
@@ -245,12 +245,12 @@
     "en": "Keep private details private."
   },
   "delete.privateBody": {
-    "ja": "ランキングIDはアプリの「設定 → プライバシー」で確認できます。表示名・得点・登録日時も手がかりになります。IDだけを本人確認の証明とはしません。公開ポストにはランキングIDや個人情報を書かず、パスワードや認証トークンはどの方法でも送らないでください。",
-    "en": "Find your leaderboard ID in Settings → Privacy. Your display name, score and submission date may also help. An ID alone is not proof of ownership. Do not post IDs or personal information publicly, and never send passwords or authentication tokens."
+    "ja": "新ランキングの相談ではプラットフォーム名・プレイヤー名・得点・日時をお知らせください。旧版のランキングIDは旧版の「設定 → プライバシー」で確認できます。これらの情報だけを本人確認の証明とはしません。公開投稿にIDや個人情報を書かず、パスワードや認証トークンは送らないでください。",
+    "en": "For new boards, identify the platform, player name, score and date. Legacy ranking IDs are shown in Settings → Privacy in older builds. These details alone do not prove ownership. Do not publish IDs or private information, and never send passwords or authentication tokens."
   },
   "delete.retention": {
-    "ja": "お問い合わせ内容は、対応と不正防止に必要な期間保持します。X上のメッセージはXの取り扱い方針にも従います。バックアップやGoogle側の安全対策用ログは各サービスの保持方針に従います。",
-    "en": "Support correspondence is retained as needed to resolve requests and prevent abuse. Messages on X are also subject to X’s policies. Service backups and Google security logs follow the providers’ retention policies."
+    "ja": "お問い合わせは対応と不正防止に必要な期間保持します。X上のメッセージはXの方針、各サービスの記録・バックアップ・セキュリティログはGoogle／Apple等の方針に従います。",
+    "en": "Support correspondence is retained as needed to resolve requests and prevent abuse. X messages follow X’s policies; provider records, backups and security logs follow Google’s or Apple’s applicable policies."
   }
 };
   const storageKey = 'pocketpatrol.locale';
