@@ -26,19 +26,19 @@ export const en: PolicyLocaleContent = {
   sections: [
     {
       title: '1. Information We Collect',
-      html: 'Names and birth dates entered for gameplay are stored on your device and are not sent to the Lab. You do not need to use your real name or birth date. The App does not access location or advertising identifiers.',
+      html: "Ranch names, horse names and birth dates entered for gameplay stay on your device and are not sent to the Lab. You need not use real names or birth dates. Rankings use Google Play Games on Android and Apple Game Center on iOS, with separate rankings for each platform. Google or Apple processes your platform player identifier and scores; your display name, rank and scores may be visible to other players according to your profile settings. There is no developer-operated account or ranking server.",
     },
     {
       title: '2. Data Storage and Usage',
-      html: 'Data generated and saved within the App, such as game progress, is stored only on the user’s device.<br />Player and horse names, progress, language, and separate music / sound-effect preferences stay on your device. Version 1.22 and later bundle audio and translations and do not send text to translation services. Earlier versions could send Japanese text shown in the game to Google for translation into English. Update to the current version to use bundled translations.',
+      html: "Game progress, names, language and separate music/sound preferences stay on your device. Rankings submit career prize money, best race prize, victories and elapsed ranch years. Uninstalling the app or clearing its storage removes local progress, settings and pending records. This does not automatically delete scores already stored by Google or Apple. Use the platform’s game-data and profile management options. The developer has no server-side account records.",
     },
     {
       title: '3. Advertising and Analytics Tools',
-      html: 'The App does not include any advertising display or analytics tools, such as Google AdMob or Firebase Analytics.',
+      html: "No advertising SDK or Firebase Analytics is added. The Google Play Games SDK processes gamer profile information and analytics/diagnostics used to improve SDK stability. Audio and translations are bundled; the app does not record audio or send text to translation services.",
     },
     {
       title: '4. Provision of Information to Third Parties',
-      html: 'The Lab does not provide user information to third parties except where required by law. For the external translation service that earlier versions could use, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.',
+      html: "Rankings use Google Play Games on Android and Apple Game Center on iOS, with separate rankings for each platform. Google or Apple processes your platform player identifier and scores; your display name, rank and scores may be visible to other players according to your profile settings. There is no developer-operated account or ranking server. See <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">Google’s Privacy Policy</a> and <a href=\"https://www.apple.com/legal/privacy/data/en/game-center/\" target=\"_blank\" rel=\"noopener noreferrer\">Game Center and Privacy</a>.",
     },
     {
       title: '5. Contact',
