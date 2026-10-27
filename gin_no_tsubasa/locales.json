@@ -36,7 +36,8 @@
     "growthTitle": "育て方も、装備選びも、自分らしく。",
     "growth": "レベルアップで得た能力をどう伸ばすか、どの武器や防具を選ぶか。戦いを重ねながら、自分に合う組み合わせを探せます。街で装備を整え、宿屋で回復したら、もう一度冒険へ。少しずつ強くなる手応えを積み重ねていきます。",
     "playTitle": "冒険の続きは、いつもの端末で。",
-    "play": "進行や装備、設定は端末内に保存。日本語と英語を切り替えられ、音楽と効果音もそれぞれオン・オフを選べます。広告や追加課金に中断されず、自分のペースで探索と育成を楽しめる買い切りRPGです。"
+    "play": "進行や装備、設定は端末内に保存。日本語と英語を切り替えられ、音楽と効果音もそれぞれオン・オフを選べます。広告や追加課金に中断されず、自分のペースで探索と育成を楽しめる買い切りRPGです。",
+    "artCaption": "冒険のひとこま"
   },
   "en": {
     "app": "Silver Wings",
@@ -75,6 +76,7 @@
     "growthTitle": "Shape your growth. Choose your equipment.",
     "growth": "Decide how to develop your abilities as you level up, then choose your weapons and armor. Try different combinations through battle to find what suits you. Prepare your equipment in town, recover at the inn, and head out again. Each trip is another step toward becoming stronger.",
     "playTitle": "Your adventure continues on your device.",
-    "play": "Progress, equipment, and settings are saved on your device. Switch between Japanese and English, and turn music and sound effects on or off separately. Enjoy exploration and character growth at your own pace in a premium RPG with no in-game ads or in-app purchases."
+    "play": "Progress, equipment, and settings are saved on your device. Switch between Japanese and English, and turn music and sound effects on or off separately. Enjoy exploration and character growth at your own pace in a premium RPG with no in-game ads or in-app purchases.",
+    "artCaption": "A glimpse of the adventure"
   }
 }
