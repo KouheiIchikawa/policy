@@ -13,11 +13,11 @@
     "apple": "App Store",
     "google": "Google Play",
     "privacyLead": "本ポリシーはKouhei Elimi Labが提供する「銀色の翼」に適用されます。",
-    "updated": "更新日：2026年10月19日",
+    "updated": "更新日：2026年10月27日",
     "p1": "1. 情報の収集",
     "p1body": "個人情報を開発者のサーバーへ収集・送信しません。通常プレイにアカウントは不要です。Android版のランキングはGoogle Play Games、iOS版はApple Game Centerを使用し、OS間で順位は共有しません。ログイン時のプラットフォーム識別子と成績をGoogleまたはAppleが処理し、プロフィールの公開設定に応じて表示名・順位・成績が他の利用者に見える場合があります。開発者独自のアカウントやランキングサーバーは使用しません。",
     "p2": "2. 端末内の保存",
-    "p2body": "プレイヤー名・進行・装備・戦闘記録・設定・未送信の最高記録を端末に保存します。ランキングには槍お撃破時の総能力、槍お撃破回数、転生回数を送信します。ゲーム内の入力名はランキング用に送信しません。",
+    "p2body": "プレイヤー名・進行・装備・戦闘記録・設定・未送信の最高記録を端末に保存します。ランキングには能力値や戦闘・育成に関する成績を送信します。ゲーム内の入力名はランキング用に送信しません。",
     "p3": "3. 広告・分析・外部リンク",
     "p3body": "広告SDKやFirebase Analyticsは追加していません。Google Play Games SDKは、ゲーム用プロフィール、SDKの安定性向上に使う分析・診断情報を処理します。ゲーム音源・翻訳は同梱し、音声録音や外部翻訳への文章送信は行いません。",
     "p4": "4. データの削除",
@@ -33,8 +33,10 @@
     "copyright": "© 2025–2026 Kouhei Elimi Lab",
     "motionTitle": "風景が息づき、武器が閃く。",
     "motion": "街道、港、富士山の背景には、元のイラストを活かした短い環境アニメーション。敵味方の待機、攻撃、被弾と、武器ごとの斬撃・刺突・術式などの演出が戦いを彩ります。",
-    "rankingTitle": "槍おに挑んだ、その力を記録。",
-    "ranking": "槍お撃破時の総能力、槍お撃破回数、転生回数のランキング。AndroidはGoogle Play Games、iPhoneはGame Centerを使用し、順位はOS別に管理します。通常のゲーム進行は端末内に保存されます。"
+    "growthTitle": "育て方も、装備選びも、自分らしく。",
+    "growth": "レベルアップで得た能力をどう伸ばすか、どの武器や防具を選ぶか。戦いを重ねながら、自分に合う組み合わせを探せます。街で装備を整え、宿屋で回復したら、もう一度冒険へ。少しずつ強くなる手応えを積み重ねていきます。",
+    "playTitle": "冒険の続きは、いつもの端末で。",
+    "play": "進行や装備、設定は端末内に保存。日本語と英語を切り替えられ、音楽と効果音もそれぞれオン・オフを選べます。広告や追加課金に中断されず、自分のペースで探索と育成を楽しめる買い切りRPGです。"
   },
   "en": {
     "app": "Silver Wings",
@@ -50,11 +52,11 @@
     "apple": "App Store",
     "google": "Google Play",
     "privacyLead": "This policy applies to Silver Wings, provided by Kouhei Elimi Lab.",
-    "updated": "Updated: October 19, 2026",
+    "updated": "Updated: October 27, 2026",
     "p1": "1. Information Collection",
     "p1body": "The app does not collect or send personal information to developer-operated servers. An account is not required for normal play. Rankings use Google Play Games on Android and Apple Game Center on iOS, with separate rankings for each platform. Google or Apple processes your platform player identifier and scores; your display name, rank and scores may be visible to other players according to your profile settings. There is no developer-operated account or ranking server.",
     "p2": "2. Storage on Your Device",
-    "p2body": "Player names, progress, equipment, battle records, settings and pending best scores are stored locally. Rankings submit total abilities at a Yario victory, Yario victories and rebirths. The in-game name you enter is not uploaded for rankings.",
+    "p2body": "Player names, progress, equipment, battle records, settings and pending best scores are stored locally. Rankings submit ability stats and battle and progression records. The in-game name you enter is not uploaded for rankings.",
     "p3": "3. Advertising, Analytics, and External Links",
     "p3body": "No advertising SDK or Firebase Analytics is added. The Google Play Games SDK processes gamer profile information and analytics/diagnostics used to improve SDK stability. Audio and translations are bundled; the app does not record audio or send text to translation services.",
     "p4": "4. Deleting Data",
@@ -70,7 +72,9 @@
     "copyright": "© 2025–2026 Kouhei Elimi Lab",
     "motionTitle": "Living scenery. Distinctive strikes.",
     "motion": "Subtle animated scenery brings the railway, harbor and Mount Fuji illustrations to life. Both sides have idle, attack and hit motion, with slashes, thrusts, runes and other weapon-specific effects.",
-    "rankingTitle": "Record the strength behind your victory.",
-    "ranking": "Compare total stats when defeating Yario, Yario victories and rebirth count. Android uses Google Play Games and iPhone uses Game Center, with separate platform rankings. Normal progress remains on your device."
+    "growthTitle": "Shape your growth. Choose your equipment.",
+    "growth": "Decide how to develop your abilities as you level up, then choose your weapons and armor. Try different combinations through battle to find what suits you. Prepare your equipment in town, recover at the inn, and head out again. Each trip is another step toward becoming stronger.",
+    "playTitle": "Your adventure continues on your device.",
+    "play": "Progress, equipment, and settings are saved on your device. Switch between Japanese and English, and turn music and sound effects on or off separately. Enjoy exploration and character growth at your own pace in a premium RPG with no in-game ads or in-app purchases."
   }
 }
