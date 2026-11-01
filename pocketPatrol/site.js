@@ -113,8 +113,8 @@
     "en": "Privacy policy"
   },
   "privacy.lead": {
-    "ja": "あなたの記録を、<br>あなたのために。",
-    "en": "Your progress.<br>Your choices."
+    "ja": "POCKET PATROLにおける情報の取り扱いについて。",
+    "en": "How POCKET PATROL handles information."
   },
   "contents": {
     "ja": "このページの内容",
@@ -136,41 +136,29 @@
     "ja": "保持期間と削除",
     "en": "Retention and deletion"
   },
-  "policy.contact.title": {
-    "ja": "運営とお問い合わせ",
-    "en": "Operator and contact"
-  },
   "updated": {
     "ja": "更新日：2026年11月1日",
     "en": "Last updated: November 1, 2026"
   },
   "policy.local.body": {
-    "ja": "進行状況、設定、図鑑、端末内の成績は端末内に保存します。これらの情報は、ランキングへの送信を除き、通常のゲーム進行のためにサーバーへ送信しません。",
-    "en": "Progress, settings, collection records and local scores are stored on your device. Apart from leaderboard submissions, these records are not sent to a server for ordinary gameplay."
+    "ja": "ゲームの進行状況や設定は端末内に保存します。",
+    "en": "Game progress and settings are stored on your device."
   },
   "policy.ranking.body": {
-    "ja": "Android版1.0.51以降はGoogle Play Games、今後のiPhone版はGame Centerのランキングを利用します。参加時は各サービスで認証し、クリア／ゲームオーバー時の得点を送信します。SDKはプレイヤー識別子やプロフィール、接続に必要な情報を各社の方針に従って処理します。Google Play Games SDKは、サービスの安定性・品質改善のため利用状況と診断情報も収集します。ランキングはOS別で、進行状況の端末間同期はありません。旧版1.0.50以前はFirebaseの匿名ID、得点、任意名（8文字まで）、選択地域、面、難易度、機体、結果、日時、プレイ識別子を扱っていました。旧サービスは移行に伴い終了予定で、旧記録を新ランキングへ自動移行しません。",
-    "en": "Android 1.0.51 and later use Google Play Games; the upcoming iPhone version uses Game Center. Participating authenticates with that provider and sends your settled Clear/Game Over score. The SDK processes player identifiers, profiles and connection information under the provider’s policies. The Google Play Games SDK also collects usage analytics and diagnostic information to improve service stability and quality. Rankings are separate by platform; campaign progress is not synced across devices. Versions up to 1.0.50 used Firebase guest IDs, scores, optional names of up to eight characters, selected regions, stages, difficulty, craft, results, times and run IDs. That legacy service is being retired; its records are not automatically moved to the new boards."
-  },
-  "policy.ranking.public": {
-    "ja": "新ランキングでは各サービスのプレイヤー名・プロフィールと得点が、プロフィールの公開設定に従って表示されます。独自の8文字名や都道府県の入力はありません。旧Firebaseランキングでは名前・地域・得点・面・難易度・機体・結果・日時が公開され、匿名ID等も配信データに含まれます。GPSで地域は取得しません。ランキングを使わずにゲームを遊べます。",
-    "en": "New boards show the platform player name/profile and score according to profile visibility settings. There is no separate eight-character name or region form. Legacy Firebase records publicly included name, region, score, stage, difficulty, craft, result and time, with anonymous identifiers in the distributed data. GPS is not used. You can play without using leaderboards."
+    "ja": "ランキングにはGoogle Play Games／Game Centerを利用し、プレイヤー識別子、プロフィール、得点、プレイ記録を処理します。プレイヤー名や得点は、各サービスの公開設定に従って表示されます。Google Play Gamesは、品質改善のため利用状況や診断情報も処理します。",
+    "en": "Leaderboards use Google Play Games or Game Center to process player identifiers, profiles, scores and gameplay records. Player names and scores are displayed according to each service’s visibility settings. Google Play Games also processes usage and diagnostic information to improve service quality."
   },
   "policy.services.body": {
-    "ja": "ランキングと認証にはGoogle Play Games／Apple Game Centerを使用します。各社はセキュリティやサービス提供のために情報を処理します。旧版の互換運用ではFirebase AuthenticationとRealtime Databaseを利用します。通信は暗号化されます。詳しくはGoogleおよびAppleのプライバシー方針をご確認ください。",
-    "en": "Leaderboards and authentication use Google Play Games or Apple Game Center. These providers process information to deliver and secure their services. Legacy-version compatibility uses Firebase Authentication and Realtime Database. Connections are encrypted. Please also review Google’s and Apple’s privacy policies."
+    "ja": "ランキング・認証にGoogle Play Games／Game Centerを、旧版ではFirebaseを利用します。これらのサービスは機能の提供と安全性の確保のために情報を処理します。",
+    "en": "Google Play Games and Game Center provide leaderboards and authentication. Older versions use Firebase. These services process information to provide their features and maintain security."
   },
   "policy.services.sdk": {
-    "ja": "広告対応版1.0.52以降は、ステージ間・コンティニュー時にGoogle AdMobの全画面広告を表示します。Googleの広告SDKはIPアドレス（概算位置の推定を含む）、端末・アカウント識別子、広告への操作、広告データ、利用状況・診断情報などを広告配信・分析・不正防止のため収集・共有します。必要な地域ではGoogle UMPによる同意画面を表示し、必要な場合はゲーム内のプライバシー画面から選択を変更できます。確認用Android APKにはテスト広告を表示します。1.0.51以前には広告SDKは含まれません。アプリ内購入はありません。",
-    "en": "Ad-supported versions 1.0.52 and later show Google AdMob interstitial ads between stages and on Continue. Google’s advertising SDK collects and shares IP addresses (including approximate location inference), device/account identifiers, ad interactions, advertising data, usage and diagnostics for advertising, analytics and fraud prevention. Google UMP requests consent where required; when applicable, choices can be changed from the in-game Privacy screen. Android verification APKs display test ads. Versions through 1.0.51 do not include the advertising SDK. There are no in-app purchases."
+    "ja": "広告配信にGoogle AdMobを利用します。広告SDKは、IPアドレス（概算位置を含む）、端末等の識別子、広告への操作、利用状況・診断情報を、広告配信・分析・不正防止のため収集・共有します。必要な地域では同意を確認し、該当する場合はアプリ内で選択を変更できます。",
+    "en": "Advertising uses Google AdMob. Its SDK collects and shares IP addresses (including approximate location), device and related identifiers, ad interactions, usage and diagnostics for advertising, analytics and fraud prevention. Consent is requested where required, and applicable choices can be changed in the app."
   },
   "policy.retention.body": {
-    "ja": "ランキングの記録はGoogle Play Games／Game Centerで管理し、保持・削除は各サービスの方針に従います。Google Play Gamesのゲームデータはプロフィール設定から削除できます。Game Centerや旧Firebaseの記録については、下のお問い合わせ先へご連絡ください。旧Firebase記録は移行対応のため保持しています。アンインストールでは端末内のデータが削除されますが、各サービスの記録は自動では削除されません。",
-    "en": "Leaderboard records are managed by Google Play Games or Game Center under each service’s retention and deletion policies. Google Play Games data can be deleted through your profile settings. For Game Center or legacy Firebase records, use the contact link below. Legacy Firebase records are retained during migration. Uninstalling removes local data but does not automatically delete records held by these services."
-  },
-  "policy.contact.body": {
-    "ja": "本ポリシーは「POCKET PATROL 境界の向こうへ」（Androidパッケージ：jp.kouheielimilab.pocketpatrol）に適用します。運営：Kouhei Elimi Lab（Google Play上の開発者表記：Kohei Elimi Lab）。ご質問はXの @sio_sio_bull へご連絡ください。",
-    "en": "This policy applies to POCKET PATROL (Android package: jp.kouheielimilab.pocketpatrol). Operated by Kouhei Elimi Lab, listed as Kohei Elimi Lab on Google Play. For questions, contact @sio_sio_bull on X."
+    "ja": "情報はサービス提供に必要な期間保持し、外部サービスの記録は各社の方針に従って管理します。データの削除は各サービスの設定、またはフッターのXからお問い合わせください。",
+    "en": "Information is retained for as long as needed to provide the service. Records held by external services are managed under their policies. For deletion, use the relevant service’s settings or contact us through the X link in the footer."
   }
 };
   const storageKey = 'pocketpatrol.locale';
@@ -210,7 +198,7 @@
     const page = document.body.dataset.page;
     const label = page === 'privacy' ? messages['privacy.title'][locale] : locale === 'ja' ? '公式サイト' : 'Official Site';
     document.title = 'POCKET PATROL | ' + label;
-    const description = page === 'home' ? messages['home.about'][locale] : page === 'privacy' ? messages['policy.contact.body'][locale] : messages['policy.contact.body'][locale];
+    const description = page === 'home' ? messages['home.about'][locale] : messages['privacy.lead'][locale];
     document.querySelector('meta[name=description]').content = description;
     document.querySelector('meta[property="og:title"]').content = document.title;
     document.querySelector('nav').setAttribute('aria-label', locale === 'ja' ? 'サイトナビゲーション' : 'Site navigation');
