@@ -10,9 +10,10 @@
 <meta property="og:title" content="POCKET PATROL">
 <meta property="og:image" content="https://kouheiichikawa.github.io/policy/pocketPatrol/assets/hero.webp">
 <link rel="icon" href="assets/icon.png">
-<script src="site.js?v=20261101-privacy">
+<script src="site.js?v=20261105-ga4">
 </script>
-<link rel="stylesheet" href="style.css?v=2">
+<script defer src="analytics.js?v=20261105-ga4"></script>
+<link rel="stylesheet" href="style.css?v=20261105-ga4">
 </head>
 <body data-page="home">
 <header>
@@ -86,9 +87,24 @@
 <footer>
 <div class="footer-brand">© 2026 Kouhei Elimi Lab</div>
 <div class="footer-links">
+<button type="button" class="cookie-settings" data-cookie-settings aria-controls="cookie-banner" data-i18n="nav.cookies">Cookie settings</button>
 <a data-i18n="nav.privacyFull" href="privacy-policy.html" data-local-link>Privacy policy</a>
 <a href="https://x.com/sio_sio_bull" target="_blank" rel="noopener noreferrer">X</a>
 </div>
 </footer>
+
+<section id="cookie-banner" class="cookie-banner" role="region" aria-labelledby="cookie-title" aria-describedby="cookie-description" hidden>
+<div class="cookie-copy">
+<h2 id="cookie-title" data-i18n="cookie.title">Website analytics cookies</h2>
+<p id="cookie-description" data-i18n="cookie.body">With your permission, this website uses Google Analytics to send page visits, interactions, and device/browser information to Google to help improve the site. You can use the site without allowing analytics and change your choice in Cookie settings at any time.</p>
+<a href="privacy-policy.html#website-analytics" data-local-link data-i18n="nav.privacyFull">Privacy policy</a>
+</div>
+<div class="cookie-actions">
+<button type="button" data-cookie-choice="denied" data-i18n="cookie.deny">Do not allow</button>
+<button type="button" data-cookie-choice="granted" data-i18n="cookie.allow">Allow analytics</button>
+<button type="button" id="cookie-close" data-i18n="cookie.close" hidden>Close</button>
+</div>
+</section>
 </body>
 </html>
+

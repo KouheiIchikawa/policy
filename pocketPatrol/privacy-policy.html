@@ -10,9 +10,10 @@
 <meta property="og:title" content="POCKET PATROL">
 <meta property="og:image" content="https://kouheiichikawa.github.io/policy/pocketPatrol/assets/hero.webp">
 <link rel="icon" href="assets/icon.png">
-<script src="site.js?v=20261101-privacy">
+<script src="site.js?v=20261105-ga4">
 </script>
-<link rel="stylesheet" href="style.css?v=2">
+<script defer src="analytics.js?v=20261105-ga4"></script>
+<link rel="stylesheet" href="style.css?v=20261105-ga4">
 </head>
 <body data-page="privacy">
 <header>
@@ -44,10 +45,11 @@
 <a data-i18n="policy.local.title" href="#local">On your device</a>
 <a data-i18n="policy.ranking.title" href="#ranking">Leaderboard data</a>
 <a data-i18n="policy.services.title" href="#services">Purpose and external services</a>
+<a data-i18n="policy.web.title" href="#website-analytics">Website analytics</a>
 <a data-i18n="policy.retention.title" href="#retention">Retention and deletion</a>
 </aside>
 <div class="legal-body">
-<p data-i18n="updated" class="muted update">Last updated: November 1, 2026</p>
+<p data-i18n="updated" class="muted update">Last updated: November 5, 2026</p>
 <section id="local" class="policy-section">
 <span class="section-number">01</span>
 <h2 data-i18n="policy.local.title" >On your device</h2>
@@ -67,8 +69,16 @@
 </p>
 <p data-i18n="policy.services.sdk" >Advertising uses Google AdMob. Its SDK collects and shares IP addresses (including approximate location), device and related identifiers, ad interactions, usage and diagnostics for advertising, analytics and fraud prevention. Consent is requested where required, and applicable choices can be changed in the app.</p>
 </section>
-<section id="retention" class="policy-section">
+
+<section id="website-analytics" class="policy-section">
 <span class="section-number">04</span>
+<h2 data-i18n="policy.web.title">Website analytics</h2>
+<p data-i18n="policy.web.body">This official website loads Google Analytics 4 (Google LLC) and uses analytics cookies only if you allow it. Page visits, link interactions, referrers, device/browser information and approximate region are sent to Google to understand and improve website use. Your IP address is provided to Google when connecting. Google signals and advertising personalization signals are disabled for this web measurement, and it does not send your in-game account information.</p>
+<p data-i18n="policy.web.choice">Before you allow analytics, or if you choose “Do not allow,” this site does not load its Google Analytics tag or create analytics cookies. Your language and cookie choice are stored in your browser. Cookie choices and analytics cookies last for up to 180 days. Withdrawing permission in the footer’s “Cookie settings” deletes the analytics cookies set by this site and stops subsequent measurement. Previously sent records remain subject to Google’s policies and this service’s retention settings.</p>
+<p><a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites that use its services</a></p>
+</section>
+<section id="retention" class="policy-section">
+<span class="section-number">05</span>
 <h2 data-i18n="policy.retention.title" >Retention and deletion</h2>
 <p data-i18n="policy.retention.body" >Information is retained for as long as needed to provide the service. Records held by external services are managed under their policies. For deletion, use the relevant service’s settings or contact us through the X link in the footer.</p>
 </section>
@@ -78,9 +88,24 @@
 <footer>
 <div class="footer-brand">© 2026 Kouhei Elimi Lab</div>
 <div class="footer-links">
+<button type="button" class="cookie-settings" data-cookie-settings aria-controls="cookie-banner" data-i18n="nav.cookies">Cookie settings</button>
 <a data-i18n="nav.privacyFull" href="privacy-policy.html" data-local-link>Privacy policy</a>
 <a href="https://x.com/sio_sio_bull" target="_blank" rel="noopener noreferrer">X</a>
 </div>
 </footer>
+
+<section id="cookie-banner" class="cookie-banner" role="region" aria-labelledby="cookie-title" aria-describedby="cookie-description" hidden>
+<div class="cookie-copy">
+<h2 id="cookie-title" data-i18n="cookie.title">Website analytics cookies</h2>
+<p id="cookie-description" data-i18n="cookie.body">With your permission, this website uses Google Analytics to send page visits, interactions, and device/browser information to Google to help improve the site. You can use the site without allowing analytics and change your choice in Cookie settings at any time.</p>
+<a href="privacy-policy.html#website-analytics" data-local-link data-i18n="nav.privacyFull">Privacy policy</a>
+</div>
+<div class="cookie-actions">
+<button type="button" data-cookie-choice="denied" data-i18n="cookie.deny">Do not allow</button>
+<button type="button" data-cookie-choice="granted" data-i18n="cookie.allow">Allow analytics</button>
+<button type="button" id="cookie-close" data-i18n="cookie.close" hidden>Close</button>
+</div>
+</section>
 </body>
 </html>
+

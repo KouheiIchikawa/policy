@@ -137,8 +137,8 @@
     "en": "Retention and deletion"
   },
   "updated": {
-    "ja": "更新日：2026年11月1日",
-    "en": "Last updated: November 1, 2026"
+    "ja": "更新日：2026年11月5日",
+    "en": "Last updated: November 5, 2026"
   },
   "policy.local.body": {
     "ja": "ゲームの進行状況や設定は端末内に保存します。",
@@ -159,6 +159,42 @@
   "policy.retention.body": {
     "ja": "情報はサービス提供に必要な期間保持し、外部サービスの記録は各社の方針に従って管理します。データの削除は各サービスの設定、またはフッターのXからお問い合わせください。",
     "en": "Information is retained for as long as needed to provide the service. Records held by external services are managed under their policies. For deletion, use the relevant service’s settings or contact us through the X link in the footer."
+  },
+  "nav.cookies": {
+    "ja": "Cookie設定",
+    "en": "Cookie settings"
+  },
+  "cookie.title": {
+    "ja": "アクセス解析用Cookie",
+    "en": "Website analytics cookies"
+  },
+  "cookie.body": {
+    "ja": "このWebサイトでは、許可した場合のみGoogle Analyticsを使い、閲覧ページや操作、端末・ブラウザー情報をGoogleに送信してサイトの改善に役立てます。許可しなくてもサイトを利用できます。選択は後からCookie設定で変更できます。",
+    "en": "With your permission, this website uses Google Analytics to send page visits, interactions, and device/browser information to Google to help improve the site. You can use the site without allowing analytics and change your choice in Cookie settings at any time."
+  },
+  "cookie.deny": {
+    "ja": "許可しない",
+    "en": "Do not allow"
+  },
+  "cookie.allow": {
+    "ja": "許可する",
+    "en": "Allow analytics"
+  },
+  "cookie.close": {
+    "ja": "閉じる",
+    "en": "Close"
+  },
+  "policy.web.title": {
+    "ja": "Webサイトのアクセス解析",
+    "en": "Website analytics"
+  },
+  "policy.web.body": {
+    "ja": "この公式Webサイトでは、利用者が許可した場合に限りGoogle Analytics 4（Google LLC）を読み込み、アクセス解析用Cookieを使用します。閲覧ページ、リンクの操作、参照元、端末・ブラウザー情報、おおよその地域などを、サイトの利用状況の把握と改善のためGoogleに送信します。IPアドレスは通信時にGoogleに提供されます。このWeb計測ではGoogleシグナルと広告のパーソナライズ用シグナルを無効にし、ゲーム内のアカウント情報は送信しません。",
+    "en": "This official website loads Google Analytics 4 (Google LLC) and uses analytics cookies only if you allow it. Page visits, link interactions, referrers, device/browser information and approximate region are sent to Google to understand and improve website use. Your IP address is provided to Google when connecting. Google signals and advertising personalization signals are disabled for this web measurement, and it does not send your in-game account information."
+  },
+  "policy.web.choice": {
+    "ja": "許可する前や「許可しない」を選んだ場合、このサイトのGoogle Analyticsタグは読み込まれず、アクセス解析用Cookieは作成されません。言語とCookieの選択はブラウザー内に保存します。Cookieの選択とアクセス解析用Cookieの有効期間は最長180日です。フッターの「Cookie設定」で許可を取り消すと、このサイトが設定したアクセス解析用Cookieを削除し、その後の計測を停止します。すでに送信された記録はGoogleの方針と本サービスの保持設定に従って管理されます。",
+    "en": "Before you allow analytics, or if you choose “Do not allow,” this site does not load its Google Analytics tag or create analytics cookies. Your language and cookie choice are stored in your browser. Cookie choices and analytics cookies last for up to 180 days. Withdrawing permission in the footer’s “Cookie settings” deletes the analytics cookies set by this site and stops subsequent measurement. Previously sent records remain subject to Google’s policies and this service’s retention settings."
   }
 };
   const storageKey = 'pocketpatrol.locale';
@@ -216,3 +252,4 @@
   });
   addEventListener('popstate', () => applyLocale(requestedLocale()));
 })();
+
