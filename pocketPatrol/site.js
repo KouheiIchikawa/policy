@@ -1,5 +1,29 @@
 (() => {
   const messages = {
+  "home.metaTitle": {
+    "ja": "POCKET PATROL 境界の向こうへ | 無料の弾幕シューティング",
+    "en": "POCKET PATROL | Free Portrait Bullet-Hell Shooter"
+  },
+  "home.metaDescription": {
+    "ja": "フルボイスの物語と弾幕バトルを楽しむAndroid向け縦画面シューティング『POCKET PATROL 境界の向こうへ』。シンプル操作でハイスコアに挑戦。完全無料・アプリ内課金なし。Google Playで配信中。",
+    "en": "Play POCKET PATROL, a free portrait bullet-hell shooter for Android with full voice acting, simple controls and leaderboards. No in-app purchases."
+  },
+  "download.androidLabel": {
+    "ja": "Google PlayでPOCKET PATROLをダウンロード（新しいタブで開きます）",
+    "en": "Get POCKET PATROL on Google Play (opens in a new tab)"
+  },
+  "download.action": {
+    "ja": "無料でダウンロード <span aria-hidden=\"true\">↗</span>",
+    "en": "Download for free <span aria-hidden=\"true\">↗</span>"
+  },
+  "download.title": {
+    "ja": "さあ、その手で境界を越えよう。",
+    "en": "Ready to cross the boundary?"
+  },
+  "download.note": {
+    "ja": "完全無料・アプリ内課金なし。広告が表示されます。",
+    "en": "Free to play. No in-app purchases. Contains ads."
+  },
   "nav.home": {
     "ja": "公式サイト",
     "en": "Official site"
@@ -233,10 +257,12 @@
     });
     const page = document.body.dataset.page;
     const label = page === 'privacy' ? messages['privacy.title'][locale] : locale === 'ja' ? '公式サイト' : 'Official Site';
-    document.title = 'POCKET PATROL | ' + label;
-    const description = page === 'home' ? messages['home.about'][locale] : messages['privacy.lead'][locale];
+    document.title = page === 'home' ? messages['home.metaTitle'][locale] : 'POCKET PATROL | ' + label;
+    const description = page === 'home' ? messages['home.metaDescription'][locale] : messages['privacy.lead'][locale];
     document.querySelector('meta[name=description]').content = description;
     document.querySelector('meta[property="og:title"]').content = document.title;
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.content = description;
     document.querySelector('nav').setAttribute('aria-label', locale === 'ja' ? 'サイトナビゲーション' : 'Site navigation');
   }
   document.addEventListener('DOMContentLoaded', () => {

@@ -157,3 +157,16 @@ button:focus-visible{outline:3px solid #87e5ff;outline-offset:5px}
 .cookie-actions button:hover{background:#ffe5b2}
 .cookie-actions #cookie-close{background:transparent;color:var(--ink);border-color:#819ab5}
 @media(max-width:700px){.cookie-banner{inset:auto 12px 12px;max-height:calc(100dvh - 24px);padding:20px;display:block}.cookie-actions{margin-top:16px}.cookie-copy h2{font-size:18px}.cookie-actions button{min-height:48px}}
+
+/* Direct, keyboard-accessible store links stay usable without JavaScript. */
+.store-links{display:flex;flex-wrap:wrap;gap:16px;margin:30px 0 10px}
+.store-button{display:grid;grid-template-columns:1fr auto;gap:3px 28px;min-width:260px;max-width:100%;padding:16px 22px;border:1px solid #ffda8c;border-radius:14px;background:#ffda8c;color:#102033;text-decoration:none;line-height:1.4;box-shadow:0 6px 0 #594229}
+.store-button:hover{background:#ffe5b2}
+.store-button:active{box-shadow:0 3px 0 #594229}
+.store-device{font-size:12px;font-weight:600;letter-spacing:.08em}
+.store-name{grid-column:1;font-size:25px;font-weight:750}
+.store-action{grid-column:2;grid-row:1 / 3;align-self:center;font-size:14px;font-weight:700}
+.download-section{border-top:1px solid #31445e;background:linear-gradient(135deg,#142c42,#0a182c)}
+.download-section p{color:var(--muted)}
+@media(max-width:650px){.store-links{margin-top:24px}.store-button{width:100%;min-width:0;gap:3px 16px;padding:16px 18px}.store-name{font-size:23px}.store-action{font-size:13px}}
+@media(max-width:360px){.store-button{grid-template-columns:1fr}.store-action{grid-column:1;grid-row:auto;margin-top:8px}}
