@@ -143,10 +143,10 @@
     document.querySelectorAll('a[data-store]').forEach(link => link.addEventListener('click', () => {
       // Fixed, non-personal labels only. The store stays usable without analytics.
       if (!started || consent?.value !== 'granted' || consent.expires <= Date.now() || window[disabledKey]) return;
-      if (link.dataset.store !== 'google_play' || !['intro', 'bottom'].includes(link.dataset.placement)) return;
+      if (!['google_play', 'app_store'].includes(link.dataset.store) || !['intro', 'bottom'].includes(link.dataset.placement)) return;
       window.gtag('event', 'store_click', {
         game_id: 'pocket_patrol',
-        store: 'google_play',
+        store: link.dataset.store,
         placement: link.dataset.placement,
         site_language: document.documentElement.lang === 'ja' ? 'ja' : 'en',
         page_path: location.pathname,

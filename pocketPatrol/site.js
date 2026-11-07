@@ -5,8 +5,12 @@
     "en": "POCKET PATROL | Free Portrait Bullet-Hell Shooter"
   },
   "home.metaDescription": {
-    "ja": "フルボイスの物語と弾幕バトルを楽しむAndroid向け縦画面シューティング『POCKET PATROL 境界の向こうへ』。シンプル操作でハイスコアに挑戦。完全無料・アプリ内課金なし。Google Playで配信中。",
-    "en": "Play POCKET PATROL, a free portrait bullet-hell shooter for Android with full voice acting, simple controls and leaderboards. No in-app purchases."
+    "ja": "フルボイスの物語と弾幕バトルを楽しむiOS・Android向け縦画面シューティング『POCKET PATROL 境界の向こうへ』。シンプル操作でハイスコアに挑戦。完全無料・アプリ内課金なし。App Store・Google Playで配信中。",
+    "en": "Play POCKET PATROL, a free portrait bullet-hell shooter for iOS and Android with full voice acting, simple controls and leaderboards. No in-app purchases."
+  },
+  "download.iosLabel": {
+    "ja": "App StoreでPOCKET PATROLをダウンロード（新しいタブで開きます）",
+    "en": "Get POCKET PATROL on the App Store (opens in a new tab)"
   },
   "download.androidLabel": {
     "ja": "Google PlayでPOCKET PATROLをダウンロード（新しいタブで開きます）",

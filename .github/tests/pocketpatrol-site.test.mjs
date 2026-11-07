@@ -27,7 +27,8 @@ test('Verified Android CTA exists twice and works without JavaScript',()=>{
  const links=[...html.matchAll(/<a[^>]+data-store="google_play"[^>]*>/g)].map(x=>x[0]);
  assert.equal(links.length,2);
  for(const link of links){assert.match(link,/href="https:\/\/play.google.com\/store\/apps\/details\?id=jp.kouheielimilab.pocketpatrol"/);assert.match(link,/rel="noopener noreferrer"/);}
- assert.doesNotMatch(html,/6824158539|apps.apple.com/);
+ assert.equal([...html.matchAll(/data-store="app_store"/g)].length,2);
+ assert.equal([...html.matchAll(/href="https:\/\/apps.apple.com\/app\/id6824158539"/g)].length,2);
  assert.match(html,/data-placement="intro"/);assert.match(html,/data-placement="bottom"/);
 });
 test('No analytics or clicks before permission or after denial',()=>{
@@ -39,7 +40,8 @@ test('Explicit permission enables fixed store_click labels once per click',()=>{
  assert.equal(h.scripts.length,1);assert.equal(h.events().length,2);
  assert.deepEqual(JSON.parse(JSON.stringify(h.events()[0][2])),{game_id:'pocket_patrol',store:'google_play',placement:'intro',site_language:'ja',page_path:'/policy/pocketPatrol/',transport_type:'beacon'});
  assert.equal(h.events()[1][2].placement,'bottom');
- h.links[0].dataset.store='untrusted';h.click(0);assert.equal(h.events().length,2);
+ h.links[0].dataset.store='app_store';h.click(0);assert.equal(h.events().length,3);assert.equal(h.events()[2][2].store,'app_store');
+ h.links[0].dataset.store='untrusted';h.click(0);assert.equal(h.events().length,3);
 });
 test('Returning grants expire and withdrawals stop clicks',()=>{
  const h=harness('granted');h.click(0);assert.equal(h.events().length,1);h.expire();h.click(0);assert.equal(h.events().length,1);
