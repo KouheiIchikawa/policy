@@ -59,6 +59,28 @@
     });
   }
 
+
+  function campaignConfig() {
+    // Only our public promotion labels are accepted; never forward arbitrary
+    // query strings, search terms, ad click IDs or visitor identifiers.
+    const params = new URLSearchParams(location.search);
+    const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+    if (keys.some(key => params.getAll(key).length > 1)) return {};
+    const source = params.get('utm_source');
+    const medium = params.get('utm_medium');
+    if (!((source === 'x' && medium === 'social') ||
+          (source === 'youtube' && medium === 'video'))) return {};
+    const name = params.get('utm_campaign') || '';
+    const match = /^pp_(20[2-4][0-9])(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])_(gameplay|arts|characters|release)_[0-9]{2}$/.exec(name);
+    if (!match) return {};
+    const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+    if (date.getUTCMonth() + 1 !== Number(match[2])) return {};
+    const config = { campaign_source: source, campaign_medium: medium, campaign_name: name };
+    const content = params.get('utm_content');
+    if (['video_a', 'video_b', 'text_a', 'text_b'].includes(content)) config.campaign_content = content;
+    return config;
+  }
+
   function startAnalytics() {
     if (started || consent?.value !== 'granted' || consent.expires <= Date.now()) return;
     started = true;
@@ -74,6 +96,7 @@
     });
     window.gtag('js', new Date());
     window.gtag('config', measurementId, {
+      ...campaignConfig(),
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       cookie_domain: 'none',
