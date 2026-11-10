@@ -33,7 +33,7 @@
     "chibi_art": "New website illustration based on verified Nova and Sera front art: Nova reminds Sera to guide visitors while he plays. Transparent PNG, 1536x1024. Original game portraits retained for the cast and story.",
     "navigation": "One accessible mini-game tab set replaces the four stacked explanations. Direct links, language switching, Arrow keys and Home/End preserve selection. Back-to-top returns focus to the header and stays hidden while consent controls are open. The top control uses an angular blue panel with gold chevrons, replacing the generic round arrow.",
     "enemy_catalog": "Stage 1 only: drone, white-rider, fighter, elder, Pursuer Hound (midboss) and Collector Veil (boss). Identical appearance roster verified in campaign encounters for easy, normal and hard. No later-stage profiles or artwork included. New character traits and salary settings are distinguished from canonical roles and specifications.",
-    "art_format": "Four generated regular-enemy illustrations converted losslessly from PNG to WebP; two original in-game boss illustrations reused unchanged. Only the selected illustration is requested. All 26 produced illustrations preserved outside the website repository."
+    "art_format": "All six enemy illustrations use the website illustration style. Hound and Veil were redrawn from their existing game portraits on November 10, 2026. Original reference assets are preserved in the game repository."
   },
   "measurement": {
     "primary": "Consented store_click sessions divided by consented home-page sessions; clicks are not installs.",
@@ -74,11 +74,11 @@
     }
   },
   "enemy_image_sha256": {
-    "brawler.webp": "91c9aadbb33caacd5794e82a896f7ee8d82a66ab9d7bd99d55f8c260802568cd",
+    "brawler.webp": "b8a1d52866e23fd71b51c476fccb7915791a0ef0cdd64e6100261c2c9e665e6e",
     "drone.webp": "886e8e1f46bbca17c6b923ec670cc986d4cdd5a342a798f4218c9e47da838a34",
     "elder.webp": "8dc95901772011fea7a831c0cd83554d1fa8c820432296dbf274cd62c50036f3",
     "fighter.webp": "a091c964faabf403961dab7c86871326a84ea0aad5f6a897bc10ea6e4a5447ad",
-    "sorceress.webp": "975993b6be78677158a37e0228e60a54b62e2c19a9996891acbbbb785ad5463f",
+    "sorceress.webp": "1aa8f02942cebff7d710f6d1f49e212dd9a3c4a0adb108ade3dcfa72ea34525e",
     "white-rider.webp": "46a2238417139c4a77d9b89f7489d00ed0e048bb88e9c2907a2a56e8fac960f6"
   }
 }

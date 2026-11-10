@@ -348,7 +348,7 @@ window.POCKET_RESIDENTS = {
         "lengthM": 2.65,
         "weightKg": 480
       },
-      "image": "assets/enemies/brawler.webp"
+      "image": "assets/enemies/brawler.webp?v=20261111-redraw"
     },
     {
       "base": "sorceress",
@@ -408,7 +408,7 @@ window.POCKET_RESIDENTS = {
         "lengthM": 1.76,
         "weightKg": 58
       },
-      "image": "assets/enemies/sorceress.webp"
+      "image": "assets/enemies/sorceress.webp?v=20261111-redraw"
     }
   ]
 };

@@ -183,7 +183,7 @@ test('Enemy catalog contains only six verified Stage 1 characters and matching i
   for(const field of ['name','speciesName','classification','role','personality','belief','payUse']){
    assert.ok(c[field].ja,c.base+' '+field+' ja');assert.ok(c[field].en,c.base+' '+field+' en');
   }
-  assert.equal(c.image,'assets/enemies/'+c.base+'.webp');assert.ok(readFileSync(new URL(c.image,root)).length>0);
+  assert.equal(c.image.split('?')[0],'assets/enemies/'+c.base+'.webp');assert.ok(readFileSync(new URL(c.image.split('?')[0],root)).length>0);
  }
  assert.doesNotMatch(catalogSource,/app\.notion\.com|sourceBlobSha|sharedModelLoreReference|libfile_|C:\\\\/);
 });
@@ -252,3 +252,9 @@ test('Every arcade tab includes its actual gameplay screenshot',()=>{
  const page=readFileSync(new URL('minigames.html',root),'utf8');
  for(const kind of ['breakout','pinball','slot','bingo']){assert.ok(page.includes('assets/arcade/'+kind+'.webp'));assert.ok(readFileSync(new URL('assets/arcade/'+kind+'.webp',root)).length>10000);}
 });
+
+ test("interview has no unwanted bottom promotion", () => {
+ const html = readFileSync(new URL("../../pocketPatrol/interview.html", import.meta.url), "utf8");
+ assert.ok(!html.includes("briefing-exit"));
+ assert.ok(!html.includes("BACK TO THE GAME"));
+ });
