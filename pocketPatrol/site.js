@@ -274,8 +274,14 @@
     "ja": "そのアナログっぽさを残したのは、なぜでしょう？",
     "en": "Why did you want to keep that analog feel?"
   },
-  "interview.a3": {"ja":"今って便利すぎるし、成功してる人の結果だけ見て、やらずに答えを出すというか。「本気を出せばできる」とかって思うでしょ。実際にはやりもせんと。","en":"Things are so convenient now, and we see only the results of other people’s success and reach a conclusion without trying for ourselves. You think, “I could do that if I really tried,” right? Without actually doing it."},
-  "interview.a3b": {"ja":"料理とか旅行とかでも、準備から実際にやってみると、いろいろうまくいかないんですよね。","en":"Even with cooking or travel, once you go through the preparation and actually try it, all sorts of things don’t go as planned."},
+  "interview.a3": {
+    "ja": "たとえばキャンプで、バーナーを使わずに火を起こすときとか。何かをしたら、思ったとおりの結果が出るとは限らないじゃないですか。それが現実だと思うんです。",
+    "en": "Think of starting a fire while camping without using a burner. Doing something does not always give you the result you expected. I think that is how things work in real life."
+  },
+  "interview.a3b": {
+    "ja": "そういうところって忘れがちなんですけど、だからこそ上達もあるんで。そこを楽しんでほしいですね。",
+    "en": "It is easy to forget that. But that is also why there is room to improve. I hope people enjoy that."
+  },
   "interview.teaser": {
     "ja": "3Dを使いたくて始めたこと。あえて残した、アナログな操作感。",
     "en": "The wish to work in 3D, and the analog feel deliberately kept in the controls."
@@ -289,9 +295,8 @@
     "en": "Back to the official site"
   }
 });
-  Object.assign(messages,{"room.title": {"ja": "開発者に聞く　3D初挑戦の意外な答えとは！？", "en": "The developer’s first venture into 3D: an unexpected answer!"}, "room.subtitle": {"ja": "POCKET PATROL 制作インタビュー", "en": "Inside the making of POCKET PATROL"}, "room.intro": {"ja": "3Dを作りたくなった、その瞬間。<br>そして、手の中に残したかった感覚。<br>4つの問いから、制作の話を。", "en": "The moment 3D became a possibility.<br>The feel the developer wanted to keep.<br>Four questions about making the game."}, "room.open": {"ja": "インタビューを開く", "en": "Open the interview"}, "room.spoiler": {"ja": "ネタバレなし", "en": "SPOILER-FREE"}, "room.chapter1": {"ja": "始まりの話", "en": "How it started"}, "room.chapter2": {"ja": "操作の手触り", "en": "The feel of the controls"}, "room.chapter3": {"ja": "実際にやってみること", "en": "Trying it yourself"}, "room.note": {"ja": "開発者の言葉を記録する。", "en": "In the developer’s words."}, "room.interviewer": {"ja": "聞き手", "en": "INTERVIEWER"}, "room.developer": {"ja": "開発者", "en": "DEVELOPER"}, "room.top": {"ja": "ページ上部へ ↑", "en": "Back to top ↑"}, "room.exit": {"ja": "次は、その手で。", "en": "Now, try it yourself."}});
+  Object.assign(messages,{"room.title": {"ja": "開発者に聞く　3D初挑戦の意外な答えとは！？", "en": "The developer’s first venture into 3D: an unexpected answer!"}, "room.subtitle": {"ja": "POCKET PATROL 制作インタビュー", "en": "Inside the making of POCKET PATROL"}, "room.intro": {"ja": "3Dを作りたくなった、その瞬間。<br>そして、手の中に残したかった感覚。<br>4つの問いから、制作の話を。", "en": "The moment 3D became a possibility.<br>The feel the developer wanted to keep.<br>Four questions about making the game."}, "room.open": {"ja": "インタビューを開く", "en": "Open the interview"}, "room.spoiler": {"ja": "ネタバレなし", "en": "SPOILER-FREE"}, "room.chapter1": {"ja": "始まりの話", "en": "How it started"}, "room.chapter2": {"ja": "操作の手触り", "en": "The feel of the controls"}, "room.chapter3": {"ja": "上達するということ", "en": "Learning to improve"}, "room.note": {"ja": "開発者の言葉を記録する。", "en": "In the developer’s words."}, "room.interviewer": {"ja": "聞き手", "en": "INTERVIEWER"}, "room.developer": {"ja": "開発者", "en": "DEVELOPER"}, "room.top": {"ja": "ページ上部へ ↑", "en": "Back to top ↑"}, "room.exit": {"ja": "次は、その手で。", "en": "Now, try it yourself."}});
   Object.assign(messages,{"room.chapter4": {"ja": "これからの話", "en": "What comes next"}, "interview.q4": {"ja": "今後は2Dと3D、どちらになりますか？", "en": "Will your next game be in 2D or 3D?"}, "interview.a4": {"ja": "上の歯が抜けたら3D、下の歯が抜けたら2Dかな。", "en": "If an upper tooth falls out, 3D. If a lower tooth falls out, maybe 2D."}, "interview.aside4": {"ja": "はぐらかされたようだ。", "en": "It seems he dodged the question."}});
-  Object.assign(messages,{"interview.a3c":{"ja":"たとえば同じ100キロでも、電車で行くのか、車なのか、バイクなのか、電動自転車なのか、自転車なのか。それぞれ違うし、家にいてるのとは全然ちゃうんですよ。","en":"Take the same 100 kilometers: by train, by car, by motorcycle, by electric bicycle, or by bicycle. Each is different, and all of them are completely different from staying at home."},"interview.a3d":{"ja":"だから、このポケットパトロールも、ただのゲームじゃなくて、わざと不都合を残してみたんです。何か響くかなって思っています。これも、実際に操作せんとちゃうよ、って話ですね。","en":"So with POCKET PATROL, I wanted it to be more than just a game. I deliberately left in some inconveniences. I hope something about that resonates. You have to actually control it yourself. That makes a difference."}});
   const storageKey = 'pocketpatrol.locale';
   function storedLocale() { try { return localStorage.getItem(storageKey); } catch { return null; } }
   function requestedLocale() {
