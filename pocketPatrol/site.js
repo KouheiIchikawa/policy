@@ -225,6 +225,78 @@
     "en": "Before you allow analytics, or if you choose “Do not allow,” this site does not load its Google Analytics tag or create analytics cookies. Your language and cookie choice are stored in your browser. Cookie choices and analytics cookies last for up to 180 days. Withdrawing permission in the footer’s “Cookie settings” deletes the analytics cookies set by this site and stops subsequent measurement. Previously sent records remain subject to Google’s policies and this service’s retention settings."
   }
 };
+  Object.assign(messages, {
+  "nav.interview": {
+    "ja": "開発者インタビュー",
+    "en": "Developer interview"
+  },
+  "interview.title": {
+    "ja": "作ったきっかけと、<br>操作に残したかった感覚",
+    "en": "What started the project,<br>and the feel behind the controls"
+  },
+  "interview.metaTitle": {
+    "ja": "開発者インタビュー | POCKET PATROL 境界の向こうへ",
+    "en": "Developer interview | POCKET PATROL"
+  },
+  "interview.metaDescription": {
+    "ja": "POCKET PATROLを作り始めたきっかけと、あえて残したアナログな操作感。開発者が語る、ネタバレなしのインタビュー。",
+    "en": "A spoiler-free interview about what inspired POCKET PATROL and the deliberately analog feel of its controls."
+  },
+  "interview.lead": {
+    "ja": "『POCKET PATROL 境界の向こうへ』を作り始めたきっかけと、遊ぶ人に楽しんでほしいこと。開発者に聞きました。",
+    "en": "We asked the developer what inspired POCKET PATROL and what they hope players will enjoy."
+  },
+  "interview.q1": {
+    "ja": "POCKET PATROLを作ろうと思ったきっかけは？",
+    "en": "What made you want to create POCKET PATROL?"
+  },
+  "interview.a1": {
+    "ja": "『シンソウ学園』で一度、一段落していたんです。「もうここまでかな」と思っていたんですけど、AIの進化を見て、「3Dいけるじゃん」と思って。",
+    "en": "After Shinso Gakuen, I felt I had reached a stopping point. I was thinking, “Maybe this is as far as I can go.” But seeing how AI was progressing made me think, “I could do 3D.”"
+  },
+  "interview.a1b": {
+    "ja": "3Dを使いたくて作りました。そこが始まりですね。",
+    "en": "I made it because I wanted to use 3D. That was the starting point."
+  },
+  "interview.q2": {
+    "ja": "遊ぶ人には、どんなところを楽しんでほしいですか？",
+    "en": "What do you hope players will enjoy?"
+  },
+  "interview.a2": {
+    "ja": "わざとレバーを用意して、昔のマリオの操作みたいな、少し滑る感じを残しています。ちょっとアナログっぽい操作感ですね。",
+    "en": "I deliberately included a control stick and kept a slightly slippery feel, like the controls in older Mario games. It has a bit of an analog feel."
+  },
+  "interview.a2b": {
+    "ja": "ラジコンとか、大人なら車とか。そういうものを自分で動かす感覚を、久しぶりに味わってほしいと思っています。",
+    "en": "Like a radio-controlled model, or a car for adults. I want people to experience that feeling of controlling something themselves again."
+  },
+  "interview.q3": {
+    "ja": "そのアナログっぽさを残したのは、なぜでしょう？",
+    "en": "Why did you want to keep that analog feel?"
+  },
+  "interview.a3": {
+    "ja": "たとえばキャンプで、バーナーを使わずに火を起こすときとか。何かをしたら、思ったとおりの結果が出るとは限らないじゃないですか。それが現実だと思うんです。",
+    "en": "Think of starting a fire while camping without using a burner. Doing something does not always give you the result you expected. I think that is how things work in real life."
+  },
+  "interview.a3b": {
+    "ja": "そういうところって忘れがちなんですけど、だからこそ上達もあるんで。そこを楽しんでほしいですね。",
+    "en": "It is easy to forget that. But that is also why there is room to improve. I hope people enjoy that."
+  },
+  "interview.teaser": {
+    "ja": "3Dを使いたくて始めたこと。あえて残した、アナログな操作感。",
+    "en": "The wish to work in 3D, and the analog feel deliberately kept in the controls."
+  },
+  "interview.read": {
+    "ja": "インタビューを読む",
+    "en": "Read the interview"
+  },
+  "interview.back": {
+    "ja": "公式サイトへ戻る",
+    "en": "Back to the official site"
+  }
+});
+  Object.assign(messages,{"room.title": {"ja": "開発者に聞く　3D初挑戦の意外な答えとは！？", "en": "The developer’s first venture into 3D: an unexpected answer!"}, "room.subtitle": {"ja": "POCKET PATROL 制作インタビュー", "en": "Inside the making of POCKET PATROL"}, "room.intro": {"ja": "3Dを作りたくなった、その瞬間。<br>そして、手の中に残したかった感覚。<br>4つの問いから、制作の話を。", "en": "The moment 3D became a possibility.<br>The feel the developer wanted to keep.<br>Four questions about making the game."}, "room.open": {"ja": "インタビューを開く", "en": "Open the interview"}, "room.spoiler": {"ja": "ネタバレなし", "en": "SPOILER-FREE"}, "room.chapter1": {"ja": "始まりの話", "en": "How it started"}, "room.chapter2": {"ja": "操作の手触り", "en": "The feel of the controls"}, "room.chapter3": {"ja": "上達するということ", "en": "Learning to improve"}, "room.note": {"ja": "開発者の言葉を記録する。", "en": "In the developer’s words."}, "room.interviewer": {"ja": "聞き手", "en": "INTERVIEWER"}, "room.developer": {"ja": "開発者", "en": "DEVELOPER"}, "room.top": {"ja": "ページ上部へ ↑", "en": "Back to top ↑"}, "room.exit": {"ja": "次は、その手で。", "en": "Now, try it yourself."}});
+  Object.assign(messages,{"room.chapter4": {"ja": "これからの話", "en": "What comes next"}, "interview.q4": {"ja": "今後は2Dと3D、どちらになりますか？", "en": "Will your next game be in 2D or 3D?"}, "interview.a4": {"ja": "上の歯が抜けたら3D、下の歯が抜けたら2Dかな。", "en": "If an upper tooth falls out, 3D. If a lower tooth falls out, maybe 2D."}, "interview.aside4": {"ja": "はぐらかされたようだ。", "en": "It seems he dodged the question."}});
   const storageKey = 'pocketpatrol.locale';
   function storedLocale() { try { return localStorage.getItem(storageKey); } catch { return null; } }
   function requestedLocale() {
@@ -261,8 +333,8 @@
     });
     const page = document.body.dataset.page;
     const label = page === 'privacy' ? messages['privacy.title'][locale] : locale === 'ja' ? '公式サイト' : 'Official Site';
-    document.title = page === 'home' ? messages['home.metaTitle'][locale] : 'POCKET PATROL | ' + label;
-    const description = page === 'home' ? messages['home.metaDescription'][locale] : messages['privacy.lead'][locale];
+    document.title = page === 'interview' ? messages['interview.metaTitle'][locale] : page === 'home' ? messages['home.metaTitle'][locale] : 'POCKET PATROL | ' + label;
+    const description = page === 'interview' ? messages['interview.metaDescription'][locale] : page === 'home' ? messages['home.metaDescription'][locale] : messages['privacy.lead'][locale];
     document.querySelector('meta[name=description]').content = description;
     document.querySelector('meta[property="og:title"]').content = document.title;
     const ogDescription = document.querySelector('meta[property="og:description"]');
