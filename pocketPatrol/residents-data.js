@@ -1,10 +1,6 @@
 window.POCKET_RESIDENTS = {
   "schemaVersion": 1,
   "count": 6,
-  "pageNote": {
-    "ja": "1面「境界地帯」の6体。役割と仕様はゲーム本編、通常敵の個体名・人物像・給与は追加設定です。",
-    "en": "Six characters from Stage 1, the Borderlands. Roles and specifications come from the game; individual names for regular enemies, personalities and pay are additional worldbuilding."
-  },
   "salaryLabels": {
     "gross": {
       "ja": "額面給与",
@@ -52,8 +48,8 @@ window.POCKET_RESIDENTS = {
     },
     "rules": [
       {
-        "ja": "Cは架空の決済単位。実際の円・ドル、電力量、ゲームスコアとは換算しません。給与は共通会計暦30日で集計します。",
-        "en": "C is a fictional spending unit, with no fixed conversion to real currencies, electricity, or game scores. Pay covers 30 common-accounting days."
+        "ja": "給与は共通会計暦30日で集計します。",
+        "en": "Pay covers 30 common-accounting days."
       },
       {
         "ja": "給与は働く人格の口座へ。業務の充電・弾薬・標準修理は雇用主の設備費で、本人への報酬とは別です。",
@@ -128,15 +124,7 @@ window.POCKET_RESIDENTS = {
         "lengthM": 0.92,
         "weightKg": 18
       },
-      "image": "assets/enemies/drone.webp",
-      "appearance": {
-        "ja": "1面 / 通常敵",
-        "en": "Stage 1 / Regular enemy"
-      },
-      "artNote": {
-        "ja": "ゲームモデルから描き起こしたイラスト",
-        "en": "New illustration based on the in-game model"
-      }
+      "image": "assets/enemies/drone.webp"
     },
     {
       "base": "white-rider",
@@ -188,15 +176,7 @@ window.POCKET_RESIDENTS = {
           "en": "Wages credited to the personality account"
         }
       },
-      "image": "assets/enemies/white-rider.webp",
-      "appearance": {
-        "ja": "1面 / 通常敵",
-        "en": "Stage 1 / Regular enemy"
-      },
-      "artNote": {
-        "ja": "ゲームモデルから描き起こしたイラスト",
-        "en": "New illustration based on the in-game model"
-      }
+      "image": "assets/enemies/white-rider.webp"
     },
     {
       "base": "fighter",
@@ -252,15 +232,7 @@ window.POCKET_RESIDENTS = {
         "lengthM": 1.88,
         "weightKg": 92
       },
-      "image": "assets/enemies/fighter.webp",
-      "appearance": {
-        "ja": "1面 / 通常敵",
-        "en": "Stage 1 / Regular enemy"
-      },
-      "artNote": {
-        "ja": "ゲームモデルから描き起こしたイラスト",
-        "en": "New illustration based on the in-game model"
-      }
+      "image": "assets/enemies/fighter.webp"
     },
     {
       "base": "elder",
@@ -316,15 +288,7 @@ window.POCKET_RESIDENTS = {
         "lengthM": 1.83,
         "weightKg": 74
       },
-      "image": "assets/enemies/elder.webp",
-      "appearance": {
-        "ja": "1面 / 通常敵",
-        "en": "Stage 1 / Regular enemy"
-      },
-      "artNote": {
-        "ja": "ゲームモデルから描き起こしたイラスト",
-        "en": "New illustration based on the in-game model"
-      }
+      "image": "assets/enemies/elder.webp"
     },
     {
       "base": "brawler",
@@ -338,12 +302,8 @@ window.POCKET_RESIDENTS = {
         "en": "Heavy pursuit unit"
       },
       "designation": {
-        "ja": "1面 / 中ボス",
-        "en": "Stage 1 / Midboss"
-      },
-      "appearance": {
-        "ja": "1面 / 中ボス",
-        "en": "Stage 1 / Midboss"
+        "ja": "",
+        "en": ""
       },
       "classification": {
         "ja": "重量追跡機",
@@ -388,11 +348,7 @@ window.POCKET_RESIDENTS = {
         "lengthM": 2.65,
         "weightKg": 480
       },
-      "image": "assets/enemies/brawler.webp",
-      "artNote": {
-        "ja": "ゲーム本編のキャラクターイラスト",
-        "en": "Original in-game character illustration"
-      }
+      "image": "assets/enemies/brawler.webp"
     },
     {
       "base": "sorceress",
@@ -406,12 +362,8 @@ window.POCKET_RESIDENTS = {
         "en": "Land-fee collector"
       },
       "designation": {
-        "ja": "1面 / ボス",
-        "en": "Stage 1 / Boss"
-      },
-      "appearance": {
-        "ja": "1面 / ボス",
-        "en": "Stage 1 / Boss"
+        "ja": "",
+        "en": ""
       },
       "classification": {
         "ja": "土地の徴収官",
@@ -456,11 +408,7 @@ window.POCKET_RESIDENTS = {
         "lengthM": 1.76,
         "weightKg": 58
       },
-      "image": "assets/enemies/sorceress.webp",
-      "artNote": {
-        "ja": "ゲーム本編のキャラクターイラスト",
-        "en": "Original in-game character illustration"
-      }
+      "image": "assets/enemies/sorceress.webp"
     }
   ]
 };

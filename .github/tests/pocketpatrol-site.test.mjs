@@ -180,7 +180,7 @@ test('Enemy catalog contains only six verified Stage 1 characters and matching i
  assert.deepEqual(catalog.characters.map(c=>c.base).sort(),roster);
  assert.deepEqual(readdirSync(new URL('assets/enemies/',root)).sort(),roster.map(base=>base+'.webp'));
  for(const c of catalog.characters){
-  for(const field of ['name','speciesName','designation','classification','role','personality','belief','payUse','appearance','artNote']){
+  for(const field of ['name','speciesName','classification','role','personality','belief','payUse']){
    assert.ok(c[field].ja,c.base+' '+field+' ja');assert.ok(c[field].en,c.base+' '+field+' en');
   }
   assert.equal(c.image,'assets/enemies/'+c.base+'.webp');assert.ok(readFileSync(new URL(c.image,root)).length>0);
@@ -204,7 +204,6 @@ test('Shared boss models do not lend unverified boss dimensions to ordinary indi
  assert.equal(catalog.characters.filter(c=>c.canonicalDimensions).length,5);
  assert.deepEqual(catalog.characters.find(c=>c.base==='brawler').canonicalDimensions,{lengthM:2.65,weightKg:480});
  assert.deepEqual(catalog.characters.find(c=>c.base==='sorceress').canonicalDimensions,{lengthM:1.76,weightKg:58});
- assert.match(catalog.pageNote.ja,/追加設定/);
 });
 
 test('Enemy page has a dedicated canonical URL and one character selector',()=>{
@@ -235,7 +234,6 @@ test('Catalog renders each of six profiles, optional pay fields and both locales
  for(const character of catalog.characters){
   nodes['resident-select'].value=character.base;nodes['resident-select'].handlers.change();
   assert.equal(nodes['resident-name'].textContent,character.name.ja);assert.equal(nodes['resident-image'].src,character.image);
-  assert.equal(nodes['resident-art-note'].textContent,character.artNote.ja);
   assert.equal(location.hash,'#'+character.base);
  }
  steps[1].handlers.click();assert.equal(nodes['resident-name'].textContent,'ツギ');
@@ -243,4 +241,9 @@ test('Catalog renders each of six profiles, optional pay fields and both locales
  location.hash='#sorceress';events.popstate();assert.equal(nodes['resident-name'].textContent,'Collector Veil');
  assert.equal(nodes['salary-values'].children.length,1);
  assert.doesNotMatch(JSON.stringify(catalog),/準備中|In preparation/);
+});
+
+test('Public enemy and arcade copy has no stage or production disclosures',()=>{
+ const copy=['index.html','residents.html','residents-data.js','minigames.html','site.js'].map(name=>readFileSync(new URL(name,root),'utf8')).join('\n');
+ assert.doesNotMatch(copy,/Stage 1|STAGE 01|first stage|1面|第3・第6|additional worldbuilding|追加設定|追加の世界設定|in-game character illustration|New illustration based on the in-game model/);
 });

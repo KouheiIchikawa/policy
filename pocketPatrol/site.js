@@ -349,8 +349,8 @@
     "en": "Nova and Sera introduce the four mini-games in POCKET PATROL."
   },
   "arcade.introNova": {
-    "ja": "任務の途中には、スコアを稼げるミニゲームもあるよ。今日は私とセラ先輩で案内するね。",
-    "en": "Some missions have a mini-game break where you can earn extra score. Sera and I will show you how."
+    "ja": "今日は私とセラ先輩で案内するね。",
+    "en": "Sera and I will show you around."
   },
   "arcade.introSera": {
     "ja": "説明なら任せろ。まず俺が一回……いや、もう一回だけ。",
@@ -360,14 +360,6 @@
     "ja": "先輩、案内する側だってば。",
     "en": "Sera. We’re supposed to be the guides."
   },
-  "arcade.note": {
-    "ja": "第3・第6ステージ後は3種類からランダム。第4ステージ後はビンゴ。獲得したボーナスはスコアに加算されます。",
-    "en": "After stages 3 and 6, one of three games is chosen at random. Stage 4 is followed by bingo. Bonuses add to your score."
-  },
-  "arcade.fiction": {
-    "ja": "ノヴァとセラのサイト限定ミニ劇場",
-    "en": "A website-only interlude with Nova and Sera"
-  },
   "arcade.breakout.name": {
     "ja": "ブロック崩し",
     "en": "BREAKOUT"
@@ -375,10 +367,6 @@
   "arcade.breakout.title": {
     "ja": "ブロックの中央を狙って。",
     "en": "Aim for the middle."
-  },
-  "arcade.breakout.body": {
-    "ja": "レバーでバーを動かして、ボールを打ち返す。中央に近いブロックほど高得点。硬いブロックは、壊したときに点が入るよ。",
-    "en": "Move the paddle with the lever and keep the ball in play. Blocks nearer the center are worth more. Tough blocks award points when they break."
   },
   "arcade.breakout.sera": {
     "ja": "いいところに来た！ あと一球……！",
@@ -396,10 +384,6 @@
     "ja": "落ちる前に、フリッパー！",
     "en": "Save it with the flippers!"
   },
-  "arcade.pinball.body": {
-    "ja": "フリッパーでボールを弾いて、バンパーやターゲットを狙おう。抽選ポケットやワープ穴もあるから、行き先をよく見て。",
-    "en": "Use the flippers to send the ball toward bumpers and targets. Keep an eye on the prize pockets and warp holes, too."
-  },
   "arcade.pinball.sera": {
     "ja": "おっ、まだ落ちてない！ これは続けるしかないだろ。",
     "en": "Look, it’s still in play! Can’t stop now."
@@ -416,10 +400,6 @@
     "ja": "回して、止めて、絵柄をそろえる。",
     "en": "Spin, stop and match."
   },
-  "arcade.slot.body": {
-    "ja": "SPINでスタート。リールを止めて絵柄をそろえよう。2つそろえばリーチ。最後のリールまで見届けてね。",
-    "en": "Press SPIN, then stop the reels and try to match the symbols. Two matching reels make a reach. Watch that last reel."
-  },
   "arcade.slot.sera": {
     "ja": "今のは惜しかった。次こそ来る気がするんだ。",
     "en": "That was close. I’ve got a feeling about the next one."
@@ -435,10 +415,6 @@
   "arcade.bingo.title": {
     "ja": "あとひとつ。その番号を待って。",
     "en": "One number away. Keep watching."
-  },
-  "arcade.bingo.body": {
-    "ja": "カードを選んで抽選を待とう。リーチやそろったラインを見ながら、2ライン完成を目指す。時間制限はないよ。",
-    "en": "Choose a card and watch the draw. Follow the reaches and completed lines as you aim to finish two lines. There’s no time limit."
   },
   "arcade.bingo.sera": {
     "ja": "その番号だ！ ……違う？ もう一度よく見せろ。",
@@ -463,10 +439,6 @@
   "world.nova": {
     "ja": "最初は、もうひとつの故郷をつくる話だったんだ。",
     "en": "At first, it was about building another place to call home."
-  },
-  "world.note": {
-    "ja": "本編のオープニングまでの出来事です。「20XX」以降の細かな年次は作中で明かされていません。",
-    "en": "These events lead up to the opening. The story gives “20XX” for the era, but no dates for the events that follow."
   },
   "world.0.label": {
     "ja": "アンドロイドの時代",
@@ -593,16 +565,12 @@
     "en": "Off the battlefield."
   },
   "residents.meta": {
-    "ja": "POCKET PATROLの1面「境界地帯」に登場する6体を紹介。追跡機ハウンド、徴収官ヴェイルと4種の通常敵。",
-    "en": "Meet six characters from Stage 1 of POCKET PATROL: Pursuer Hound, Collector Veil and four regular enemy types."
+    "ja": "POCKET PATROLの敵たちの素顔。名前、性格、暮らしと、その思い。",
+    "en": "Meet the enemies of POCKET PATROL: their names, personalities, lives and hopes."
   },
   "residents.lead": {
-    "ja": "境界を守る者、逃げ道を塞ぐ者。まずは1面「境界地帯」で出会う6体。",
-    "en": "Some hold the border. Others cut off escape. Meet six opponents from the Borderlands, the first stage."
-  },
-  "residents.note": {
-    "ja": "1面「境界地帯」の6体。役割と仕様はゲーム本編、通常敵の個体名・人物像・給与は追加設定です。",
-    "en": "Six characters from Stage 1, the Borderlands. Roles and specifications come from the game; individual names for regular enemies, personalities and pay are additional worldbuilding."
+    "ja": "境界を守る者、逃げ道を塞ぐ者。戦場の外では、どんな日々を送っているのか。",
+    "en": "Some hold the border. Others cut off escape. What are their lives like beyond the battlefield?"
   },
   "residents.choose": {
     "ja": "キャラクターを選ぶ",
@@ -640,21 +608,13 @@
     "ja": "暮らしと給与のしくみ",
     "en": "How work and pay fit together"
   },
-  "residents.economyNote": {
-    "ja": "この給与制度は追加の世界設定です。ゲーム内の得点や実装済みの通貨とは別のものです。",
-    "en": "This pay system is an additional worldbuilding concept, separate from in-game scores or implemented currencies."
-  },
-  "residents.artNote": {
-    "ja": "ゲームのモデルをもとにした描き起こしイラスト",
-    "en": "New illustration based on the in-game model"
-  },
   "residents.homeLead": {
     "ja": "戦いの相手を、少し違う角度から。名前、性格、給与。そのお金で何をしたいのか。",
     "en": "See the opposition from another angle: their names, temperaments, wages and what they hope to do with them."
   },
   "residents.open": {
-    "ja": "1面の6体を見る",
-    "en": "Meet the six Stage 1 enemies"
+    "ja": "敵キャラを見る",
+    "en": "Meet the enemies"
   },
   "nav.interview": {
     "ja": "開発者インタビュー",

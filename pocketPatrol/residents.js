@@ -20,8 +20,6 @@
       }));
       put('resident-position', String(index + 1).padStart(2, '0') + ' / ' + characters.length + '  —  ' + text(character.name, locale));
       put('resident-species', text(character.speciesName, locale));
-      put('resident-stage', text(character.appearance, locale));
-      put('resident-art-note', text(character.artNote, locale));
       put('resident-name', text(character.name, locale));
       put('resident-designation', text(character.designation, locale));
       put('resident-belief', text(character.belief, locale));
