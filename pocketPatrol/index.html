@@ -17,6 +17,8 @@
 </script>
 <script defer src="analytics.js?v=20261107-stage1"></script>
 <link rel="stylesheet" href="style.css?v=20261111-local-interview">
+<link rel="stylesheet" href="hero.css?v=20261111-1">
+<script defer src="hero.js?v=20261111-1"></script>
 </head>
 <body data-page="home">
 <header>
@@ -34,10 +36,16 @@
 </nav>
 </header>
 <main>
-<div class="hero">
-<img src="assets/hero.webp" width="1536" height="750" data-i18n="hero.alt" data-i18n-attr="alt" alt="Volt, Flare and Leaf: three small machines and the POCKET PATROL logo">
-<span class="eyebrow">A SMALL LIGHT. A WORLD BEYOND.</span>
+<section class="hero keyvisual" aria-label="POCKET PATROL" aria-roledescription="carousel">
+<div class="kv-stage">
+<div class="kv-slide is-active" role="group" aria-roledescription="slide" aria-label="1 / 4"><img class="kv-art" src="assets/hero.webp" width="1536" height="750" alt="POCKET PATROL — Volt, Flare, Leaf" fetchpriority="high"></div>
+<div class="kv-slide" role="group" aria-roledescription="slide" aria-label="2 / 4" aria-hidden="true" inert><img class="kv-art" src="assets/hero/keyvisual-02.webp" width="1672" height="941" alt="Nova, Sera and Rin" decoding="async"><div class="kv-logo" aria-label="POCKET PATROL"><span>POCKET</span><span>PATROL</span></div></div>
+<div class="kv-slide" role="group" aria-roledescription="slide" aria-label="3 / 4" aria-hidden="true" inert><img class="kv-art" src="assets/hero/keyvisual-03.webp" width="1672" height="941" alt="Nova, Sera, Volt, Flare and Leaf" decoding="async"><div class="kv-logo" aria-label="POCKET PATROL"><span>POCKET</span><span>PATROL</span></div></div>
+<div class="kv-slide" role="group" aria-roledescription="slide" aria-label="4 / 4" aria-hidden="true" inert><img class="kv-art" src="assets/hero/keyvisual-04.webp" width="1774" height="887" alt="Volt, Flare and Leaf face Hibiki, Sevran, Hound and Veil" decoding="async"><div class="kv-logo" aria-label="POCKET PATROL"><span>POCKET</span><span>PATROL</span></div></div>
 </div>
+<div class="kv-controls" hidden><button class="kv-prev" type="button" aria-label="Previous visual">&#8592;</button><div class="kv-dots"><button type="button" data-kv="0" aria-label="Visual 1" aria-current="true">01</button><button type="button" data-kv="1" aria-label="Visual 2">02</button><button type="button" data-kv="2" aria-label="Visual 3">03</button><button type="button" data-kv="3" aria-label="Visual 4">04</button></div><button class="kv-next" type="button" aria-label="Next visual">&#8594;</button><button class="kv-pause" type="button" aria-label="Pause slideshow">&#10074;&#10074;</button></div>
+<span class="kv-status" role="status" aria-live="polite"></span>
+</section>
 <section class="intro">
 <span class="kicker">POCKET PATROL — BEYOND THE BOUNDARY</span>
 <h1 data-i18n="home.title" >Dodge the barrage.<br>Strike back with Arts!</h1>
