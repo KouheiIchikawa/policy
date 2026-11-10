@@ -121,7 +121,7 @@ test('Store badge images reuse the supplied common assets and preserve click att
 test('Arcade guides use the new chibi illustration without replacing the original cast art',()=>{
  const guide=readFileSync(new URL('minigames.html',root),'utf8');
  assert.match(guide,/assets\/chibi\/nova-sera-guide\.png/);
- assert.equal((guide.match(/class="chibi-avatar /g)||[]).length,15);
+ assert.equal((guide.match(/class="chibi-avatar /g)||[]).length,11);
  assert.doesNotMatch(guide,/assets\/characters\/(?:nova|sera)-portrait/);
  assert.match(html,/class="chibi-stage chibi-preview"/);
  assert.match(html,/assets\/characters\/nova\.webp/);
@@ -246,4 +246,9 @@ test('Catalog renders each of six profiles, optional pay fields and both locales
 test('Public enemy and arcade copy has no stage or production disclosures',()=>{
  const copy=['index.html','residents.html','residents-data.js','minigames.html','site.js'].map(name=>readFileSync(new URL(name,root),'utf8')).join('\n');
  assert.doesNotMatch(copy,/Stage 1|STAGE 01|first stage|1面|第3・第6|additional worldbuilding|追加設定|追加の世界設定|in-game character illustration|New illustration based on the in-game model/);
+});
+
+test('Every arcade tab includes its actual gameplay screenshot',()=>{
+ const page=readFileSync(new URL('minigames.html',root),'utf8');
+ for(const kind of ['breakout','pinball','slot','bingo']){assert.ok(page.includes('assets/arcade/'+kind+'.webp'));assert.ok(readFileSync(new URL('assets/arcade/'+kind+'.webp',root)).length>10000);}
 });

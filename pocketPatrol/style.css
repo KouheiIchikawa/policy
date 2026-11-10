@@ -318,3 +318,5 @@ body[data-page="home"] .world-epilogue { position: relative; margin: clamp(40px,
 body[data-page="home"] .world-epilogue img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover; object-position: center 48%; }
 body[data-page="home"] .world-epilogue::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(8,18,34,.12), transparent 24%, transparent 74%, rgba(8,18,34,.4)); }
 @media (max-width: 640px) { body[data-page="home"] .world-epilogue img { aspect-ratio: 4 / 3; object-position: 68% center; } }
+
+.arcade-gameplay{max-width:420px;margin:24px auto 32px}.arcade-gameplay img{display:block;width:100%;height:auto;border:1px solid #385169;border-radius:14px;background:#081222}
