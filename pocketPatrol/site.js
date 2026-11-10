@@ -225,16 +225,16 @@
     "en": "Before you allow analytics, or if you choose “Do not allow,” this site does not load its Google Analytics tag or create analytics cookies. Your language and cookie choice are stored in your browser. Cookie choices and analytics cookies last for up to 180 days. Withdrawing permission in the footer’s “Cookie settings” deletes the analytics cookies set by this site and stops subsequent measurement. Previously sent records remain subject to Google’s policies and this service’s retention settings."
   },
   "nav.world": {
-    "ja": "世界観・年表",
-    "en": "World & timeline"
+    "ja": "年表",
+    "en": "Timeline"
   },
   "nav.characters": {
     "ja": "登場人物",
     "en": "Characters"
   },
   "nav.arcade": {
-    "ja": "ひと休み",
-    "en": "Arcade break"
+    "ja": "休憩室",
+    "en": "Break Room"
   },
   "badge.play": {
     "ja": "../common/Google_Play_Badge_JA.svg",

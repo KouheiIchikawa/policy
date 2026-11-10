@@ -258,3 +258,9 @@ test('Every arcade tab includes its actual gameplay screenshot',()=>{
  assert.ok(!html.includes("briefing-exit"));
  assert.ok(!html.includes("BACK TO THE GAME"));
  });
+
+test("all content pages share the same five navigation destinations", () => {
+ const names = ["index", "interview", "world", "residents", "minigames", "privacy-policy"];
+ const headers = names.map(name => readFileSync(new URL(`../../pocketPatrol/${name}.html`, import.meta.url), "utf8").match(/<header>[\s\S]*?<\/header>/)[0]);
+ headers.forEach(header => { assert.equal(header, headers[0]); assert.ok(!header.includes('nav.characters')); assert.ok(header.includes('nav.interview')); });
+});
