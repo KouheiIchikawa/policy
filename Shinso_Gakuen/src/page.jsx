@@ -1,3 +1,4 @@
+import CubeGuide from './CubeGuide'
 import { Fragment, StrictMode, useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import cubeFragmentsUrl from '../assets/cube-fragments.png'
@@ -474,14 +475,14 @@ const pageCopy = {
     ja: {
       title: 'シンソウ学園 | 攻略',
       heading: '攻略',
-      lead: 'スマホアプリ内の3x3ギミックは、毎回オレンジ面がゴール。',
-      body: '面を回す操作と、見回すだけの視点変更を分けて考えます。',
+      lead: 'アプリのゴールは、オレンジの一面。',
+      body: '六面完成は不要。行・列を動かす操作を、一手ずつ練習しましょう。',
     },
     en: {
       title: 'Shinso Gakuen | Guide',
       heading: 'Guide',
-      lead: 'In-app 3x3 logic: the orange face is the goal every time.',
-      body: 'Separate face turns from camera/view changes.',
+      lead: 'The app’s goal: complete the orange front face.',
+      body: 'No need to solve all six faces. Learn row and column moves one step at a time.',
     },
   },
 }
@@ -690,7 +691,7 @@ function ContentPage() {
         </section>
       ) : null}
 
-      {!isBook && !isApp ? (
+      {!isBook && !isApp && !isGuide ? (
         <article className={`content-panel${isStory ? ' story-panel' : ''}${isGuide ? ' guide-intro-panel' : ''}`}>
         {isStory ? (
           <>
@@ -755,108 +756,7 @@ function ContentPage() {
         </article>
       ) : null}
 
-      {pageId === 'guide' ? (
-        <>
-          <section className="guide-visual-strip" aria-label={language === 'ja' ? '攻略イメージ' : 'Guide visuals'}>
-            {guideVisuals.map((image) => (
-              <img src={image} alt="" key={image} />
-            ))}
-          </section>
-
-          <section className="guide-flow" aria-label={guideCopy.flowLabel}>
-            {guideCopy.steps.map(([title, cue, body, image, miu], index) => (
-              <article className="guide-step" key={title}>
-                <img src={image} alt="" />
-                <div>
-                  <img className="guide-step-miu" src={miu} alt="" />
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <h2>{title}</h2>
-                  <strong>{cue}</strong>
-                  <p>{body}</p>
-                </div>
-              </article>
-            ))}
-          </section>
-
-          <section className="guide-example" aria-label={guideCopy.exampleLabel}>
-            <div className="guide-example-copy">
-              <p>{guideCopy.exampleEyebrow}</p>
-              <h2>{guideCopy.exampleTitle}</h2>
-              <strong>{currentExample[0]}</strong>
-              <span>{currentExample[1]}</span>
-              <small>{currentExample[2]}</small>
-              <div className="guide-example-actions">
-                <button
-                  type="button"
-                  disabled={guideExampleIndex === 0}
-                  onClick={() => setGuideExampleIndex((index) => Math.max(0, index - 1))}
-                >
-                  {guideCopy.prev}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setGuideExampleIndex(0)}
-                >
-                  {guideCopy.reset}
-                </button>
-                <button
-                  type="button"
-                  disabled={guideExampleIndex === guideCopy.example.length - 1}
-                  onClick={() =>
-                    setGuideExampleIndex((index) => Math.min(guideCopy.example.length - 1, index + 1))
-                  }
-                >
-                  {guideCopy.next}
-                </button>
-              </div>
-            </div>
-            <div className="guide-example-stage">
-              <div className={`guide-mini-cube guide-mini-cube-${currentExample[3]}`}>
-                {exampleStickers[currentExample[3]].map((color, index) => (
-                  <span className={`cube-sticker cube-sticker-${color}`} key={`${color}-${index}`} />
-                ))}
-              </div>
-              <img src={currentExample[4]} alt="" />
-              <div className="guide-example-dots" aria-hidden="true">
-                {guideCopy.example.map((step, index) => (
-                  <button
-                    type="button"
-                    aria-label={step[0]}
-                    aria-current={guideExampleIndex === index ? 'step' : undefined}
-                    key={step[0]}
-                    onClick={() => setGuideExampleIndex(index)}
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="guide-board" aria-label={guideCopy.boardLabel}>
-            <div className="guide-board-heading">
-              <p>{guideCopy.boardEyebrow}</p>
-              <h2>{guideCopy.boardTitle}</h2>
-            </div>
-            <div className="guide-algorithms">
-              {guideCopy.algorithms.map(([name, notation, phrase]) => (
-                <article key={name}>
-                  <h3>{name}</h3>
-                  <code>{notation}</code>
-                  <p>{phrase}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="guide-tips" aria-label={guideCopy.tipsLabel}>
-            {guideCopy.tips.map(([title, body]) => (
-              <article key={title}>
-                <h2>{title}</h2>
-                <p>{body}</p>
-              </article>
-            ))}
-          </section>
-        </>
-      ) : null}
+      {pageId === 'guide' ? <CubeGuide language={language} /> : null}
 
       {pageId === 'character' ? (
         <section className="character-section" aria-label="Character profiles">
