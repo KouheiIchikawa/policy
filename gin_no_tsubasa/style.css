@@ -3,3 +3,5 @@
 .hero-angel,.footer-mascots img[src*="-pixel"]{image-rendering:pixelated}
 
 @media(max-width:700px){.footer-mascots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;max-width:400px;margin:auto}.footer-mascots span{display:none}.footer-mascots img{width:100%;height:95px}}
+
+.store-badge{display:inline-flex;align-items:center;line-height:0;max-width:100%}.store-badge img{display:block;height:48px;width:auto;max-width:100%}.store-badge:hover{opacity:.85}
