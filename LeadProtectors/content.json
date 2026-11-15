@@ -1,0 +1,324 @@
+{
+  "ja": {
+    "name": "リードプロテクターズ",
+    "tag": "ハンドルの先に、自分だけの毎日を。",
+    "desc": "教習所からはじまる、バイクのある生活。配達で働いて、相棒を選んで、次の日曜日はツーリングへ。iOS・Android向けの縦画面3Dバイクゲーム。",
+    "nav": [
+      "ゲームについて",
+      "プライバシー",
+      "利用規約",
+      "サポート",
+      "クレジット"
+    ],
+    "status": "iOS / Android · 公開準備中",
+    "model": "買い切り・広告なし・アプリ内課金なし",
+    "cta": "バイクのある生活をのぞく",
+    "eyebrow": "A MOTORCYCLE LIFE, IN YOUR HANDS",
+    "intro": "免許を取った、その先へ。",
+    "introtext": "まずは教習所で操作を覚えるところから。キーを回し、エンジンをかけ、街へ出る。仕事も、買い物も、旅も。何をするかを決めるのは、あなたです。",
+    "chapters": [
+      [
+        "01 / LEARN",
+        "教習所ではじめの一歩。",
+        "担当教官と一緒に、発進、ブレーキ、右左折を練習。ふつう・むずかしいの2つの操作モードで、自分のペースで進められます。"
+      ],
+      [
+        "02 / WORK",
+        "街を走って、仕事をする。",
+        "500m、1km、2kmの配達依頼。行き先で待つお客さんへ届け、報酬を受け取ろう。短い距離から、少しずつ。"
+      ],
+      [
+        "03 / LIVE",
+        "一台を選ぶ。日々を重ねる。",
+        "ドリームプラザで相棒を探し、色や装備を選ぶ。汚れたら洗車。体力と天気を見ながら、週ごとの暮らしを楽しもう。"
+      ],
+      [
+        "04 / RIDE",
+        "次の日曜日は、どこへ行く？",
+        "自分のバイクでツーリングへ。車種ごとの乗り味、エンジンの音、ライダーの姿勢。違いを感じながら、道路の先を目指そう。"
+      ]
+    ],
+    "bikehead": "相棒との付き合い方も、あなた次第。",
+    "biketext": "スクーター、ネイキッド、スポーツ、クルーザー。車体の色や装備を選び、お気に入りの一台と暮らす。",
+    "facts": [
+      [
+        "縦画面",
+        "片手に収まる3Dの街"
+      ],
+      [
+        "日本語 / English",
+        "ゲームもサイトも2言語"
+      ],
+      [
+        "端末内セーブ",
+        "アカウント登録不要"
+      ]
+    ],
+    "notice": "これはバイクを題材にしたゲームです。実際の運転教習・免許試験・交通安全の評価を代替しません。車両・人物は架空のデザインで、実在メーカーとの提携はありません。",
+    "ready": "街へ出る準備を、少しずつ。",
+    "readytext": "iOSは申請準備中、Androidはクローズドテスト開始前です。公開日・販売価格・対応機種は、決まり次第ご案内します。",
+    "footer": "お問い合わせ",
+    "updated": "最終更新：2026年11月15日",
+    "privacy": [
+      [
+        "対象と運営者",
+        "このポリシーは、Kohei Elimi Labが提供する「リードプロテクターズ」と本公式サイトに適用されます。お問い合わせ：repa.le.das@gmail.com。"
+      ],
+      [
+        "端末内に保存する情報",
+        "ゲームの進行、プレイヤーが選んだ外見・年齢、所持金、車両・装備、ゲーム内の日時と天気、配達や教習の記録、言語・表示・振動設定、任意の走行リプレイを端末内に保存します。ゲーム内の年齢はキャラクター設定です。開発者がこれらを自動でアップロードする機能はありません。アカウント登録・クラウドセーブ・端末間同期は現在ありません。"
+      ],
+      [
+        "端末のセンサー",
+        "操作には加速度・重力・ジャイロセンサーを、演出には振動機能を使用します。センサー値はゲーム内で処理し、開発者のサーバーへ送信しません。GPS位置情報、連絡先、カメラ、マイクをゲームのために収集・使用しません。走行リプレイはゲーム内の動きの記録で、カメラ映像やマイク音声の録音ではありません。"
+      ],
+      [
+        "追加コースの通信",
+        "追加コースの一覧・データをHTTPSでGoogle Firebase Hosting（gd-leadprotectors.web.app）から取得します。氏名、メール、端末内セーブ、センサー値をこのリクエストへ添付しません。通信先は配信・不正利用防止のためIPアドレスや通常の通信情報を処理する場合があります。取得したコースは端末内へキャッシュされます。Googleでの取扱いはGoogleのプライバシーポリシーをご確認ください。"
+      ],
+      [
+        "広告・解析・トラッキング",
+        "広告SDK、広告ID、行動追跡、アプリ内解析SDK、開発者への自動クラッシュ送信は組み込んでいません。AppleやGoogleがOS・ストアの設定に応じて提供する診断・購入情報の取扱いは、それぞれのポリシーに従います。ゲーム内の購入はゲーム内通貨で行い、実際の追加決済ではありません。"
+      ],
+      [
+        "公式サイト",
+        "本サイトはGitHub Pages上の静的ページです。アクセス解析タグ、広告、追跡Cookie、問い合わせフォームはありません。言語は日本語・英語のURLを切り替えて表示します。GitHubがサービス保護等のため通信情報を処理する場合があります。外部リンク先にはそれぞれのポリシーが適用されます。"
+      ],
+      [
+        "お問い合わせ・保持期間",
+        "メールで連絡した場合、メールアドレス・本文・自分で添付した情報を、回答と問題の確認に使用します。ゲームデータは自動添付しません。対応に必要な期間だけ保持し、法令等で必要な場合を除き不要になった情報は削除します。情報の確認・訂正・削除の相談は上記窓口へお送りください。"
+      ],
+      [
+        "セーブの削除と変更",
+        "タイトルからゲームを開始し、「設定 → 走行 → データクリア」でゲームの進行をリセットできます。アプリ内に残るコースキャッシュ等を含め全端末内データを削除するには、Androidではアプリ設定のストレージ消去、iOSでは「Appを削除」を使用してください。iOSの「Appを取り除く」ではデータが残ります。削除した進行は復元できず、開発者は端末内セーブを遠隔取得できません。機能や情報の取扱いを変更する場合は本ページを更新します。"
+      ]
+    ],
+    "terms": [
+      [
+        "利用について",
+        "本作はフィクションのゲームです。実際の運転や道路状況、法律上の免許・試験基準を保証するものではありません。現実の運転中には操作しないでください。"
+      ],
+      [
+        "購入と支払い",
+        "買い切りの有料アプリとして準備しています。最終的な販売価格・対応機種は各ストアの購入画面をご確認ください。広告、サブスクリプション、実際の金銭によるアプリ内課金はありません。ゲーム内通貨やアイテムは換金できません。"
+      ],
+      [
+        "ストアの条件と返金",
+        "ダウンロード・決済・再ダウンロード・返金には、購入先のApp StoreまたはGoogle Playの規約・手続きが適用されます。法令に基づく権利を制限しません。"
+      ],
+      [
+        "セーブと更新",
+        "セーブは端末内に保存されます。端末の紛失・故障・データ消去等により進行が失われる場合があります。現在、端末間の引き継ぎ機能はありません。更新時の互換性維持に努めますが、すべての端末・将来のOSでの動作を保証しません。"
+      ],
+      [
+        "権利と禁止事項",
+        "ゲームの独自コンテンツの権利はKohei Elimi Labまたは各権利者に帰属します。第三者素材は各ライセンスに従います。無断再配布や第三者の権利侵害を禁止します。法令で認められた利用を制限するものではありません。"
+      ],
+      [
+        "責任とお問い合わせ",
+        "適用法令で許される範囲で提供します。故意・重過失に関する責任や消費者保護法による権利を排除しません。利用上の問題はサポート窓口へご連絡ください。公開内容を変更する場合はこのページでお知らせします。"
+      ]
+    ],
+    "support": [
+      [
+        "お問い合わせ",
+        "不具合・操作・ご購入に関する相談は repa.le.das@gmail.com へお送りください。アプリのバージョン、端末の機種名、OS、発生した場面、再現手順を分かる範囲で記載すると確認しやすくなります。パスワードや決済カード情報は送らないでください。"
+      ],
+      [
+        "機種変更したらセーブを移せる？",
+        "現在は端末内セーブのみです。アカウントやクラウド経由の引き継ぎには対応していません。アンインストールや端末データの消去にはご注意ください。"
+      ],
+      [
+        "ネット接続は必要？",
+        "組み込みのコースで遊ぶための常時接続は必要ありません。追加コースの取得や外部のポリシーページの表示にはネット接続が必要です。"
+      ],
+      [
+        "運転中にやめるには？",
+        "右上の≡から地図を開き、終了を選びます。転倒・事故などの処理中は退出できない場合があります。未完了の配達には報酬が入りません。"
+      ],
+      [
+        "画面の動き・振動・言語を変えたい",
+        "「設定 → 表示・振動」で調整できます。走行モードは「設定 → 走行」にあります。体力が不足する週は「休む」で次の週へ進めます。"
+      ],
+      [
+        "返金について",
+        "App StoreまたはGoogle Playの購入履歴から、それぞれの返金手続きをご確認ください。開発者のメールへ注文番号を送る場合は、不要な個人情報を隠してください。"
+      ]
+    ],
+    "credits": [
+      [
+        "制作",
+        "Kohei Elimi Lab。キャラクター・車両名・世界観は架空のものです。スクリーンショットやイラストは開発中の内容で、変更される場合があります。"
+      ],
+      [
+        "エンジン・書体・音",
+        "Godot Engine（MIT）。Noto Sans JP / Dela Gothic One（SIL Open Font License）。音源はCC0素材等を加工したものと独自制作素材を使用します。個別のライセンスはアプリ同梱の表記をご確認ください。"
+      ],
+      [
+        "地図・地形",
+        "一部のツーリングコースは © OpenStreetMap contributors（ODbL）と国土地理院の標高データを元に制作しています。車線幅、建物、信号、標識、高低差等はゲーム向けの再構成です。教習所と配達の街並みは創作コースです。実在の道路を案内するナビゲーションではありません。"
+      ]
+    ]
+  },
+  "en": {
+    "name": "LEAD PROTECTORS",
+    "tag": "A little freedom, every Sunday.",
+    "desc": "A motorcycle life that starts at riding school. Deliver around town, find your own machine, and head out on Sunday. A portrait 3D motorcycle game for iOS and Android.",
+    "nav": [
+      "The game",
+      "Privacy",
+      "Terms",
+      "Support",
+      "Credits"
+    ],
+    "status": "iOS / Android · In preparation",
+    "model": "One-time purchase · No ads · No in-app purchases",
+    "cta": "Explore motorcycle life",
+    "eyebrow": "A MOTORCYCLE LIFE, IN YOUR HANDS",
+    "intro": "Your licence is just the beginning.",
+    "introtext": "Start with the basics at riding school. Turn the key, start the engine, and head into town. Work, shop, or take a ride. Your week is yours to choose.",
+    "chapters": [
+      [
+        "01 / LEARN",
+        "Your first steps, at riding school.",
+        "Practise starts, braking and junction turns with your instructor. Choose Normal or Hard and learn at your own pace."
+      ],
+      [
+        "02 / WORK",
+        "A job on two wheels.",
+        "Take 500 m, 1 km or 2 km delivery jobs. Meet the customer at the destination and earn your pay. Start small and build confidence."
+      ],
+      [
+        "03 / LIVE",
+        "One bike. A life of your own.",
+        "Visit Dream Plaza for a new machine, colours and gear. Wash your bike when it gets dirty. Plan your weeks around energy and the weather."
+      ],
+      [
+        "04 / RIDE",
+        "Where will Sunday take you?",
+        "Go touring on your own motorcycle. Explore different riding styles, engine sounds and rider positions as the road unfolds."
+      ]
+    ],
+    "bikehead": "Make a machine your own.",
+    "biketext": "Scooters, roadsters, sports bikes and cruisers. Choose your colours and gear, and spend time with your favourite machine.",
+    "facts": [
+      [
+        "Portrait 3D",
+        "A town in your hands"
+      ],
+      [
+        "日本語 / English",
+        "Two languages, in game and online"
+      ],
+      [
+        "Local saves",
+        "No account required"
+      ]
+    ],
+    "notice": "This is a motorcycle-themed game, not a substitute for real riding instruction, licence examinations or road-safety assessment. Vehicles and characters are fictional designs. No manufacturer affiliation is implied.",
+    "ready": "Getting ready for the open road.",
+    "readytext": "iOS submission preparation and Android preparation ahead of closed testing are in progress. Release dates, prices and supported devices will be announced when confirmed.",
+    "footer": "Contact",
+    "updated": "Last updated: November 15, 2026",
+    "privacy": [
+      [
+        "Scope and operator",
+        "This policy applies to LEAD PROTECTORS (リードプロテクターズ) and this official website, provided by Kohei Elimi Lab. Contact: repa.le.das@gmail.com."
+      ],
+      [
+        "Information stored on your device",
+        "Game progress, character appearance and age choices, in-game funds, vehicles and gear, the game calendar and weather, delivery and school records, language/display/haptic settings and optional ride replays are saved locally. The age is a fictional character setting. The developer does not automatically upload these files. There is currently no account registration, cloud save or cross-device sync."
+      ],
+      [
+        "Device sensors",
+        "Accelerometer, gravity and gyroscope readings control riding, and haptics provide feedback. Readings are processed in the game and are not sent to developer servers. The game does not collect or use GPS location, contacts, the camera or the microphone. Ride replays record game motion, not camera footage or microphone audio."
+      ],
+      [
+        "Additional course downloads",
+        "Course listings and data are requested over HTTPS from Google Firebase Hosting at gd-leadprotectors.web.app. These requests do not include your name, email, local saves or sensor readings. The service provider may process IP addresses and standard connection information for delivery and security. Downloaded courses are cached locally. See Google’s Privacy Policy for its processing."
+      ],
+      [
+        "Advertising, analytics and tracking",
+        "There is no advertising SDK, advertising identifier, behavioural tracking, in-app analytics SDK or automatic crash upload to the developer. Apple and Google may process purchases or diagnostics under their own platform policies and your settings. Purchases within gameplay use fictional currency, not additional real-money payments."
+      ],
+      [
+        "This website",
+        "This is a static website hosted on GitHub Pages. It has no analytics tags, advertising, tracking cookies or contact forms. Language selection navigates between Japanese and English URLs. GitHub may process connection information to operate and protect its services. External websites have their own policies."
+      ],
+      [
+        "Support and retention",
+        "If you email us, we use your address, message and any information you choose to attach to answer and investigate. Game data is never attached automatically. We retain correspondence only as long as needed for support or legal obligations, then delete unnecessary information. Contact us to ask about access, correction or deletion."
+      ],
+      [
+        "Deleting saves and changes",
+        "After starting from the title, Settings → Riding → Clear data resets game progress. To delete all local app data, including remaining course caches, clear app storage in Android settings or use Delete App on iOS. Offload App on iOS retains data. Deleted progress cannot be recovered by the developer, who cannot remotely access your save. We update this page when features or information practices change."
+      ]
+    ],
+    "terms": [
+      [
+        "Use of the game",
+        "This is fictional entertainment. It does not guarantee real motorcycle behaviour, real road conditions or legal licence/test standards. Do not operate it while driving or riding."
+      ],
+      [
+        "Purchases",
+        "The app is being prepared as a paid, one-time purchase. Check your store’s purchase screen for the final price and supported devices. There are no ads, subscriptions or real-money in-app purchases. In-game currency and items cannot be redeemed for money."
+      ],
+      [
+        "Store terms and refunds",
+        "Downloads, payments, re-downloads and refunds follow the terms and procedures of the App Store or Google Play where you purchased the app. Nothing here limits mandatory statutory rights."
+      ],
+      [
+        "Saves and updates",
+        "Saves stay on your device. Loss, device failure or deletion may remove progress. Cross-device transfers are not currently available. We aim to preserve compatibility but cannot guarantee every device or future OS version."
+      ],
+      [
+        "Rights and prohibited use",
+        "Original game content belongs to Kohei Elimi Lab or its respective rightsholders. Third-party material is governed by its own licences. Do not redistribute without permission or infringe others’ rights. Uses permitted by applicable law remain permitted."
+      ],
+      [
+        "Liability and contact",
+        "The app is provided subject to applicable law. This does not exclude liability for intentional misconduct or gross negligence or restrict mandatory consumer protections. Contact support about problems. Changes will be posted here."
+      ]
+    ],
+    "support": [
+      [
+        "Contact support",
+        "Email repa.le.das@gmail.com about bugs, controls or purchases. If possible, include the app version, device model, OS, what happened and steps to reproduce it. Never send passwords or payment-card details."
+      ],
+      [
+        "Can I transfer my save?",
+        "Saves are currently local only. There is no account or cloud transfer. Take care before uninstalling the app or clearing device data."
+      ],
+      [
+        "Do I need an internet connection?",
+        "Built-in courses do not require a permanent connection. Downloading extra courses and opening external policy pages require internet access."
+      ],
+      [
+        "How do I stop riding?",
+        "Open the map with ≡ at the top right and choose to end the outing. Exit may be unavailable during falls or incidents. Unfinished deliveries do not earn pay."
+      ],
+      [
+        "Motion, haptics and language",
+        "Adjust them under Settings → Display & Haptics. Riding modes are under Settings → Riding. Use Rest to advance a week when energy is low."
+      ],
+      [
+        "Refunds",
+        "Use the refund procedure in the App Store or Google Play purchase history. If you send an order number to support, hide unrelated personal details."
+      ]
+    ],
+    "credits": [
+      [
+        "Production",
+        "Kohei Elimi Lab. Character and vehicle names and the world are fictional. Screenshots and illustrations show development content and may change."
+      ],
+      [
+        "Engine, fonts and sound",
+        "Godot Engine (MIT). Noto Sans JP / Dela Gothic One (SIL Open Font License). Sound uses edited CC0 recordings and original material. See the licences bundled with the app for individual notices."
+      ],
+      [
+        "Maps and terrain",
+        "Some touring courses use © OpenStreetMap contributors data (ODbL) and Geospatial Information Authority of Japan elevation data. Lane widths, buildings, signals, signs and terrain are adapted for the game. Riding school and delivery neighbourhoods are authored fictional courses. This app is not real-world navigation."
+      ]
+    ]
+  }
+}
