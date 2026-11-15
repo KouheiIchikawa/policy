@@ -1,8 +1,19 @@
 // Same face order, row/column cycles and outer-face rotations as CubeModel in the app.
 const colors = ['orange', 'red', 'yellow', 'white', 'green', 'blue']
+import {faceBasis,stickerPosition} from './cubeGesture.js'
 export const solvedCube = () => colors.map(color => Array(9).fill(color))
 export function turnCube(input, {kind, index, delta}) {
   const s = input.map(face => [...face])
+  if(kind==='depth'){
+   const rotate=([x,y,z])=>delta>0?[-y,x,z]:[y,-x,z]
+   input.forEach((face,f)=>face.forEach((color,i)=>{
+    const position=stickerPosition(f,i);if(position[2]!==index-1)return
+    const p=rotate(position),normal=rotate(faceBasis[f].n)
+    const dest=faceBasis.findIndex(b=>b.n.every((v,j)=>v===normal[j])),b=faceBasis[dest]
+    const offset=p.map((v,j)=>v-b.n[j]),col=offset.reduce((n,v,j)=>n+v*b.u[j],0)+1,row=offset.reduce((n,v,j)=>n+v*b.v[j],0)+1
+    s[dest][row*3+col]=color
+   }));return s
+  }
   const read = face => Array.from({length:3}, (_,i) => s[face][kind === 'row' ? index*3+i : i*3+index])
   const write = (face, values) => values.forEach((v,i) => {s[face][kind === 'row' ? index*3+i : i*3+index] = v})
   const cycle = kind === 'row' ? [4,0,5,1] : [2,0,3,1]
