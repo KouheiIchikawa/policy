@@ -2,7 +2,7 @@
   "ja": {
     "name": "リードプロテクターズ",
     "tag": "ハンドルの先に、自分だけの毎日を。",
-    "desc": "教習所からはじまる、バイクのある生活。配達で働いて、相棒を選んで、次の日曜日はツーリングへ。iOS・Android向けの縦画面3Dバイクゲーム。",
+    "desc": "日曜日、キーを回した。まだ知らない道がある。",
     "nav": [
       "ゲームについて",
       "プライバシー",
@@ -10,53 +10,40 @@
       "サポート",
       "クレジット"
     ],
-    "status": "iOS / Android · 公開準備中",
+    "status": "iOS / Android",
     "model": "買い切り・広告なし・アプリ内課金なし",
-    "cta": "バイクのある生活をのぞく",
+    "cta": "日曜日へ",
     "eyebrow": "A MOTORCYCLE LIFE, IN YOUR HANDS",
-    "intro": "免許を取った、その先へ。",
-    "introtext": "まずは教習所で操作を覚えるところから。キーを回し、エンジンをかけ、街へ出る。仕事も、買い物も、旅も。何をするかを決めるのは、あなたです。",
+    "intro": "日曜日、キーを回した。",
+    "introtext": "まだ知らない道がある。",
     "chapters": [
       [
-        "01 / LEARN",
-        "教習所ではじめの一歩。",
-        "担当教官と一緒に、発進、ブレーキ、右左折を練習。ふつう・むずかしいの2つの操作モードで、自分のペースで進められます。"
+        "DRIVING SCHOOL",
+        "教習所",
+        "「今日は、どれを練習していく？」"
       ],
       [
-        "02 / WORK",
-        "街を走って、仕事をする。",
-        "500m、1km、2kmの配達依頼。行き先で待つお客さんへ届け、報酬を受け取ろう。短い距離から、少しずつ。"
+        "DREAM PLAZA",
+        "ドリームプラザ",
+        "「いらっしゃい。今日はなんだい？」"
       ],
       [
-        "03 / LIVE",
-        "一台を選ぶ。日々を重ねる。",
-        "ドリームプラザで相棒を探し、色や装備を選ぶ。汚れたら洗車。体力と天気を見ながら、週ごとの暮らしを楽しもう。"
+        "DELIVERY DESK",
+        "バイト先",
+        "「おう、おつかれ。今日の依頼はこれだ。」"
       ],
       [
-        "04 / RIDE",
-        "次の日曜日は、どこへ行く？",
-        "自分のバイクでツーリングへ。車種ごとの乗り味、エンジンの音、ライダーの姿勢。違いを感じながら、道路の先を目指そう。"
+        "ON THE ROAD",
+        "ツーリング",
+        "次のカーブの向こうまで。"
       ]
     ],
-    "bikehead": "相棒との付き合い方も、あなた次第。",
-    "biketext": "スクーター、ネイキッド、スポーツ、クルーザー。車体の色や装備を選び、お気に入りの一台と暮らす。",
-    "facts": [
-      [
-        "縦画面",
-        "片手に収まる3Dの街"
-      ],
-      [
-        "日本語 / English",
-        "ゲームもサイトも2言語"
-      ],
-      [
-        "端末内セーブ",
-        "アカウント登録不要"
-      ]
-    ],
-    "notice": "これはバイクを題材にしたゲームです。実際の運転教習・免許試験・交通安全の評価を代替しません。車両・人物は架空のデザインで、実在メーカーとの提携はありません。",
-    "ready": "街へ出る準備を、少しずつ。",
-    "readytext": "iOSは申請準備中、Androidはクローズドテスト開始前です。公開日・販売価格・対応機種は、決まり次第ご案内します。",
+    "bikehead": "どれに乗って、どこへ行こう。",
+    "biketext": "相棒と、少し遠くまで。",
+    "facts": [],
+    "notice": "ゲーム内の車両・人物・物語はフィクションです。",
+    "ready": "また、次の日曜日に。",
+    "readytext": "COMING SOON",
     "footer": "お問い合わせ",
     "updated": "最終更新：2026年11月15日",
     "privacy": [
@@ -74,7 +61,7 @@
       ],
       [
         "追加コースの通信",
-        "追加コースの一覧・データをHTTPSでGoogle Firebase Hosting（gd-leadprotectors.web.app）から取得します。氏名、メール、端末内セーブ、センサー値をこのリクエストへ添付しません。通信先は配信・不正利用防止のためIPアドレスや通常の通信情報を処理する場合があります。取得したコースは端末内へキャッシュされます。Googleでの取扱いはGoogleのプライバシーポリシーをご確認ください。"
+        "追加コースの一覧・データをHTTPSでGoogle Firebase Hosting（gd-leadprotectors.web.app）から取得します。氏名、メール、端末内セーブ、センサー値をこのリクエストへ添付しません。Google Firebase HostingはIPアドレスを不正利用防止と配信利用状況の分析に使用し、Googleの案内では数か月間保持します。通常の通信情報もサービス運営のために処理されます。取得したコースは端末内へキャッシュされます。Googleでの取扱いはGoogleのプライバシーポリシーをご確認ください。"
       ],
       [
         "広告・解析・トラッキング",
@@ -163,7 +150,7 @@
   "en": {
     "name": "LEAD PROTECTORS",
     "tag": "A little freedom, every Sunday.",
-    "desc": "A motorcycle life that starts at riding school. Deliver around town, find your own machine, and head out on Sunday. A portrait 3D motorcycle game for iOS and Android.",
+    "desc": "Sunday. Turn the key. There is a road you have not taken yet.",
     "nav": [
       "The game",
       "Privacy",
@@ -171,53 +158,40 @@
       "Support",
       "Credits"
     ],
-    "status": "iOS / Android · In preparation",
+    "status": "iOS / Android",
     "model": "One-time purchase · No ads · No in-app purchases",
-    "cta": "Explore motorcycle life",
+    "cta": "Step into Sunday",
     "eyebrow": "A MOTORCYCLE LIFE, IN YOUR HANDS",
-    "intro": "Your licence is just the beginning.",
-    "introtext": "Start with the basics at riding school. Turn the key, start the engine, and head into town. Work, shop, or take a ride. Your week is yours to choose.",
+    "intro": "Sunday. Turn the key.",
+    "introtext": "There is a road you have not taken yet.",
     "chapters": [
       [
-        "01 / LEARN",
-        "Your first steps, at riding school.",
-        "Practise starts, braking and junction turns with your instructor. Choose Normal or Hard and learn at your own pace."
+        "DRIVING SCHOOL",
+        "Riding school",
+        "“What shall we practise today?”"
       ],
       [
-        "02 / WORK",
-        "A job on two wheels.",
-        "Take 500 m, 1 km or 2 km delivery jobs. Meet the customer at the destination and earn your pay. Start small and build confidence."
+        "DREAM PLAZA",
+        "Dream Plaza",
+        "“Welcome. What brings you in?”"
       ],
       [
-        "03 / LIVE",
-        "One bike. A life of your own.",
-        "Visit Dream Plaza for a new machine, colours and gear. Wash your bike when it gets dirty. Plan your weeks around energy and the weather."
+        "DELIVERY DESK",
+        "The delivery shop",
+        "“Hey. Here are today’s jobs.”"
       ],
       [
-        "04 / RIDE",
-        "Where will Sunday take you?",
-        "Go touring on your own motorcycle. Explore different riding styles, engine sounds and rider positions as the road unfolds."
+        "ON THE ROAD",
+        "Out for a ride",
+        "Just beyond the next bend."
       ]
     ],
-    "bikehead": "Make a machine your own.",
-    "biketext": "Scooters, roadsters, sports bikes and cruisers. Choose your colours and gear, and spend time with your favourite machine.",
-    "facts": [
-      [
-        "Portrait 3D",
-        "A town in your hands"
-      ],
-      [
-        "日本語 / English",
-        "Two languages, in game and online"
-      ],
-      [
-        "Local saves",
-        "No account required"
-      ]
-    ],
-    "notice": "This is a motorcycle-themed game, not a substitute for real riding instruction, licence examinations or road-safety assessment. Vehicles and characters are fictional designs. No manufacturer affiliation is implied.",
-    "ready": "Getting ready for the open road.",
-    "readytext": "iOS submission preparation and Android preparation ahead of closed testing are in progress. Release dates, prices and supported devices will be announced when confirmed.",
+    "bikehead": "Which bike? Which road?",
+    "biketext": "A little farther, together.",
+    "facts": [],
+    "notice": "Vehicles, characters and stories in this game are fictional.",
+    "ready": "See you next Sunday.",
+    "readytext": "COMING SOON",
     "footer": "Contact",
     "updated": "Last updated: November 15, 2026",
     "privacy": [
@@ -235,7 +209,7 @@
       ],
       [
         "Additional course downloads",
-        "Course listings and data are requested over HTTPS from Google Firebase Hosting at gd-leadprotectors.web.app. These requests do not include your name, email, local saves or sensor readings. The service provider may process IP addresses and standard connection information for delivery and security. Downloaded courses are cached locally. See Google’s Privacy Policy for its processing."
+        "Course listings and data are requested over HTTPS from Google Firebase Hosting at gd-leadprotectors.web.app. These requests do not include your name, email, local saves or sensor readings. Google Firebase Hosting uses IP addresses for abuse prevention and usage analysis and, according to Google, retains IP data for a few months. Standard connection information is also processed to operate the service. Downloaded courses are cached locally. See Google’s Privacy Policy for its processing."
       ],
       [
         "Advertising, analytics and tracking",
