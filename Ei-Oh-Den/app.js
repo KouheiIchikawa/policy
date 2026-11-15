@@ -369,6 +369,7 @@ function updateStructuredData(copy, language) {
       {
         "@type": "WebSite",
         name: copy.siteName,
+        alternateName: copy.altNames,
         url: pageUrl,
         inLanguage: language,
         publisher: {

@@ -2,22 +2,27 @@
   "htmlLang": "ja",
   "siteName": "影桜伝 公式サイト",
   "breadcrumbCurrent": "公式ランディングページ",
-  "pageTitle": "影桜伝 | Ei-Oh-DeN 公式サイト | iOS / Android / Kindle",
+  "pageTitle": "影桜伝（エイオウデン）| Ei-Oh-DeN 公式サイト",
   "appName": "影桜伝",
   "altNames": [
     "影桜伝",
-    "Ei-Oh-DeN"
+    "エイオウデン",
+    "EiOhDeN",
+    "Ei-Oh-DeN",
+    "Ei-Oh-Den"
   ],
   "genres": [
     "和風ダークファンタジー",
     "歴史ファンタジー",
     "戦略育成"
   ],
-  "seoDescription": "影桜伝 / Ei-Oh-DeN 公式サイト。Kohei Elimi Labによる歴史ファンタジー作品で、スマホアプリ・Kindle小説・LINEスタンプの公式情報を掲載しています。",
+  "seoDescription": "影桜伝（エイオウデン / EiOhDeN / Ei-Oh-DeN） 公式サイト。Kohei Elimi Labによる歴史ファンタジー作品で、スマホアプリ・Kindle小説・LINEスタンプの公式情報を掲載しています。",
   "seoKeywords": [
     "影桜伝",
-    "Ei-Oh-Den",
+    "エイオウデン",
+    "EiOhDeN",
     "Ei-Oh-DeN",
+    "Ei-Oh-Den",
     "Kohei Elimi Lab",
     "iOS",
     "Android",
@@ -32,7 +37,7 @@
   "hero": {
     "title": "影桜伝",
     "subtitle": "桜の影に、戦いの記憶が宿る。",
-    "description": "育てて、挑んで、物語に沈む歴史ファンタジー。",
+    "description": "影桜伝（エイオウデン / EiOhDeN / Ei-Oh-DeN）。育てて、挑んで、物語に沈む歴史ファンタジー。",
     "supporting": "iOS / Android 配信中。200円の有料アプリ。Kindle小説とLINEスタンプも展開しています。",
     "meta": [
       "Kohei Elimi Lab 制作",

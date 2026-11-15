@@ -52,7 +52,7 @@ export default function App() {
       document.querySelector('meta[property="og:image"]') ??
       document.head.appendChild(document.createElement('meta'))
     ogImage.setAttribute('property', 'og:image')
-    ogImage.setAttribute('content', assetPath('/images/turf_of_angel_logo.png'))
+    ogImage.setAttribute('content', new URL(assetPath('/images/turf_of_angel_logo.png'), window.location.origin).href)
   }, [content])
 
   useEffect(() => {
